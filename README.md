@@ -5,4 +5,4 @@ Stiles:
 
 Plain
 
-VSCode
+Visual Studio Code
