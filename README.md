@@ -1,7 +1,7 @@
 # WebIDE
 An IDE written in html!!!
 
-Stiles:
+Styles:
 
 Plain
 
