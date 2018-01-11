@@ -1,6 +1,8 @@
 # WebIDE
 An IDE written in html!!!
 
+---
+
 Styles:
 
 > Plain
@@ -10,3 +12,5 @@ Styles:
 > Visual Studio Code remade
 
 > Codechef
+
+---
