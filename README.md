@@ -1,5 +1,5 @@
 # WebIDE
-An IDE written in html!!!
+A portable IDE written in html!!!
 
 ---
 
