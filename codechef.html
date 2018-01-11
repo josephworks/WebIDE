@@ -1,0 +1,664 @@
+<div class="c4s_content">
+              <div class="c4s_content-in-new">
+                <div id="breadcrumb">
+                  <div class="breadcrumb"><a href="/">Home</a>&nbsp;»&nbsp;IDE</div>                </div>
+                                                                <div class="ns-content">
+                  <style xmlns="http://www.w3.org/1999/html">
+#ide-root{
+  margin:auto;
+}
+.growl-notification {
+    height: auto !important;
+}
+.c4s_content-in-new {
+    background: rgb(249, 249, 249) !important;
+}
+</style>
+<link rel="stylesheet" href="/em/libs/chosen/chosen.css">
+<link rel="stylesheet" href="/misc/font-awesome/css/font-awesome.css">
+<link rel="stylesheet" href="/em/components/autocomplete/css/autocomplete.css">
+<link rel="stylesheet" href="/em/components/cceditor/css/cceditor.css?v=1">
+<div class="ns-top ns-content-width clearfix">
+    <div class="ns-heading" style="width:100%">Code, Compile &amp; Run</div>
+</div>
+
+<div class="c4s_content-in c4s_content-textbox">
+  <div id="ide-root" class="ember-application">
+      
+  <div id="ember251" class="ember-view">
+    <div class="tabs">
+        
+            <div class="small-editor-button fa tab-button tab-active" id="1515632933999tab" data-bindattr-272="272" data-ember-action="273">
+                
+                <div data-ember-action="276" class="tab-label ellipsis">Ide</div>
+                
+            </div>
+            <i id="1515632933999close" data-bindattr-274="274" class="tab-close fa fa-close" data-ember-action="275"></i>
+        
+    
+    <div data-bindattr-278="278" class="small-editor-button fa tab-button" data-ember-action="279">
+        <div class="tab-label tab-plus">+</div>
+    </div>
+    
+    </div>
+
+    
+            <div class="tab-pane" id="1515632933999" data-bindattr-280="280" style="">
+            <div id="ember300" class="ember-view"><div class="cc-editor-component">
+    <div id="ember351" class="ember-view"><div id="ember354" class="ember-view">
+    
+    
+    
+    <div id="ember371" class="ember-view full-width-box problem-statement" style="display: none;">
+    
+    </div>
+    <div class="margin-bottom">
+        
+    </div>
+</div></div>
+    <div id="ember352" class="ember-view"><div id="ember360" class="ember-view cc-text-editor">
+    <div id="ember355" class="ember-view overlay" style="background-image: url(&quot;/misc/ajax_loader_d.gif&quot;); display: none;">
+    
+    </div>
+    <div id="ember356" class="ember-view header">
+    <div class="left-header">
+        <div class="language_selector" style="float:left;">
+            <select id="ember386" class="ember-view ember-select ember-chosenselect" style="display: none;"><option id="ember697" class="ember-view" value="1">C++ 6.3 (gcc 6.3)</option><option id="ember699" class="ember-view" value="2">PAS gpc (gpc 20070904)</option><option id="ember701" class="ember-view" value="3">PERL (perl 5.24.1)</option><option id="ember703" class="ember-view" value="4">PYTH (cpython 2.7.13)</option><option id="ember705" class="ember-view" value="5">FORT (gfortran 6.3)</option><option id="ember707" class="ember-view" value="6">WSPC (wspace 0.3)</option><option id="ember709" class="ember-view" value="7">ADA (gnat 6.3)</option><option id="ember711" class="ember-view" value="8">CAML (ocamlopt 4.01)</option><option id="ember713" class="ember-view" value="9">ICK (ick 0.3)</option><option id="ember715" class="ember-view" value="10">JAVA (HotSpot 8u112)</option><option id="ember717" class="ember-view" value="11">C (gcc 6.3)</option><option id="ember719" class="ember-view" value="12">BF (bff 1.0.6)</option><option id="ember721" class="ember-view" value="13">ASM (nasm 2.12.01)</option><option id="ember723" class="ember-view" value="14">CLPS (clips 6.24)</option><option id="ember725" class="ember-view" value="15">PRLG (swi 7.2.3)</option><option id="ember727" class="ember-view" value="16">ICON (iconc 9.5.1)</option><option id="ember729" class="ember-view" value="17">RUBY (ruby 2.3.3)</option><option id="ember731" class="ember-view" value="18">SCM qobi (stalin 0.3)</option><option id="ember733" class="ember-view" value="19">PIKE (pike 8.0)</option><option id="ember735" class="ember-view" value="20">D (gdc 6.3)</option><option id="ember737" class="ember-view" value="21">HASK (ghc 8.0.1)</option><option id="ember739" class="ember-view" value="22">PAS fpc (fpc 3.0.0)</option><option id="ember741" class="ember-view" value="23">ST (gst 3.2.5)</option><option id="ember743" class="ember-view" value="25">NICE (nicec 0.9.13)</option><option id="ember745" class="ember-view" value="26">LUA (luac 5.3.3)</option><option id="ember747" class="ember-view" value="27">C# (gmcs 4.6.2)</option><option id="ember749" class="ember-view" value="28">BASH (bash 4.4.5)</option><option id="ember751" class="ember-view" value="29">PHP (php 7.1.0)</option><option id="ember753" class="ember-view" value="30">NEM (ncc 1.2.0)</option><option id="ember755" class="ember-view" value="31">LISP sbcl (sbcl 1.3.13)</option><option id="ember757" class="ember-view" value="32">LISP clisp (clisp 2.49)</option><option id="ember759" class="ember-view" value="33">SCM guile (guile 2.0.13)</option><option id="ember761" class="ember-view" value="34">C99 strict (gcc 6.3)</option><option id="ember763" class="ember-view" value="35">JS (rhino 1.7.7)</option><option id="ember765" class="ember-view" value="36">ERL (erl 19)</option><option id="ember767" class="ember-view" value="38">TCL (tcl 8.6)</option><option id="ember769" class="ember-view" value="39">SCALA (scala 2.12.1)</option><option id="ember771" class="ember-view" value="44">C++14 (gcc 6.3)</option><option id="ember773" class="ember-view" value="47">kotlin (kotlin 1.0.6)</option><option id="ember775" class="ember-view" value="54">PERL6 (perl 6)</option><option id="ember777" class="ember-view" value="56">NODEJS (node 7.4.0)</option><option id="ember779" class="ember-view" value="62">TEXT (pure text)</option><option id="ember781" class="ember-view" value="85">swift (swift 3.0.2)</option><option id="ember783" class="ember-view" value="93">rust (rust 1.14.0)</option><option id="ember785" class="ember-view" value="97">SCM chicken (chicken 4.11.0)</option><option id="ember787" class="ember-view" value="99">PYPY (PyPy 2.6.0)</option><option id="ember789" class="ember-view" value="111">CLOJ (clojure 1.8.0)</option><option id="ember791" class="ember-view" value="114">GO (go 1.7.4)</option><option id="ember793" class="ember-view" value="116">PYTH 3.5 (python  3.5)</option><option id="ember795" class="ember-view" value="118">COB (open-cobol 1.1.0)</option><option id="ember797" class="ember-view" value="124">F# (mono 4.0.0)</option></select><div class="chosen-container chosen-container-single ember-view ember-select ember-chosenselect" style="width: 100%;" title="" id="ember386_chosen"><a class="chosen-single" tabindex="-1"><span>C++ 6.3 (gcc 6.3)</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"><li class="active-result result-selected ember-view" data-option-array-index="0" style="">C++ 6.3 (gcc 6.3)</li><li class="active-result ember-view" data-option-array-index="1" style="">PAS gpc (gpc 20070904)</li><li class="active-result ember-view" data-option-array-index="2" style="">PERL (perl 5.24.1)</li><li class="active-result ember-view" data-option-array-index="3" style="">PYTH (cpython 2.7.13)</li><li class="active-result ember-view" data-option-array-index="4" style="">FORT (gfortran 6.3)</li><li class="active-result ember-view" data-option-array-index="5" style="">WSPC (wspace 0.3)</li><li class="active-result ember-view" data-option-array-index="6" style="">ADA (gnat 6.3)</li><li class="active-result ember-view" data-option-array-index="7" style="">CAML (ocamlopt 4.01)</li><li class="active-result ember-view" data-option-array-index="8" style="">ICK (ick 0.3)</li><li class="active-result ember-view" data-option-array-index="9" style="">JAVA (HotSpot 8u112)</li><li class="active-result ember-view" data-option-array-index="10" style="">C (gcc 6.3)</li><li class="active-result ember-view" data-option-array-index="11" style="">BF (bff 1.0.6)</li><li class="active-result ember-view" data-option-array-index="12" style="">ASM (nasm 2.12.01)</li><li class="active-result ember-view" data-option-array-index="13" style="">CLPS (clips 6.24)</li><li class="active-result ember-view" data-option-array-index="14" style="">PRLG (swi 7.2.3)</li><li class="active-result ember-view" data-option-array-index="15" style="">ICON (iconc 9.5.1)</li><li class="active-result ember-view" data-option-array-index="16" style="">RUBY (ruby 2.3.3)</li><li class="active-result ember-view" data-option-array-index="17" style="">SCM qobi (stalin 0.3)</li><li class="active-result ember-view" data-option-array-index="18" style="">PIKE (pike 8.0)</li><li class="active-result ember-view" data-option-array-index="19" style="">D (gdc 6.3)</li><li class="active-result ember-view" data-option-array-index="20" style="">HASK (ghc 8.0.1)</li><li class="active-result ember-view" data-option-array-index="21" style="">PAS fpc (fpc 3.0.0)</li><li class="active-result ember-view" data-option-array-index="22" style="">ST (gst 3.2.5)</li><li class="active-result ember-view" data-option-array-index="23" style="">NICE (nicec 0.9.13)</li><li class="active-result ember-view" data-option-array-index="24" style="">LUA (luac 5.3.3)</li><li class="active-result ember-view" data-option-array-index="25" style="">C# (gmcs 4.6.2)</li><li class="active-result ember-view" data-option-array-index="26" style="">BASH (bash 4.4.5)</li><li class="active-result ember-view" data-option-array-index="27" style="">PHP (php 7.1.0)</li><li class="active-result ember-view" data-option-array-index="28" style="">NEM (ncc 1.2.0)</li><li class="active-result ember-view" data-option-array-index="29" style="">LISP sbcl (sbcl 1.3.13)</li><li class="active-result ember-view" data-option-array-index="30" style="">LISP clisp (clisp 2.49)</li><li class="active-result ember-view" data-option-array-index="31" style="">SCM guile (guile 2.0.13)</li><li class="active-result ember-view" data-option-array-index="32" style="">C99 strict (gcc 6.3)</li><li class="active-result ember-view" data-option-array-index="33" style="">JS (rhino 1.7.7)</li><li class="active-result ember-view" data-option-array-index="34" style="">ERL (erl 19)</li><li class="active-result ember-view" data-option-array-index="35" style="">TCL (tcl 8.6)</li><li class="active-result ember-view" data-option-array-index="36" style="">SCALA (scala 2.12.1)</li><li class="active-result ember-view" data-option-array-index="37" style="">C++14 (gcc 6.3)</li><li class="active-result ember-view" data-option-array-index="38" style="">kotlin (kotlin 1.0.6)</li><li class="active-result ember-view" data-option-array-index="39" style="">PERL6 (perl 6)</li><li class="active-result ember-view" data-option-array-index="40" style="">NODEJS (node 7.4.0)</li><li class="active-result ember-view" data-option-array-index="41" style="">TEXT (pure text)</li><li class="active-result ember-view" data-option-array-index="42" style="">swift (swift 3.0.2)</li><li class="active-result ember-view" data-option-array-index="43" style="">rust (rust 1.14.0)</li><li class="active-result ember-view" data-option-array-index="44" style="">SCM chicken (chicken 4.11.0)</li><li class="active-result ember-view" data-option-array-index="45" style="">PYPY (PyPy 2.6.0)</li><li class="active-result ember-view" data-option-array-index="46" style="">CLOJ (clojure 1.8.0)</li><li class="active-result ember-view" data-option-array-index="47" style="">GO (go 1.7.4)</li><li class="active-result ember-view" data-option-array-index="48" style="">PYTH 3.5 (python 3.5)</li><li class="active-result ember-view" data-option-array-index="49" style="">COB (open-cobol 1.1.0)</li><li class="active-result ember-view" data-option-array-index="50" style="">F# (mono 4.0.0)</li></ul></div></div>
+        </div>
+
+        
+
+        
+    </div>
+    <div class="right-header">
+        <button title="Info" class="small-editor-button fa fa-info-circle" data-ember-action="387"></button>
+        <button title="Download Code" class="small-editor-button fa fa-download" data-ember-action="388"></button>
+        
+        <button title="Go FullScreen" class="small-editor-button fa fa-expand" data-ember-action="401"></button>
+        
+        <button title="Settings" class="small-editor-button fa fa-cog" data-ember-action="389"></button>
+        <div class="float-right">
+            <div id="ember368" class="ember-view settings-menu arrow_box" style="display: none;">
+            <div class="settings-pair">
+                <div class="settings-label">Theme</div>
+                <select id="ember402" class="ember-view ember-select ember-chosenselect" style="display: none;"><option id="ember412" class="ember-view" value=""></option><option id="ember414" class="ember-view" value="ace/theme/chrome">Chrome</option><option id="ember416" class="ember-view" value="ace/theme/clouds">Clouds</option><option id="ember418" class="ember-view" value="ace/theme/crimson_editor">Crimson Editor</option><option id="ember420" class="ember-view" value="ace/theme/dawn">Dawn</option><option id="ember422" class="ember-view" value="ace/theme/dreamweaver">Dreamweaver</option><option id="ember424" class="ember-view" value="ace/theme/eclipse">Eclipse</option><option id="ember426" class="ember-view" value="ace/theme/github">GitHub</option><option id="ember428" class="ember-view" value="ace/theme/iplastic">IPlastic</option><option id="ember430" class="ember-view" value="ace/theme/solarized_light">Solarized Light</option><option id="ember432" class="ember-view" value="ace/theme/textmate">TextMate</option><option id="ember434" class="ember-view" value="ace/theme/tomorrow">Tomorrow</option><option id="ember436" class="ember-view" value="ace/theme/xcode">XCode</option><option id="ember438" class="ember-view" value="ace/theme/kuroir">Kuroir</option><option id="ember440" class="ember-view" value="ace/theme/katzenmilch">KatzenMilch</option><option id="ember442" class="ember-view" value="ace/theme/sqlserver">SQL Server</option><option id="ember444" class="ember-view" value="ace/theme/ambiance">Ambiance</option><option id="ember446" class="ember-view" value="ace/theme/chaos">Chaos</option><option id="ember448" class="ember-view" value="ace/theme/clouds_midnight">Clouds Midnight</option><option id="ember450" class="ember-view" value="ace/theme/cobalt">Cobalt</option><option id="ember452" class="ember-view" value="ace/theme/gruvbox">Gruvbox</option><option id="ember454" class="ember-view" value="ace/theme/gob">Green on Black</option><option id="ember456" class="ember-view" value="ace/theme/idle_fingers">idle Fingers</option><option id="ember458" class="ember-view" value="ace/theme/kr_theme">krTheme</option><option id="ember460" class="ember-view" value="ace/theme/merbivore">Merbivore</option><option id="ember462" class="ember-view" value="ace/theme/merbivore_soft">Merbivore Soft</option><option id="ember464" class="ember-view" value="ace/theme/mono_industrial">Mono Industrial</option><option id="ember466" class="ember-view" value="ace/theme/monokai">Monokai</option><option id="ember468" class="ember-view" value="ace/theme/pastel_on_dark">Pastel on dark</option><option id="ember470" class="ember-view" value="ace/theme/solarized_dark">Solarized Dark</option><option id="ember472" class="ember-view" value="ace/theme/terminal">Terminal</option><option id="ember474" class="ember-view" value="ace/theme/tomorrow_night">Tomorrow Night</option><option id="ember476" class="ember-view" value="ace/theme/tomorrow_night_blue">Tomorrow Night Blue</option><option id="ember478" class="ember-view" value="ace/theme/tomorrow_night_bright">Tomorrow Night Bright</option><option id="ember480" class="ember-view" value="ace/theme/tomorrow_night_eighties">Tomorrow Night 80s</option><option id="ember482" class="ember-view" value="ace/theme/twilight">Twilight</option><option id="ember484" class="ember-view" value="ace/theme/vibrant_ink">Vibrant Ink</option></select><div class="chosen-container chosen-container-single ember-view ember-select ember-chosenselect" style="width: 100%;" title="" id="ember402_chosen"><a class="chosen-single" tabindex="-1"><span>Tomorrow</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+            </div>
+            <div class="settings-pair">
+                <div class="settings-label">Keyboard</div>
+                <select id="ember403" class="ember-view ember-select ember-chosenselect" style="display: none;"><option id="ember490" class="ember-view" value=""></option><option id="ember492" class="ember-view" value="0">Default</option><option id="ember494" class="ember-view" value="1">Emacs</option><option id="ember496" class="ember-view" value="2">Vim</option></select><div class="chosen-container chosen-container-single ember-view ember-select ember-chosenselect" style="width: 100%;" title="" id="ember403_chosen"><a class="chosen-single" tabindex="-1"><span>Default</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+            </div>
+            <div class="settings-pair">
+                <div class="settings-label">Tab Size</div>
+                <div><input id="ember404" class="ember-view ember-text-field input-style" type="number"></div>
+            </div>
+            <div class="settings-pair">
+                <div class="settings-label">Font Size</div>
+                <div><input id="ember405" class="ember-view ember-text-field input-style" type="number"></div>
+            </div>
+            <div class="settings-pair" data-ember-action="406">
+            <div class="settings-label tick-label">Soft Wrap</div>
+            <div class="ns-checkbox tick-check">
+                
+                <input type="checkbox">
+                
+                <label></label>
+            </div>
+        </div>
+        <div class="settings-pair" data-ember-action="407">
+        <div class="settings-label tick-label">Auto Complete</div>
+        <div class="ns-checkbox tick-check">
+            
+            <input type="checkbox" checked="">
+            
+            <label></label>
+        </div>
+    </div>
+    
+    </div>
+    </div>
+    <div data-ember-action="390">
+    <div id="ember369" class="ember-view info-view" style="display: none;">
+    <div class="inset" data-ember-action="498">
+    <div class="header" style="text-align: center"><b>Keyboard bindings</b>
+        <i class="fa fa-times close" data-ember-action="499"></i>
+    </div>
+    <div class="content" style="height: 100%;">
+        
+        <div class="key-binding">
+            <div class="key-binding-name">Save Code</div>
+            <div class="key-binding-info">Ctrl-s</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">Settings Menu</div>
+            <div class="key-binding-info">Ctrl-Shift-s</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">Close Info/Settings/Fullscreen (in-order)</div>
+            <div class="key-binding-info">Esc</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">Full Screen Mode</div>
+            <div class="key-binding-info">Ctrl-F11</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">Open File</div>
+            <div class="key-binding-info">Ctrl-o</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">Info</div>
+            <div class="key-binding-info">Ctrl-i</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">Run Code</div>
+            <div class="key-binding-info">Ctrl-Enter</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">findAll</div>
+            <div class="key-binding-info">Ctrl-Alt-K</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">alignCursors</div>
+            <div class="key-binding-info">Ctrl-Alt-A</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">splitIntoLines</div>
+            <div class="key-binding-info">Ctrl-Alt-L</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">selectNextAfter</div>
+            <div class="key-binding-info">Ctrl-Alt-Shift-Right</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">selectNextBefore</div>
+            <div class="key-binding-info">Ctrl-Alt-Shift-Left</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">selectMoreAfter</div>
+            <div class="key-binding-info">Ctrl-Alt-Right</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">selectMoreBefore</div>
+            <div class="key-binding-info">Ctrl-Alt-Left</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">addCursorBelowSkipCurrent</div>
+            <div class="key-binding-info">Ctrl-Alt-Shift-Down</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">addCursorAboveSkipCurrent</div>
+            <div class="key-binding-info">Ctrl-Alt-Shift-Up</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">addCursorBelow</div>
+            <div class="key-binding-info">Ctrl-Alt-Down</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">addCursorAbove</div>
+            <div class="key-binding-info">Ctrl-Alt-Up</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">expandtoline</div>
+            <div class="key-binding-info">Ctrl-Shift-L</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">tolowercase</div>
+            <div class="key-binding-info">Ctrl-Shift-U</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">touppercase</div>
+            <div class="key-binding-info">Ctrl-U</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">transposeletters</div>
+            <div class="key-binding-info">Alt-Shift-X</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">blockindent</div>
+            <div class="key-binding-info">Ctrl-]</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">blockoutdent</div>
+            <div class="key-binding-info">Ctrl-[</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">indent</div>
+            <div class="key-binding-info">Tab</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">outdent</div>
+            <div class="key-binding-info">Shift-Tab</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">removewordright</div>
+            <div class="key-binding-info">Ctrl-Delete</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">removewordleft</div>
+            <div class="key-binding-info">Ctrl-Backspace</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">removetolineend</div>
+            <div class="key-binding-info">Alt-Delete</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">removetolinestart</div>
+            <div class="key-binding-info">Alt-Backspace</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">cut_or_delete</div>
+            <div class="key-binding-info">Shift-Delete</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">backspace</div>
+            <div class="key-binding-info">Shift-Backspace|Backspace</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">del</div>
+            <div class="key-binding-info">Delete</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">movelinesdown</div>
+            <div class="key-binding-info">Alt-Down</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">copylinesdown</div>
+            <div class="key-binding-info">Alt-Shift-Down</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">movelinesup</div>
+            <div class="key-binding-info">Alt-Up</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">copylinesup</div>
+            <div class="key-binding-info">Alt-Shift-Up</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">redo</div>
+            <div class="key-binding-info">Ctrl-Shift-Z|Ctrl-Y</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">undo</div>
+            <div class="key-binding-info">Ctrl-Z</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">replace</div>
+            <div class="key-binding-info">Ctrl-H</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">modifyNumberDown</div>
+            <div class="key-binding-info">Ctrl-Shift-Down</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">modifyNumberUp</div>
+            <div class="key-binding-info">Ctrl-Shift-Up</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">toggleBlockComment</div>
+            <div class="key-binding-info">Ctrl-Shift-/</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">togglecomment</div>
+            <div class="key-binding-info">Ctrl-/</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">sortlines</div>
+            <div class="key-binding-info">Ctrl-Alt-S</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">duplicateSelection</div>
+            <div class="key-binding-info">Ctrl-Shift-D</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">removeline</div>
+            <div class="key-binding-info">Ctrl-D</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">expandToMatching</div>
+            <div class="key-binding-info">Ctrl-Shift-M</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">selecttomatching</div>
+            <div class="key-binding-info">Ctrl-Shift-P</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">jumptomatching</div>
+            <div class="key-binding-info">Ctrl-P</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">replaymacro</div>
+            <div class="key-binding-info">Ctrl-Shift-E</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">togglerecording</div>
+            <div class="key-binding-info">Ctrl-Alt-E</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">scrolldown</div>
+            <div class="key-binding-info">Ctrl-Down</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">scrollup</div>
+            <div class="key-binding-info">Ctrl-Up</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">gotopagedown</div>
+            <div class="key-binding-info">PageDown</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">gotoright</div>
+            <div class="key-binding-info">Right</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">selectright</div>
+            <div class="key-binding-info">Shift-Right</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">gotolineend</div>
+            <div class="key-binding-info">Alt-Right|End</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">selecttolineend</div>
+            <div class="key-binding-info">Alt-Shift-Right</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">gotowordright</div>
+            <div class="key-binding-info">Ctrl-Right</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">selectwordright</div>
+            <div class="key-binding-info">Ctrl-Shift-Right</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">gotoleft</div>
+            <div class="key-binding-info">Left</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">selectleft</div>
+            <div class="key-binding-info">Shift-Left</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">gotolinestart</div>
+            <div class="key-binding-info">Alt-Left|Home</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">selecttolinestart</div>
+            <div class="key-binding-info">Alt-Shift-Left</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">gotowordleft</div>
+            <div class="key-binding-info">Ctrl-Left</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">selectwordleft</div>
+            <div class="key-binding-info">Ctrl-Shift-Left</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">golinedown</div>
+            <div class="key-binding-info">Down</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">selectdown</div>
+            <div class="key-binding-info">Shift-Down</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">gotoend</div>
+            <div class="key-binding-info">Ctrl-End</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">selecttoend</div>
+            <div class="key-binding-info">Ctrl-Shift-End</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">golineup</div>
+            <div class="key-binding-info">Up</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">selectup</div>
+            <div class="key-binding-info">Shift-Up</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">gotostart</div>
+            <div class="key-binding-info">Ctrl-Home</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">selecttostart</div>
+            <div class="key-binding-info">Ctrl-Shift-Home</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">find</div>
+            <div class="key-binding-info">Ctrl-F</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">selectOrFindPrevious</div>
+            <div class="key-binding-info">Alt-Shift-K</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">selectOrFindNext</div>
+            <div class="key-binding-info">Alt-K</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">findprevious</div>
+            <div class="key-binding-info">Ctrl-Shift-K</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">findnext</div>
+            <div class="key-binding-info">Ctrl-K</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">unfoldall</div>
+            <div class="key-binding-info">Alt-Shift-0</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">foldOther</div>
+            <div class="key-binding-info">Alt-0</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">toggleParentFoldWidget</div>
+            <div class="key-binding-info">Alt-F2</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">toggleFoldWidget</div>
+            <div class="key-binding-info">F2</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">unfold</div>
+            <div class="key-binding-info">Alt-Shift-L|Ctrl-Shift-F1</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">fold</div>
+            <div class="key-binding-info">Alt-L|Ctrl-F1</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">gotoline</div>
+            <div class="key-binding-info">Ctrl-L</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">selectall</div>
+            <div class="key-binding-info">Ctrl-A</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">goToPreviousError</div>
+            <div class="key-binding-info">Alt-Shift-E</div>
+        </div>
+        
+        <div class="key-binding">
+            <div class="key-binding-name">goToNextError</div>
+            <div class="key-binding-info">Alt-E</div>
+        </div>
+        
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div data-ember-action="374">
+    <div id="ember370" class="ember-view drop-file-view" style="display: none;">
+    <div style="top: 35%;position: relative;font-size: 50px;"><i class="fa fa-file-code-o fa-4"></i><br>
+
+        <div style="font-size: 13px">Drop File Here</div>
+    </div>
+    </div>
+    <div id="ember381" class="ember-view cc-editor large ace_editor ace-tomorrow" style="font-family: monospace; font-size: 12px;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 14px; width: 6.59781px; left: 44px; top: 98px;"></textarea><div class="ace_gutter"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 428px; width: 40px;"><div class="ace_gutter-cell " style="height: 14px;">1</div><div class="ace_gutter-cell " style="height: 14px;">2</div><div class="ace_gutter-cell " style="height: 14px;">3</div><div class="ace_gutter-cell " style="height: 14px;">4<span class="ace_fold-widget ace_start ace_open" style="height: 14px;"></span></div><div class="ace_gutter-cell " style="height: 14px;">5</div><div class="ace_gutter-cell " style="height: 14px;">6</div><div class="ace_gutter-cell " style="height: 14px;">7</div><div class="ace_gutter-cell " style="height: 14px;">8</div></div><div class="ace_gutter-active-line" style="top: 98px; height: 14px;"></div></div><div class="ace_scroller" style="left: 40px; right: 0px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 758px; height: 428px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 531.825px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:14px;top:98px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:14px"><span class="ace_keyword">#include</span><span class="ace_constant ace_other"> &lt;iostream&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_keyword ace_control">using</span> <span class="ace_keyword ace_operator">namespace</span> <span class="ace_identifier">std</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14px"></div><div class="ace_line" style="height:14px"><span class="ace_storage ace_type">int</span> <span class="ace_identifier">main</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14px">    <span class="ace_comment">// your code goes here</span></div><div class="ace_line" style="height:14px">    <span class="ace_keyword ace_control">return</span> <span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14px"><span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height:14px"></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 98px; width: 6.59781px; height: 14px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 22px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 22px; height: 112px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 22px; left: 40px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 22px; width: 757px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+    </div>
+    <div id="ember357" class="ember-view editor-status">
+    <div id="ember359" class="ember-view status-bar">
+    <div class="template-actions">
+        <button title="Reload template" class="small-editor-button fa fa-refresh" data-ember-action="502"></button>
+    </div>
+    
+    
+    <div class="ace_status-indicator" style="display: inline-block;">7:0</div></div>
+    </div>
+</div></div>
+    <div id="ember353" class="ember-view"><div id="ember358" class="ember-view margin-top no-select">
+    <div class="margin-top no-select">
+        <div class="no-select">
+            <div class="filePicker" style="display:none">
+                <input id="ember365" class="ember-view ember-text-field ns-button custom-file-input" type="file">
+            </div>
+            
+            <button class="ns-button" data-ember-action="504">Open File</button>
+            
+            <div class="submit-run float-right">
+                
+            </div>
+
+            <div class="submit-run float-right">
+                
+                
+                <button class="ns-button" data-ember-action="505">Run</button>
+                
+                
+            </div>
+            <div class="custom-input float-right no-select">
+                <div class="ns-checkbox tick-check" data-ember-action="503">
+                
+                <input type="checkbox">
+                
+                <label></label>
+            </div>
+            <div class="settings-label custom-input">Custom Input</div>
+        </div>
+    </div>
+    <!-- no-select end here -->
+    
+    <div style="margin-top: 20px;">
+        
+    </div>
+    </div>
+</div></div>
+</div></div>
+            </div>
+    
+</div></div>
+</div>
+
+
+
+
+
+
+
+
+
+<div id="block-block-68" class="block block-block">
+  <div class="r1 t"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div><div class="r5"></div>
+  <div class="content">
+        <div style="display:none;">
+online compiler, online ide, learn programming online, programming online, run code online, online debugging tool, online interpreter, run code online, run code ,execute code, python ide, C++ ide, C ide, Perl ide, Java ide, PHP ide, JavaScript ide, Node.js ide, Haskell ide, C++11 ide, Pascal ide, Fortran ide, Whitespace ide, ADA 95 ide, Ocaml ide, Intercal ide, C ide, Brainf**k ide, Assembler ide, Clips ide, Prolog ide, Icon ide, Ruby ide, Scheme ide, Pike ide, D ide, Smalltalk ide, JAR ide, Nice ide, Lu aide, C# ide, Bash ide, PHP ide, Nemerle ide, Common Lisp, Scheme ide, C99 strict ide, Erlang ide, Tcl ide, Scala ide, Perl6 ide, Text ide, Clojure ide, Go ide, Python3 ide, F# ide
+</div>
+  </div>
+  <div class="r5"></div><div class="r4"></div><div class="r3"></div><div class="r2"></div><div class="r1 b"></div>
+</div>
+                </div>
+              </div>
+            </div>
