@@ -6,7 +6,7 @@
 
 ---
 
-More - Just an addon to this sitemap table above
+More - Just an addition to the Navigator bar above
 
 Page Navigator done with https://www.tablesgenerator.com/markdown_tables
 
