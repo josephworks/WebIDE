@@ -19,6 +19,7 @@ Browse the latest editor API at [`monaco.d.ts`](https://github.com/Microsoft/mon
 Please mention the version of the editor when creating issues and the browser you're having trouble in. Create issues in this repository.
 
 ## Known issues
+
 In IE, the editor must be completely surrounded in the body element, otherwise the hit testing we do for mouse operations does not work. You can inspect this using F12 and clicking on the body element and confirm that visually it surrounds the editor.
 
 ## Installing
@@ -28,10 +29,11 @@ npm install monaco-editor
 ```
 
 You will get:
-* inside `dev`: bundled, not minified
-* inside `min`: bundled, and minified
-* inside `min-maps`: source maps for `min`
-* `monaco.d.ts`: this specifies the API of the editor (this is what is actually versioned, everything else is considered private and might break with any release).
+
+- inside `dev`: bundled, not minified
+- inside `min`: bundled, and minified
+- inside `min-maps`: source maps for `min`
+- `monaco.d.ts`: this specifies the API of the editor (this is what is actually versioned, everything else is considered private and might break with any release).
 
 It is recommended to develop against the `dev` version, and in production to use the `min` version.
 
@@ -43,8 +45,8 @@ Here is the most basic HTML page that embeds the editor. More samples are availa
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 </head>
 <body>
 
@@ -52,17 +54,17 @@ Here is the most basic HTML page that embeds the editor. More samples are availa
 
 <script src="monaco-editor/min/vs/loader.js"></script>
 <script>
-	require.config({ paths: { 'vs': 'monaco-editor/min/vs' }});
-	require(['vs/editor/editor.main'], function() {
-		var editor = monaco.editor.create(document.getElementById('container'), {
-			value: [
-				'function x() {',
-				'\tconsole.log("Hello world!");',
-				'}'
-			].join('\n'),
-			language: 'javascript'
-		});
-	});
+    require.config({ paths: { 'vs': 'monaco-editor/min/vs' }});
+    require(['vs/editor/editor.main'], function() {
+        var editor = monaco.editor.create(document.getElementById('container'), {
+            value: [
+                'function x() {',
+                '\tconsole.log("Hello world!");',
+                '}'
+            ].join('\n'),
+            language: 'javascript'
+        });
+    });
 </script>
 </body>
 </html>
@@ -74,34 +76,34 @@ If you are hosting your `.js` on a different domain (e.g. on a CDN) than the HTM
 
 ```html
 <!--
-	Assuming the HTML lives on www.mydomain.com and that the editor is hosted on www.mycdn.com
+    Assuming the HTML lives on www.mydomain.com and that the editor is hosted on www.mycdn.com
 -->
 <script type="text/javascript" src="http://www.mycdn.com/monaco-editor/min/vs/loader.js"></script>
 <script>
-	require.config({ paths: { 'vs': 'http://www.mycdn.com/monaco-editor/min/vs' }});
+    require.config({ paths: { 'vs': 'http://www.mycdn.com/monaco-editor/min/vs' }});
 
-	// Before loading vs/editor/editor.main, define a global MonacoEnvironment that overwrites
-	// the default worker url location (used when creating WebWorkers). The problem here is that
-	// HTML5 does not allow cross-domain web workers, so we need to proxy the instantiation of
-	// a web worker through a same-domain script
-	window.MonacoEnvironment = {
-		getWorkerUrl: function(workerId, label) {
-			return 'monaco-editor-worker-loader-proxy.js';
-		}
-	};
+    // Before loading vs/editor/editor.main, define a global MonacoEnvironment that overwrites
+    // the default worker url location (used when creating WebWorkers). The problem here is that
+    // HTML5 does not allow cross-domain web workers, so we need to proxy the instantiation of
+    // a web worker through a same-domain script
+    window.MonacoEnvironment = {
+        getWorkerUrl: function(workerId, label) {
+            return 'monaco-editor-worker-loader-proxy.js';
+        }
+    };
 
-	require(["vs/editor/editor.main"], function () {
-		// ...
-	});
+    require(["vs/editor/editor.main"], function () {
+        // ...
+    });
 </script>
 
 <!--
-	Create http://www.mydomain.com/monaco-editor-worker-loader-proxy.js with the following content:
-		self.MonacoEnvironment = {
-			baseUrl: 'http://www.mycdn.com/monaco-editor/min/'
-		};
-		importScripts('www.mycdn.com/monaco-editor/min/vs/base/worker/workerMain.js');
-	That's it. You're good to go! :)
+    Create http://www.mydomain.com/monaco-editor-worker-loader-proxy.js with the following content:
+        self.MonacoEnvironment = {
+            baseUrl: 'http://www.mycdn.com/monaco-editor/min/'
+        };
+        importScripts('www.mycdn.com/monaco-editor/min/vs/base/worker/workerMain.js');
+    That's it. You're good to go! :)
 -->
 ```
 
@@ -111,8 +113,7 @@ If you are hosting your `.js` on a different domain (e.g. on a CDN) than the HTM
 
 Find full HTML samples [here](https://github.com/Microsoft/monaco-editor-samples).
 
-Create a Monarch tokenizer [here](https://microsoft.github.io/monaco-editor/monarch.html).
-![image](https://cloud.githubusercontent.com/assets/5047891/16143041/840ced64-346a-11e6-98f3-3c68bf61884a.png)
+Create a Monarch tokenizer [here](https://microsoft.github.io/monaco-editor/monarch.html). ![image](https://cloud.githubusercontent.com/assets/5047891/16143041/840ced64-346a-11e6-98f3-3c68bf61884a.png)
 
 ## FAQ
 
@@ -146,12 +147,12 @@ No.
 
 ❓ **Why doesn't the editor support TextMate grammars?**
 
-* all the regular expressions in TM grammars are based on [oniguruma](https://github.com/kkos/oniguruma), a regular expression library written in C.
-* the only way to interpret the grammars and get anywhere near original fidelity is to use the exact same regular expression library (with its custom syntax constructs)
-* in VSCode, our runtime is node.js and we can use a node native module that exposes the library to JavaScript
-* in Monaco, we are constrained to a browser environment where we cannot do anything similar
-* we have experimented with Emscripten to compile the C library to asm.js, but performance was very poor even in Firefox (10x slower) and extremely poor in Chrome (100x slower).
-* we can revisit this once WebAssembly gets traction in the major browsers, but we will still need to consider the browser matrix we support. i.e. if we support IE11 and only Edge will add WebAssembly support, what will the experience be in IE11, etc.
+- all the regular expressions in TM grammars are based on [oniguruma](https://github.com/kkos/oniguruma), a regular expression library written in C.
+- the only way to interpret the grammars and get anywhere near original fidelity is to use the exact same regular expression library (with its custom syntax constructs)
+- in VSCode, our runtime is node.js and we can use a node native module that exposes the library to JavaScript
+- in Monaco, we are constrained to a browser environment where we cannot do anything similar
+- we have experimented with Emscripten to compile the C library to asm.js, but performance was very poor even in Firefox (10x slower) and extremely poor in Chrome (100x slower).
+- we can revisit this once WebAssembly gets traction in the major browsers, but we will still need to consider the browser matrix we support. i.e. if we support IE11 and only Edge will add WebAssembly support, what will the experience be in IE11, etc.
 
 ## Development setup
 
@@ -161,6 +162,6 @@ Please see [CONTRIBUTING](./CONTRIBUTING.md)
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-
 ## License
+
 [MIT](https://github.com/Microsoft/monaco-editor/blob/master/LICENSE.md)
