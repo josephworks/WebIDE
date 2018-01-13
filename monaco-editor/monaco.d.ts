@@ -1,3 +1,4 @@
+
 /*!-----------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
  * Type definitions for monaco-editor v0.10.1
