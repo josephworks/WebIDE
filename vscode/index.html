@@ -1,0 +1,2803 @@
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https: data:; media-src data:; child-src 'self'; object-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' https:; font-src 'self' https:;">
+  <style>
+    .monaco-shell {
+      background-color: #1e1e1e;
+      color: #CCCCCC;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" data-name="vs/workbench/workbench.main" href="file:///c:/Program%20Files%20(x86)/Microsoft%20VS%20Code%20Insiders/resources/app/out/vs/workbench/workbench.main.css">
+  <style type="text/css" media="screen"></style>
+  <style type="text/css" class="contributedColorTheme">
+    .monaco-editor .minimap-slider,
+    .monaco-editor .minimap-slider .minimap-slider-horizontal {
+      background: rgba(121, 121, 121, 0.2);
+    }
+
+    .monaco-editor .minimap-slider:hover,
+    .monaco-editor .minimap-slider:hover .minimap-slider-horizontal {
+      background: rgba(100, 100, 100, 0.35);
+    }
+
+    .monaco-editor .minimap-slider.active,
+    .monaco-editor .minimap-slider.active .minimap-slider-horizontal {
+      background: rgba(191, 191, 191, 0.2);
+    }
+
+    .monaco-editor .minimap-shadow-visible {
+      box-shadow: #000000 -6px 0 6px -6px inset;
+    }
+
+    .monaco-editor .scroll-decoration {
+      box-shadow: #000000 0 6px 6px -6px inset;
+    }
+
+    .monaco-editor .focused .selected-text {
+      background-color: #264f78;
+    }
+
+    .monaco-editor .selected-text {
+      background-color: #3a3d41;
+    }
+
+    .monaco-editor,
+    .monaco-editor-background,
+    .monaco-editor .inputarea.ime-input {
+      background-color: #1e1e1e;
+    }
+
+    .monaco-editor,
+    .monaco-editor .inputarea.ime-input {
+      color: #d4d4d4;
+    }
+
+    .monaco-editor .margin {
+      background-color: #1e1e1e;
+    }
+
+    .monaco-editor .rangeHighlight {
+      background-color: rgba(255, 255, 255, 0.04);
+    }
+
+    .vs-whitespace {
+      color: rgba(227, 228, 226, 0.16) !important;
+    }
+
+    .monaco-editor .view-overlays .current-line {
+      border: 2px solid #282828;
+    }
+
+    .monaco-editor .margin-view-overlays .current-line-margin {
+      border: 2px solid #282828;
+    }
+
+    .monaco-editor .lines-content .cigr {
+      background-color: #404040;
+    }
+
+    .monaco-editor .line-numbers {
+      color: #5a5a5a;
+    }
+
+    .monaco-editor .view-ruler {
+      background-color: #5a5a5a;
+    }
+
+    .monaco-editor .cursor {
+      background-color: #aeafad;
+      border-color: #aeafad;
+      color: #515052;
+    }
+
+    .monaco-editor .squiggly-c-error {
+      background: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23ff0000'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left;
+    }
+
+    .monaco-editor .squiggly-b-warning {
+      background: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23008000'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left;
+    }
+
+    .monaco-editor .squiggly-a-info {
+      background: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23008000'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left;
+    }
+
+    .monaco-diff-editor .diff-review-line-number {
+      color: #5a5a5a;
+    }
+
+    .monaco-diff-editor .diff-review-shadow {
+      box-shadow: #000000 0 -6px 6px -6px inset;
+    }
+
+    .monaco-editor .line-insert,
+    .monaco-editor .char-insert {
+      background-color: rgba(155, 185, 85, 0.2);
+    }
+
+    .monaco-diff-editor .line-insert,
+    .monaco-diff-editor .char-insert {
+      background-color: rgba(155, 185, 85, 0.2);
+    }
+
+    .monaco-editor .inline-added-margin-view-zone {
+      background-color: rgba(155, 185, 85, 0.2);
+    }
+
+    .monaco-editor .line-delete,
+    .monaco-editor .char-delete {
+      background-color: rgba(255, 0, 0, 0.2);
+    }
+
+    .monaco-diff-editor .line-delete,
+    .monaco-diff-editor .char-delete {
+      background-color: rgba(255, 0, 0, 0.2);
+    }
+
+    .monaco-editor .inline-deleted-margin-view-zone {
+      background-color: rgba(255, 0, 0, 0.2);
+    }
+
+    .monaco-diff-editor.side-by-side .editor.modified {
+      box-shadow: -6px 0 5px -5px #000000;
+    }
+
+    .monaco-editor .bracket-match {
+      background-color: rgba(0, 100, 0, 0.1);
+    }
+
+    .monaco-editor .bracket-match {
+      border: 1px solid #888888;
+    }
+
+    .monaco-editor .codelens-decoration {
+      color: #999999;
+    }
+
+    .monaco-editor .codelens-decoration>a:hover {
+      color: #4e94ce !important;
+    }
+
+    .monaco-editor .findOptionsWidget {
+      background-color: #2d2d30;
+    }
+
+    .monaco-editor .findOptionsWidget {
+      box-shadow: 0 2px 8px #000000;
+    }
+
+    .monaco-editor .findMatch {
+      background-color: rgba(234, 92, 0, 0.33);
+    }
+
+    .monaco-editor .currentFindMatch {
+      background-color: #515c6a;
+    }
+
+    .monaco-editor .findScope {
+      background-color: rgba(58, 61, 65, 0.4);
+    }
+
+    .monaco-editor .find-widget {
+      background-color: #2d2d30;
+    }
+
+    .monaco-editor .find-widget {
+      box-shadow: 0 2px 8px #000000;
+    }
+
+    .monaco-editor .find-widget.no-results .matchesCount {
+      color: #f48771;
+    }
+
+    .monaco-editor .find-widget .monaco-sash {
+      background-color: #454545;
+      width: 3px !important;
+      margin-left: -4px;
+    }
+
+    .monaco-workbench .simple-find-part {
+      background-color: #2d2d30 !important;
+    }
+
+    .monaco-workbench .simple-find-part {
+      box-shadow: 0 2px 8px #000000;
+    }
+
+    .monaco-editor .hoverHighlight {
+      background-color: rgba(38, 79, 120, 0.25);
+    }
+
+    .monaco-editor .monaco-editor-hover {
+      background-color: #2d2d30;
+    }
+
+    .monaco-editor .monaco-editor-hover {
+      border: 1px solid #454545;
+    }
+
+    .monaco-editor .monaco-editor-hover .hover-row:not(:first-child):not(:empty) {
+      border-top: 1px solid rgba(69, 69, 69, 0.5);
+    }
+
+    .monaco-editor .monaco-editor-hover a {
+      color: #4080d0;
+    }
+
+    .monaco-editor .monaco-editor-hover code {
+      background-color: rgba(10, 10, 10, 0.4);
+    }
+
+    .monaco-editor.vs .valueSetReplacement {
+      outline: solid 2px #888888;
+    }
+
+    .monaco-editor .detected-link-active {
+      color: #4e94ce !important;
+    }
+
+    .monaco-editor .monaco-editor-overlaymessage .anchor {
+      border-top-color: #007acc;
+    }
+
+    .monaco-editor .monaco-editor-overlaymessage .message {
+      border: 1px solid #007acc;
+    }
+
+    .monaco-editor .monaco-editor-overlaymessage .message {
+      background-color: #063b49;
+    }
+
+    .monaco-editor .parameter-hints-widget {
+      border: 1px solid #454545;
+    }
+
+    .monaco-editor .parameter-hints-widget.multiple .body {
+      border-left: 1px solid rgba(69, 69, 69, 0.5);
+    }
+
+    .monaco-editor .parameter-hints-widget .signature.has-docs {
+      border-bottom: 1px solid rgba(69, 69, 69, 0.5);
+    }
+
+    .monaco-editor .parameter-hints-widget {
+      background-color: #2d2d30;
+    }
+
+    .monaco-editor .parameter-hints-widget a {
+      color: #4080d0;
+    }
+
+    .monaco-editor .parameter-hints-widget code {
+      background-color: rgba(10, 10, 10, 0.4);
+    }
+
+    .monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-highlighted-label .highlight {
+      color: #0097fb;
+    }
+
+    .monaco-editor .suggest-widget {
+      color: #d4d4d4;
+    }
+
+    .monaco-editor .suggest-widget a {
+      color: #4080d0;
+    }
+
+    .monaco-editor .suggest-widget code {
+      background-color: rgba(10, 10, 10, 0.4);
+    }
+
+    .monaco-editor .focused .selectionHighlight {
+      background-color: rgba(173, 214, 255, 0.15);
+    }
+
+    .monaco-editor .selectionHighlight {
+      background-color: rgba(173, 214, 255, 0.07);
+    }
+
+    .monaco-editor .wordHighlight {
+      background-color: rgba(87, 87, 87, 0.72);
+    }
+
+    .monaco-editor .wordHighlightStrong {
+      background-color: rgba(0, 73, 114, 0.72);
+    }
+
+    .monaco-editor .reference-zone-widget .ref-tree .referenceMatch {
+      background-color: rgba(234, 92, 0, 0.3);
+    }
+
+    .monaco-editor .reference-zone-widget .preview .reference-decoration {
+      background-color: rgba(255, 143, 0, 0.6);
+    }
+
+    .monaco-editor .reference-zone-widget .ref-tree {
+      background-color: #252526;
+    }
+
+    .monaco-editor .reference-zone-widget .ref-tree {
+      color: #bbbbbb;
+    }
+
+    .monaco-editor .reference-zone-widget .ref-tree .reference-file {
+      color: #ffffff;
+    }
+
+    .monaco-editor .reference-zone-widget .ref-tree .monaco-tree.focused .monaco-tree-rows>.monaco-tree-row.selected:not(.highlighted) {
+      background-color: rgba(51, 153, 255, 0.2);
+    }
+
+    .monaco-editor .reference-zone-widget .ref-tree .monaco-tree.focused .monaco-tree-rows>.monaco-tree-row.selected:not(.highlighted) {
+      color: #ffffff !important;
+    }
+
+    .monaco-editor .reference-zone-widget .preview .monaco-editor .monaco-editor-background,
+    .monaco-editor .reference-zone-widget .preview .monaco-editor .inputarea.ime-input {
+      background-color: #001f33;
+    }
+
+    .monaco-editor .reference-zone-widget .preview .monaco-editor .margin {
+      background-color: #001f33;
+    }
+
+    .monaco-editor .goto-definition-link {
+      color: #4e94ce !important;
+    }
+
+    .monaco-editor .accessibilityHelpWidget {
+      background-color: #2d2d30;
+    }
+
+    .monaco-editor .accessibilityHelpWidget {
+      box-shadow: 0 2px 8px #000000;
+    }
+
+    .settings-tabs-widget>.monaco-action-bar .action-item .action-label:focus,
+    .settings-tabs-widget>.monaco-action-bar .action-item .action-label.checked {
+      border-bottom: 1px solid;
+    }
+
+
+    .settings-tabs-widget>.monaco-action-bar .action-item .action-label:hover,
+    .settings-tabs-widget>.monaco-action-bar .action-item .action-label.checked {
+      color: #e7e7e7;
+      border-bottom-color: rgba(128, 128, 128, 0.35);
+    }
+
+
+    .settings-tabs-widget>.monaco-action-bar .action-item .action-label {
+      color: rgba(231, 231, 231, 0.5);
+    }
+
+
+    .settings-tabs-widget>.monaco-action-bar .action-item .action-label:focus {
+      border-bottom-color: rgba(14, 99, 156, 0.6) !important;
+    }
+
+
+    .settings-tabs-widget>.monaco-action-bar .action-item .action-label:focus {
+      outline: none;
+    }
+
+    .monaco-shell .feedback-form .sentiment.checked {
+      border: 1px solid #007acc;
+    }
+
+    .monaco-shell .feedback-form .content .channels a {
+      color: #0e639c;
+    }
+
+    .monaco-workbench>.part.editor>.content .walkThroughContent .monaco-editor-background,
+    .monaco-workbench>.part.editor>.content .walkThroughContent .margin-view-overlays {
+      background: rgba(0, 0, 0, .4);
+    }
+
+    .monaco-workbench>.part.editor>.content .walkThroughContent a {
+      color: #4080d0;
+    }
+
+    .monaco-workbench>.part.editor>.content .walkThroughContent a:hover,
+    .monaco-workbench>.part.editor>.content .walkThroughContent a:active {
+      color: #4080d0;
+    }
+
+    .monaco-workbench>.part.editor>.content .walkThroughContent a:focus {
+      outline-color: rgba(14, 99, 156, 0.6);
+    }
+
+    .monaco-workbench>.part.editor>.content .walkThroughContent code,
+    .monaco-workbench>.part.editor>.content .walkThroughContent .shortcut {
+      color: #d7ba7d;
+    }
+
+    .monaco-workbench>.part.editor>.content .walkThroughContent blockquote {
+      background: rgba(127, 127, 127, 0.1);
+    }
+
+    .monaco-workbench>.part.editor>.content .walkThroughContent blockquote {
+      border-color: rgba(0, 122, 204, 0.5);
+    }
+
+    .monaco-workbench .panel.integrated-terminal .xterm.focus .xterm-viewport,
+    .monaco-workbench .panel.integrated-terminal .xterm:focus .xterm-viewport,
+    .monaco-workbench .panel.integrated-terminal .xterm:hover .xterm-viewport {
+      background-color: rgba(121, 121, 121, 0.4) !important;
+    }
+
+    .monaco-workbench .panel.integrated-terminal .xterm .xterm-viewport::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(100, 100, 100, 0.7);
+    }
+
+    .monaco-workbench .panel.integrated-terminal .xterm .xterm-viewport::-webkit-scrollbar-thumb:active {
+      background-color: rgba(191, 191, 191, 0.4);
+    }
+
+    .monaco-workbench>.part.statusbar.debugging>.statusbar-item .mask-icon {
+      background-color: #ffffff !important;
+    }
+
+    .monaco-editor .tm-inspect-widget {
+      border: 1px solid #454545;
+    }
+
+    .monaco-editor .tm-inspect-widget .tm-metadata-separator {
+      background-color: #454545;
+    }
+
+    .monaco-editor .tm-inspect-widget {
+      background-color: #2d2d30;
+    }
+
+    .monaco-workbench>.part.statusbar>.statusbar-item a:hover:not([disabled]):not(.disabled) {
+      background-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .monaco-workbench>.part.statusbar>.statusbar-item a:active:not([disabled]):not(.disabled) {
+      background-color: rgba(255, 255, 255, 0.18);
+    }
+
+    .monaco-workbench>.part.statusbar>.statusbar-item .status-bar-info {
+      background-color: #388a34;
+    }
+
+    .monaco-workbench>.part.statusbar>.statusbar-item a.status-bar-info:hover:not([disabled]):not(.disabled) {
+      background-color: #369432;
+    }
+
+    .keybindings-editor>.keybindings-body>.keybindings-list-container .monaco-list-row>.column .highlight {
+      color: #0097fb;
+    }
+
+    .monaco-editor .dirty-diff-modified {
+      border-left: 3px solid #0c7d9d;
+    }
+
+    .monaco-editor .dirty-diff-modified:before {
+      background: #0c7d9d;
+    }
+
+
+    .monaco-editor .dirty-diff-added {
+      border-left: 3px solid #587c0c;
+    }
+
+    .monaco-editor .dirty-diff-added:before {
+      background: #587c0c;
+    }
+
+
+    .monaco-editor .dirty-diff-deleted:after {
+      border-left: 4px solid #94151b;
+    }
+
+    .monaco-editor .dirty-diff-deleted:before {
+      background: #94151b;
+    }
+
+    .monaco-workbench>.welcomeOverlay>.key {
+      color: #cccccc;
+    }
+
+    .monaco-workbench>.welcomeOverlay {
+      background: rgba(0, 0, 0, 0.52);
+    }
+
+    .monaco-workbench>.welcomeOverlay>.key>.shortcut {
+      color: #d7ba7d;
+    }
+
+    .monaco-workbench>.part.editor>.content .welcomePage .caption {
+      color: #cccccc;
+    }
+
+    .monaco-workbench>.part.editor>.content .welcomePage .detail {
+      color: rgba(204, 204, 204, 0.7);
+    }
+
+    .monaco-workbench>.part.editor>.content .welcomePage .commands li button {
+      background: rgba(0, 0, 0, .2);
+    }
+
+    .monaco-workbench>.part.editor>.content .welcomePage .commands li button:hover {
+      background: rgba(200, 235, 255, .072);
+    }
+
+    .monaco-workbench>.part.editor>.content .welcomePage a {
+      color: #4080d0;
+    }
+
+    .monaco-workbench>.part.editor>.content .welcomePage a:hover,
+    .monaco-workbench>.part.editor>.content .welcomePage a:active {
+      color: #4080d0;
+    }
+
+    .monaco-workbench>.part.editor>.content .welcomePage a:focus {
+      outline-color: rgba(14, 99, 156, 0.6);
+    }
+
+    .monaco-workbench>.activitybar>.content .monaco-action-bar .action-item.active .action-label,
+    .monaco-workbench>.activitybar>.content .monaco-action-bar .action-item.checked .action-label,
+    .monaco-workbench>.activitybar>.content .monaco-action-bar .action-item:focus .action-label,
+    .monaco-workbench>.activitybar>.content .monaco-action-bar .action-item:hover .action-label {
+      opacity: 1;
+    }
+
+    .monaco-workbench>.activitybar>.content .monaco-action-bar .action-item .action-label {
+      opacity: 0.6;
+    }
+
+    .monaco-workbench>.activitybar>.content .monaco-action-bar .action-item:focus:before {
+      border-left-color: rgba(14, 99, 156, 0.6);
+    }
+
+
+    .monaco-workbench>.part.panel>.title>.panel-switcher-container>.monaco-action-bar .action-item:hover .action-label,
+    .monaco-workbench>.part.panel>.title>.panel-switcher-container>.monaco-action-bar .action-item.checked .action-label {
+      color: #e7e7e7;
+      border-bottom-color: rgba(128, 128, 128, 0.35);
+    }
+
+
+    .monaco-workbench>.part.panel>.title>.panel-switcher-container>.monaco-action-bar .action-item .action-label {
+      color: rgba(231, 231, 231, 0.5);
+    }
+
+
+    .monaco-workbench>.part.panel>.title>.panel-switcher-container>.monaco-action-bar .action-item:focus .action-label {
+      color: #e7e7e7;
+      border-bottom-color: rgba(14, 99, 156, 0.6) !important;
+      border-bottom: 1px solid;
+    }
+
+
+    .monaco-workbench>.part.panel>.title>.panel-switcher-container>.monaco-action-bar .action-item:focus {
+      outline: none;
+    }
+
+    .monaco-action-bar .action-item .action-label.extension-action.built-in-status {
+      border-color: #cccccc;
+    }
+
+    .monaco-action-bar .action-item .action-label.extension-action {
+      background-color: #0e639c;
+    }
+
+    .monaco-action-bar .action-item .action-label.extension-action {
+      color: #ffffff;
+    }
+
+    .monaco-action-bar .action-item:hover .action-label.extension-action {
+      background-color: #1177bb;
+    }
+
+    .monaco-action-bar .action-item .action-label.extension-action.prominent {
+      background-color: #327e36;
+    }
+
+    .monaco-action-bar .action-item .action-label.extension-action.prominent {
+      color: #ffffff;
+    }
+
+    .monaco-action-bar .action-item:hover .action-label.extension-action.prominent {
+      background-color: #28632b;
+    }
+
+    .monaco-workbench .search-viewlet .findInFileMatch {
+      background-color: rgba(234, 92, 0, 0.33);
+    }
+
+    .monaco-workbench .search-viewlet .replaceMatch {
+      background-color: rgba(155, 185, 85, 0.2);
+    }
+
+    .monaco-workbench .search-viewlet .replace.findInFileMatch {
+      background-color: rgba(255, 0, 0, 0.2);
+    }
+
+    .monaco-shell {
+      color: #cccccc;
+    }
+
+    .monaco-shell .monaco-tree .monaco-tree-row .monaco-highlighted-label .highlight,
+    .monaco-shell .monaco-list .monaco-list-row .monaco-highlighted-label .highlight {
+      color: #0097fb;
+    }
+
+    .monaco-workbench {
+      background-color: #252526;
+    }
+
+    .monaco-shell .monaco-scrollable-element>.shadow.top {
+      box-shadow: #000000 0 6px 6px -6px inset;
+    }
+
+    .monaco-shell .monaco-scrollable-element>.shadow.left {
+      box-shadow: #000000 6px 0 6px -6px inset;
+    }
+
+    .monaco-shell .monaco-scrollable-element>.shadow.top.left {
+      box-shadow: #000000 6px 6px 6px -6px inset;
+    }
+
+
+    .monaco-shell .monaco-scrollable-element>.scrollbar>.slider {
+      background: rgba(121, 121, 121, 0.4);
+    }
+
+
+    .monaco-shell .monaco-scrollable-element>.scrollbar>.slider:hover {
+      background: rgba(100, 100, 100, 0.7);
+    }
+
+
+    .monaco-shell .monaco-scrollable-element>.scrollbar>.slider.active {
+      background: rgba(191, 191, 191, 0.4);
+    }
+
+
+    .monaco-shell [tabindex="0"]:focus,
+    .monaco-shell .synthetic-focus,
+    .monaco-shell select:focus,
+    .monaco-shell .monaco-tree.focused.no-focused-item:focus:before,
+    .monaco-shell .monaco-list:not(.element-focused):focus:before,
+    .monaco-shell input[type="button"]:focus,
+    .monaco-shell input[type="text"]:focus,
+    .monaco-shell button:focus,
+    .monaco-shell textarea:focus,
+    .monaco-shell input[type="search"]:focus,
+    .monaco-shell input[type="checkbox"]:focus {
+      outline-color: rgba(14, 99, 156, 0.6);
+    }
+
+    .global-message-list li.message-list-entry .actions-container .message-action .action-button:hover {
+      background-color: #1177bb !important;
+    }
+  </style>
+  <style type="text/css" class="contributedIconTheme">
+    @font-face {
+      src: url('file:///c%3A/Program%20Files%20%28x86%29/Microsoft%20VS%20Code%20Insiders/resources/app/extensions/theme-seti/icons/seti.woff') format('woff');
+      font-family: 'seti';
+      font-weigth: normal;
+      font-style: normal;
+    }
+
+    .show-file-icons .file-icon::before,
+    .show-file-icons .folder-icon::before,
+    .show-file-icons .rootfolder-icon::before {
+      font-family: 'seti';
+      font-size: 150%
+    }
+
+    .show-file-icons .file-icon::before,
+    .show-file-icons .txt-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #d4d7d6;
+      content: '\E01D';
+    }
+
+    .show-file-icons .bat-lang-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E086';
+    }
+
+    .show-file-icons .clojure-lang-file-icon.file-icon::before {
+      color: #8dc149;
+      content: '\E010';
+    }
+
+    .show-file-icons .coffeescript-lang-file-icon.file-icon::before {
+      color: #cbcb41;
+      content: '\E012';
+    }
+
+    .show-file-icons .c-lang-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E009';
+    }
+
+    .show-file-icons .cpp-lang-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E016';
+    }
+
+    .show-file-icons .csharp-lang-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E008';
+    }
+
+    .show-file-icons .css-lang-file-icon.file-icon::before,
+    .show-file-icons .css\.map-ext-file-icon.map-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .sss-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E019';
+    }
+
+    .show-file-icons .dockerfile-lang-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E01F';
+    }
+
+    .show-file-icons .fsharp-lang-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E028';
+    }
+
+    .show-file-icons .go-lang-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E033';
+    }
+
+    .show-file-icons .groovy-lang-file-icon.file-icon::before,
+    .show-file-icons .gsp-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #8dc149;
+      content: '\E035';
+    }
+
+    .show-file-icons .handlebars-lang-file-icon.file-icon::before,
+    .show-file-icons .mustache-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .stache-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #e37933;
+      content: '\E058';
+    }
+
+    .show-file-icons .html-lang-file-icon.file-icon::before {
+      color: #e37933;
+      content: '\E03E';
+    }
+
+    .show-file-icons .properties-lang-file-icon.file-icon::before,
+    .show-file-icons .java-lang-file-icon.file-icon::before,
+    .show-file-icons .class-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .classpath-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E046';
+    }
+
+    .show-file-icons .javascriptreact-lang-file-icon.file-icon::before,
+    .show-file-icons .typescriptreact-lang-file-icon.file-icon::before,
+    .show-file-icons .cjsx-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E069';
+    }
+
+    .show-file-icons .javascript-lang-file-icon.file-icon::before,
+    .show-file-icons .js\.map-ext-file-icon.map-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .es-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .es5-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .es7-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cbcb41;
+      content: '\E047';
+    }
+
+    .show-file-icons .json-lang-file-icon.file-icon::before,
+    .show-file-icons .jsonc-lang-file-icon.file-icon::before,
+    .show-file-icons .cson-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cbcb41;
+      content: '\E04B';
+    }
+
+    .show-file-icons .less-lang-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E04E';
+    }
+
+    .show-file-icons .lua-lang-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E053';
+    }
+
+    .show-file-icons .makefile-lang-file-icon.file-icon::before {
+      color: #e37933;
+      content: '\E054';
+    }
+
+    .show-file-icons .markdown-lang-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E055';
+    }
+
+    .show-file-icons .objective-c-lang-file-icon.file-icon::before {
+      color: #cbcb41;
+      content: '\E009';
+    }
+
+    .show-file-icons .perl-lang-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E060';
+    }
+
+    .show-file-icons .php-lang-file-icon.file-icon::before,
+    .show-file-icons .php\.inc-ext-file-icon.inc-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #a074c4;
+      content: '\E062';
+    }
+
+    .show-file-icons .powershell-lang-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E063';
+    }
+
+    .show-file-icons .jade-lang-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E045';
+    }
+
+    .show-file-icons .python-lang-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E067';
+    }
+
+    .show-file-icons .ruby-lang-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E06B';
+    }
+
+    .show-file-icons .rust-lang-file-icon.file-icon::before {
+      color: #6d8086;
+      content: '\E06C';
+    }
+
+    .show-file-icons .scss-lang-file-icon.file-icon::before,
+    .show-file-icons .sass-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .sass-lint\.yml-name-file-icon.yml-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #f55385;
+      content: '\E06E';
+    }
+
+    .show-file-icons .shellscript-lang-file-icon.file-icon::before,
+    .show-file-icons .fish-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #4d5a5e;
+      content: '\E073';
+    }
+
+    .show-file-icons .sql-lang-file-icon.file-icon::before {
+      color: #f55385;
+      content: '\E01C';
+    }
+
+    .show-file-icons .swift-lang-file-icon.file-icon::before {
+      color: #e37933;
+      content: '\E07A';
+    }
+
+    .show-file-icons .typescript-lang-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E080';
+    }
+
+    .show-file-icons .xml-lang-file-icon.file-icon::before {
+      color: #e37933;
+      content: '\E089';
+    }
+
+    .show-file-icons .yaml-lang-file-icon.file-icon::before {
+      color: #a074c4;
+      content: '\E08B';
+    }
+
+    .show-file-icons .bsl-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E007';
+    }
+
+    .show-file-icons .mdo-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E057';
+    }
+
+    .show-file-icons .asm-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .s-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E003';
+    }
+
+    .show-file-icons .h-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #a074c4;
+      content: '\E009';
+    }
+
+    .show-file-icons .hh-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .hpp-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .hxx-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #a074c4;
+      content: '\E016';
+    }
+
+    .show-file-icons .edn-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E010';
+    }
+
+    .show-file-icons .cfc-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .cfm-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E014';
+    }
+
+    .show-file-icons .config-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .cfg-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .conf-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .toml-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .direnv-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .env-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .static-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .editorconfig-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .slugignore-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .htaccess-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .mime\.types-name-file-icon.types-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #6d8086;
+      content: '\E015';
+    }
+
+    .show-file-icons .cr-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #d4d7d6;
+      content: '\E017';
+    }
+
+    .show-file-icons .ecr-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .slang-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #d4d7d6;
+      content: '\E018';
+    }
+
+    .show-file-icons .csv-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #8dc149;
+      content: '\E01A';
+    }
+
+    .show-file-icons .xls-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .xlsx-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #8dc149;
+      content: '\E088';
+    }
+
+    .show-file-icons .cake-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E00A';
+    }
+
+    .show-file-icons .ctp-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E00B';
+    }
+
+    .show-file-icons .d-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E01B';
+    }
+
+    .show-file-icons .doc-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .docx-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E087';
+    }
+
+    .show-file-icons .ejs-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cbcb41;
+      content: '\E021';
+    }
+
+    .show-file-icons .ex-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #a074c4;
+      content: '\E022';
+    }
+
+    .show-file-icons .exs-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #a074c4;
+      content: '\E023';
+    }
+
+    .show-file-icons .elm-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E024';
+    }
+
+    .show-file-icons .ico-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cbcb41;
+      content: '\E029';
+    }
+
+    .show-file-icons .gitignore-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .gitconfig-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .gitkeep-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .gitattributes-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .gitmodules-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #41535b;
+      content: '\E02E';
+    }
+
+    .show-file-icons .slide-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .article-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E032';
+    }
+
+    .show-file-icons .gradle-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #8dc149;
+      content: '\E034';
+    }
+
+    .show-file-icons .haml-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E039';
+    }
+
+    .show-file-icons .hs-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .lhs-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #a074c4;
+      content: '\E03A';
+    }
+
+    .show-file-icons .hx-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #e37933;
+      content: '\E03B';
+    }
+
+    .show-file-icons .hxs-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cbcb41;
+      content: '\E03B';
+    }
+
+    .show-file-icons .hxp-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E03B';
+    }
+
+    .show-file-icons .hxml-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #a074c4;
+      content: '\E03B';
+    }
+
+    .show-file-icons .spec\.js-ext-file-icon.js-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #e37933;
+      content: '\E047';
+    }
+
+    .show-file-icons .jinja-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .jinja2-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E049';
+    }
+
+    .show-file-icons .jl-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #a074c4;
+      content: '\E04C';
+    }
+
+    .show-file-icons .liquid-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #8dc149;
+      content: '\E050';
+    }
+
+    .show-file-icons .ls-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E051';
+    }
+
+    .show-file-icons .njk-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .nunjucks-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .nunjs-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .nunj-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .njs-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .nj-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #8dc149;
+      content: '\E05C';
+    }
+
+    .show-file-icons .npm-debug\.log-ext-file-icon.log-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #41535b;
+      content: '\E05A';
+    }
+
+    .show-file-icons .npmignore-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .npmrc-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E05A';
+    }
+
+    .show-file-icons .ml-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .mli-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .cmx-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .cmxa-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #e37933;
+      content: '\E05D';
+    }
+
+    .show-file-icons .odata-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #e37933;
+      content: '\E05E';
+    }
+
+    .show-file-icons .pug-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E065';
+    }
+
+    .show-file-icons .pp-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .epp-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cbcb41;
+      content: '\E066';
+    }
+
+    .show-file-icons .erb-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .erb\.html-ext-file-icon.html-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .html\.erb-ext-file-icon.erb-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E03F';
+    }
+
+    .show-file-icons .springbeans-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #8dc149;
+      content: '\E076';
+    }
+
+    .show-file-icons .slim-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #e37933;
+      content: '\E074';
+    }
+
+    .show-file-icons .smarty\.tpl-ext-file-icon.tpl-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cbcb41;
+      content: '\E075';
+    }
+
+    .show-file-icons .sbt-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E06F';
+    }
+
+    .show-file-icons .scala-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E070';
+    }
+
+    .show-file-icons .sol-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E027';
+    }
+
+    .show-file-icons .styl-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #8dc149;
+      content: '\E077';
+    }
+
+    .show-file-icons .tf-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .tf\.json-ext-file-icon.json-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .tfvars-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #a074c4;
+      content: '\E07B';
+    }
+
+    .show-file-icons .tex-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E07C';
+    }
+
+    .show-file-icons .sty-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cbcb41;
+      content: '\E07C';
+    }
+
+    .show-file-icons .dtx-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #e37933;
+      content: '\E07C';
+    }
+
+    .show-file-icons .ins-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #d4d7d6;
+      content: '\E07C';
+    }
+
+    .show-file-icons .twig-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #8dc149;
+      content: '\E07F';
+    }
+
+    .show-file-icons .spec\.ts-ext-file-icon.ts-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cbcb41;
+      content: '\E080';
+    }
+
+    .show-file-icons .vala-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .vapi-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #6d8086;
+      content: '\E081';
+    }
+
+    .show-file-icons .vue-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #8dc149;
+      content: '\E083';
+    }
+
+    .show-file-icons .jar-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E08C';
+    }
+
+    .show-file-icons .zip-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #6d8086;
+      content: '\E08C';
+    }
+
+    .show-file-icons .wgt-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E085';
+    }
+
+    .show-file-icons .ai-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cbcb41;
+      content: '\E041';
+    }
+
+    .show-file-icons .psd-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E061';
+    }
+
+    .show-file-icons .pdf-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E05F';
+    }
+
+    .show-file-icons .eot-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .ttf-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .woff-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .woff2-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E02D';
+    }
+
+    .show-file-icons .gif-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .jpg-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .jpeg-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .png-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .pxm-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .svgx-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #a074c4;
+      content: '\E042';
+    }
+
+    .show-file-icons .svg-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #a074c4;
+      content: '\E079';
+    }
+
+    .show-file-icons .sublime-project-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .sublime-workspace-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #e37933;
+      content: '\E078';
+    }
+
+    .show-file-icons .component-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .cls-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E06D';
+    }
+
+    .show-file-icons .mov-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .ogv-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .webm-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .avi-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .mpg-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .mp4-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #f55385;
+      content: '\E082';
+    }
+
+    .show-file-icons .mp3-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .ogg-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .wav-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #a074c4;
+      content: '\E004';
+    }
+
+    .show-file-icons .babelrc-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cbcb41;
+      content: '\E005';
+    }
+
+    .show-file-icons .bowerrc-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .bower\.json-name-file-icon.json-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #e37933;
+      content: '\E006';
+    }
+
+    .show-file-icons .dockerignore-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #4d5a5e;
+      content: '\E01F';
+    }
+
+    .show-file-icons .codeclimate\.yml-ext-file-icon.yml-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #8dc149;
+      content: '\E011';
+    }
+
+    .show-file-icons .eslintrc-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .eslintrc\.js-ext-file-icon.js-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .eslintrc\.yaml-ext-file-icon.yaml-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .eslintrc\.yml-ext-file-icon.yml-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .eslintrc\.json-ext-file-icon.json-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #a074c4;
+      content: '\E026';
+    }
+
+    .show-file-icons .eslintignore-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #4d5a5e;
+      content: '\E026';
+    }
+
+    .show-file-icons .firebaserc-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .firebase\.json-name-file-icon.json-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #e37933;
+      content: '\E02A';
+    }
+
+    .show-file-icons .jshintrc-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .jscsrc-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E047';
+    }
+
+    .show-file-icons .tmp-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #6d8086;
+      content: '\E00F';
+    }
+
+    .show-file-icons .key-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .cert-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #8dc149;
+      content: '\E052';
+    }
+
+    .show-file-icons .ds_store-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #41535b;
+      content: '\E040';
+    }
+
+    .show-file-icons .mix-name-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E03D';
+    }
+
+    .show-file-icons .karma\.conf\.js-name-file-icon.conf\.js-ext-file-icon.js-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .karma\.conf\.coffee-name-file-icon.conf\.coffee-ext-file-icon.coffee-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #8dc149;
+      content: '\E04D';
+    }
+
+    .show-file-icons .readme\.md-name-file-icon.md-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E043';
+    }
+
+    .show-file-icons .changelog\.md-name-file-icon.md-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .changelog-name-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .version\.md-name-file-icon.md-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .version-name-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E00F';
+    }
+
+    .show-file-icons .mvnw-name-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E056';
+    }
+
+    .show-file-icons .jenkinsfile-name-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E048';
+    }
+
+    .show-file-icons .docker-healthcheck-name-file-icon.ext-file-icon.file-icon::before {
+      color: #8dc149;
+      content: '\E01F';
+    }
+
+    .show-file-icons .docker-compose\.yml-name-file-icon.yml-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .docker-compose\.yaml-name-file-icon.yaml-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #f55385;
+      content: '\E01F';
+    }
+
+    .show-file-icons .geckodriver-name-file-icon.ext-file-icon.file-icon::before {
+      color: #e37933;
+      content: '\E02B';
+    }
+
+    .show-file-icons .gruntfile\.js-name-file-icon.js-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .gruntfile\.babel\.js-name-file-icon.babel\.js-ext-file-icon.js-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .gruntfile\.coffee-name-file-icon.coffee-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #e37933;
+      content: '\E036';
+    }
+
+    .show-file-icons .gulpfile-name-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E037';
+    }
+
+    .show-file-icons .ionic\.config\.json-name-file-icon.config\.json-ext-file-icon.json-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .ionic\.project-name-file-icon.project-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E044';
+    }
+
+    .show-file-icons .rollup\.config\.js-name-file-icon.config\.js-ext-file-icon.js-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E06A';
+    }
+
+    .show-file-icons .yarn\.clean-name-file-icon.clean-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .yarn\.lock-name-file-icon.lock-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E08A';
+    }
+
+    .show-file-icons .webpack\.config\.js-name-file-icon.config\.js-ext-file-icon.js-ext-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .webpack\.config\.build\.js-name-file-icon.config\.build\.js-ext-file-icon.build\.js-ext-file-icon.js-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E084';
+    }
+
+    .show-file-icons .license-name-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .licence-name-file-icon.ext-file-icon.file-icon::before,
+    .show-file-icons .copying-name-file-icon.ext-file-icon.file-icon::before {
+      color: #cbcb41;
+      content: '\E04F';
+    }
+
+    .show-file-icons .compiling-name-file-icon.ext-file-icon.file-icon::before {
+      color: #e37933;
+      content: '\E04F';
+    }
+
+    .show-file-icons .contributing-name-file-icon.ext-file-icon.file-icon::before {
+      color: #cc3e44;
+      content: '\E04F';
+    }
+
+    .show-file-icons .qmakefile-name-file-icon.ext-file-icon.file-icon::before {
+      color: #a074c4;
+      content: '\E054';
+    }
+
+    .show-file-icons .omakefile-name-file-icon.ext-file-icon.file-icon::before {
+      color: #6d8086;
+      content: '\E054';
+    }
+
+    .show-file-icons .cmakelists\.txt-name-file-icon.txt-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #519aba;
+      content: '\E054';
+    }
+
+    .show-file-icons .procfile-name-file-icon.ext-file-icon.file-icon::before {
+      color: #a074c4;
+      content: '\E03C';
+    }
+
+    .show-file-icons .todo-name-file-icon.ext-file-icon.file-icon::before {
+      content: '\E07E';
+    }
+
+    .show-file-icons .npm-debug\.log-name-file-icon.log-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #41535b;
+      content: '\E05B';
+    }
+
+    .vs .show-file-icons .file-icon::before,
+    .vs .show-file-icons .txt-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #bfc2c1;
+      content: '\E01D';
+    }
+
+    .vs .show-file-icons .bat-lang-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E086';
+    }
+
+    .vs .show-file-icons .clojure-lang-file-icon.file-icon::before {
+      color: #7fae42;
+      content: '\E010';
+    }
+
+    .vs .show-file-icons .coffeescript-lang-file-icon.file-icon::before {
+      color: #b7b73b;
+      content: '\E012';
+    }
+
+    .vs .show-file-icons .c-lang-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E009';
+    }
+
+    .vs .show-file-icons .cpp-lang-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E016';
+    }
+
+    .vs .show-file-icons .csharp-lang-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E008';
+    }
+
+    .vs .show-file-icons .css-lang-file-icon.file-icon::before,
+    .vs .show-file-icons .css\.map-ext-file-icon.map-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .sss-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E019';
+    }
+
+    .vs .show-file-icons .dockerfile-lang-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E01F';
+    }
+
+    .vs .show-file-icons .fsharp-lang-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E028';
+    }
+
+    .vs .show-file-icons .go-lang-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E033';
+    }
+
+    .vs .show-file-icons .groovy-lang-file-icon.file-icon::before,
+    .vs .show-file-icons .gsp-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #7fae42;
+      content: '\E035';
+    }
+
+    .vs .show-file-icons .handlebars-lang-file-icon.file-icon::before,
+    .vs .show-file-icons .mustache-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .stache-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc6d2e;
+      content: '\E058';
+    }
+
+    .vs .show-file-icons .html-lang-file-icon.file-icon::before {
+      color: #cc6d2e;
+      content: '\E03E';
+    }
+
+    .vs .show-file-icons .properties-lang-file-icon.file-icon::before,
+    .vs .show-file-icons .java-lang-file-icon.file-icon::before,
+    .vs .show-file-icons .class-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .classpath-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E046';
+    }
+
+    .vs .show-file-icons .javascriptreact-lang-file-icon.file-icon::before,
+    .vs .show-file-icons .typescriptreact-lang-file-icon.file-icon::before,
+    .vs .show-file-icons .cjsx-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E069';
+    }
+
+    .vs .show-file-icons .javascript-lang-file-icon.file-icon::before,
+    .vs .show-file-icons .js\.map-ext-file-icon.map-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .es-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .es5-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .es7-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b7b73b;
+      content: '\E047';
+    }
+
+    .vs .show-file-icons .json-lang-file-icon.file-icon::before,
+    .vs .show-file-icons .jsonc-lang-file-icon.file-icon::before,
+    .vs .show-file-icons .cson-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b7b73b;
+      content: '\E04B';
+    }
+
+    .vs .show-file-icons .less-lang-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E04E';
+    }
+
+    .vs .show-file-icons .lua-lang-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E053';
+    }
+
+    .vs .show-file-icons .makefile-lang-file-icon.file-icon::before {
+      color: #cc6d2e;
+      content: '\E054';
+    }
+
+    .vs .show-file-icons .markdown-lang-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E055';
+    }
+
+    .vs .show-file-icons .objective-c-lang-file-icon.file-icon::before {
+      color: #b7b73b;
+      content: '\E009';
+    }
+
+    .vs .show-file-icons .perl-lang-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E060';
+    }
+
+    .vs .show-file-icons .php-lang-file-icon.file-icon::before,
+    .vs .show-file-icons .php\.inc-ext-file-icon.inc-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #9068b0;
+      content: '\E062';
+    }
+
+    .vs .show-file-icons .powershell-lang-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E063';
+    }
+
+    .vs .show-file-icons .jade-lang-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E045';
+    }
+
+    .vs .show-file-icons .python-lang-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E067';
+    }
+
+    .vs .show-file-icons .ruby-lang-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E06B';
+    }
+
+    .vs .show-file-icons .rust-lang-file-icon.file-icon::before {
+      color: #627379;
+      content: '\E06C';
+    }
+
+    .vs .show-file-icons .scss-lang-file-icon.file-icon::before,
+    .vs .show-file-icons .sass-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .sass-lint\.yml-name-file-icon.yml-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #dd4b78;
+      content: '\E06E';
+    }
+
+    .vs .show-file-icons .shellscript-lang-file-icon.file-icon::before,
+    .vs .show-file-icons .fish-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #455155;
+      content: '\E073';
+    }
+
+    .vs .show-file-icons .sql-lang-file-icon.file-icon::before {
+      color: #dd4b78;
+      content: '\E01C';
+    }
+
+    .vs .show-file-icons .swift-lang-file-icon.file-icon::before {
+      color: #cc6d2e;
+      content: '\E07A';
+    }
+
+    .vs .show-file-icons .typescript-lang-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E080';
+    }
+
+    .vs .show-file-icons .xml-lang-file-icon.file-icon::before {
+      color: #cc6d2e;
+      content: '\E089';
+    }
+
+    .vs .show-file-icons .yaml-lang-file-icon.file-icon::before {
+      color: #9068b0;
+      content: '\E08B';
+    }
+
+    .vs .show-file-icons .bsl-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E007';
+    }
+
+    .vs .show-file-icons .mdo-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E057';
+    }
+
+    .vs .show-file-icons .asm-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .s-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E003';
+    }
+
+    .vs .show-file-icons .h-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #9068b0;
+      content: '\E009';
+    }
+
+    .vs .show-file-icons .hh-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .hpp-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .hxx-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #9068b0;
+      content: '\E016';
+    }
+
+    .vs .show-file-icons .edn-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E010';
+    }
+
+    .vs .show-file-icons .cfc-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .cfm-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E014';
+    }
+
+    .vs .show-file-icons .config-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .cfg-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .conf-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .toml-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .direnv-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .env-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .static-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .editorconfig-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .slugignore-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .htaccess-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .mime\.types-name-file-icon.types-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #627379;
+      content: '\E015';
+    }
+
+    .vs .show-file-icons .cr-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #bfc2c1;
+      content: '\E017';
+    }
+
+    .vs .show-file-icons .ecr-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .slang-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #bfc2c1;
+      content: '\E018';
+    }
+
+    .vs .show-file-icons .csv-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #7fae42;
+      content: '\E01A';
+    }
+
+    .vs .show-file-icons .xls-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .xlsx-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #7fae42;
+      content: '\E088';
+    }
+
+    .vs .show-file-icons .cake-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E00A';
+    }
+
+    .vs .show-file-icons .ctp-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E00B';
+    }
+
+    .vs .show-file-icons .d-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E01B';
+    }
+
+    .vs .show-file-icons .doc-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .docx-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E087';
+    }
+
+    .vs .show-file-icons .ejs-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b7b73b;
+      content: '\E021';
+    }
+
+    .vs .show-file-icons .ex-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #9068b0;
+      content: '\E022';
+    }
+
+    .vs .show-file-icons .exs-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #9068b0;
+      content: '\E023';
+    }
+
+    .vs .show-file-icons .elm-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E024';
+    }
+
+    .vs .show-file-icons .ico-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b7b73b;
+      content: '\E029';
+    }
+
+    .vs .show-file-icons .gitignore-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .gitconfig-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .gitkeep-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .gitattributes-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .gitmodules-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #3b4b52;
+      content: '\E02E';
+    }
+
+    .vs .show-file-icons .slide-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .article-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E032';
+    }
+
+    .vs .show-file-icons .gradle-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #7fae42;
+      content: '\E034';
+    }
+
+    .vs .show-file-icons .haml-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E039';
+    }
+
+    .vs .show-file-icons .hs-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .lhs-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #9068b0;
+      content: '\E03A';
+    }
+
+    .vs .show-file-icons .hx-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc6d2e;
+      content: '\E03B';
+    }
+
+    .vs .show-file-icons .hxs-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b7b73b;
+      content: '\E03B';
+    }
+
+    .vs .show-file-icons .hxp-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E03B';
+    }
+
+    .vs .show-file-icons .hxml-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #9068b0;
+      content: '\E03B';
+    }
+
+    .vs .show-file-icons .spec\.js-ext-file-icon.js-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc6d2e;
+      content: '\E047';
+    }
+
+    .vs .show-file-icons .jinja-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .jinja2-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E049';
+    }
+
+    .vs .show-file-icons .jl-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #9068b0;
+      content: '\E04C';
+    }
+
+    .vs .show-file-icons .liquid-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #7fae42;
+      content: '\E050';
+    }
+
+    .vs .show-file-icons .ls-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E051';
+    }
+
+    .vs .show-file-icons .njk-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .nunjucks-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .nunjs-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .nunj-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .njs-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .nj-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #7fae42;
+      content: '\E05C';
+    }
+
+    .vs .show-file-icons .npm-debug\.log-ext-file-icon.log-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #3b4b52;
+      content: '\E05A';
+    }
+
+    .vs .show-file-icons .npmignore-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .npmrc-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E05A';
+    }
+
+    .vs .show-file-icons .ml-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .mli-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .cmx-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .cmxa-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc6d2e;
+      content: '\E05D';
+    }
+
+    .vs .show-file-icons .odata-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc6d2e;
+      content: '\E05E';
+    }
+
+    .vs .show-file-icons .pug-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E065';
+    }
+
+    .vs .show-file-icons .pp-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .epp-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b7b73b;
+      content: '\E066';
+    }
+
+    .vs .show-file-icons .erb-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .erb\.html-ext-file-icon.html-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .html\.erb-ext-file-icon.erb-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E03F';
+    }
+
+    .vs .show-file-icons .springbeans-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #7fae42;
+      content: '\E076';
+    }
+
+    .vs .show-file-icons .slim-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc6d2e;
+      content: '\E074';
+    }
+
+    .vs .show-file-icons .smarty\.tpl-ext-file-icon.tpl-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b7b73b;
+      content: '\E075';
+    }
+
+    .vs .show-file-icons .sbt-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E06F';
+    }
+
+    .vs .show-file-icons .scala-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E070';
+    }
+
+    .vs .show-file-icons .sol-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E027';
+    }
+
+    .vs .show-file-icons .styl-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #7fae42;
+      content: '\E077';
+    }
+
+    .vs .show-file-icons .tf-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .tf\.json-ext-file-icon.json-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .tfvars-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #9068b0;
+      content: '\E07B';
+    }
+
+    .vs .show-file-icons .tex-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E07C';
+    }
+
+    .vs .show-file-icons .sty-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b7b73b;
+      content: '\E07C';
+    }
+
+    .vs .show-file-icons .dtx-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc6d2e;
+      content: '\E07C';
+    }
+
+    .vs .show-file-icons .ins-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #bfc2c1;
+      content: '\E07C';
+    }
+
+    .vs .show-file-icons .twig-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #7fae42;
+      content: '\E07F';
+    }
+
+    .vs .show-file-icons .spec\.ts-ext-file-icon.ts-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b7b73b;
+      content: '\E080';
+    }
+
+    .vs .show-file-icons .vala-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .vapi-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #627379;
+      content: '\E081';
+    }
+
+    .vs .show-file-icons .vue-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #7fae42;
+      content: '\E083';
+    }
+
+    .vs .show-file-icons .jar-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E08C';
+    }
+
+    .vs .show-file-icons .zip-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #627379;
+      content: '\E08C';
+    }
+
+    .vs .show-file-icons .wgt-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E085';
+    }
+
+    .vs .show-file-icons .ai-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b7b73b;
+      content: '\E041';
+    }
+
+    .vs .show-file-icons .psd-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E061';
+    }
+
+    .vs .show-file-icons .pdf-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E05F';
+    }
+
+    .vs .show-file-icons .eot-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .ttf-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .woff-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .woff2-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E02D';
+    }
+
+    .vs .show-file-icons .gif-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .jpg-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .jpeg-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .png-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .pxm-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .svgx-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #9068b0;
+      content: '\E042';
+    }
+
+    .vs .show-file-icons .svg-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #9068b0;
+      content: '\E079';
+    }
+
+    .vs .show-file-icons .sublime-project-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .sublime-workspace-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc6d2e;
+      content: '\E078';
+    }
+
+    .vs .show-file-icons .component-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .cls-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E06D';
+    }
+
+    .vs .show-file-icons .mov-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .ogv-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .webm-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .avi-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .mpg-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .mp4-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #dd4b78;
+      content: '\E082';
+    }
+
+    .vs .show-file-icons .mp3-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .ogg-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .wav-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #9068b0;
+      content: '\E004';
+    }
+
+    .vs .show-file-icons .babelrc-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b7b73b;
+      content: '\E005';
+    }
+
+    .vs .show-file-icons .bowerrc-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .bower\.json-name-file-icon.json-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc6d2e;
+      content: '\E006';
+    }
+
+    .vs .show-file-icons .dockerignore-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #455155;
+      content: '\E01F';
+    }
+
+    .vs .show-file-icons .codeclimate\.yml-ext-file-icon.yml-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #7fae42;
+      content: '\E011';
+    }
+
+    .vs .show-file-icons .eslintrc-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .eslintrc\.js-ext-file-icon.js-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .eslintrc\.yaml-ext-file-icon.yaml-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .eslintrc\.yml-ext-file-icon.yml-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .eslintrc\.json-ext-file-icon.json-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #9068b0;
+      content: '\E026';
+    }
+
+    .vs .show-file-icons .eslintignore-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #455155;
+      content: '\E026';
+    }
+
+    .vs .show-file-icons .firebaserc-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .firebase\.json-name-file-icon.json-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc6d2e;
+      content: '\E02A';
+    }
+
+    .vs .show-file-icons .jshintrc-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .jscsrc-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E047';
+    }
+
+    .vs .show-file-icons .tmp-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #627379;
+      content: '\E00F';
+    }
+
+    .vs .show-file-icons .key-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .cert-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #7fae42;
+      content: '\E052';
+    }
+
+    .vs .show-file-icons .ds_store-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #3b4b52;
+      content: '\E040';
+    }
+
+    .vs .show-file-icons .mix-name-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E03D';
+    }
+
+    .vs .show-file-icons .karma\.conf\.js-name-file-icon.conf\.js-ext-file-icon.js-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .karma\.conf\.coffee-name-file-icon.conf\.coffee-ext-file-icon.coffee-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #7fae42;
+      content: '\E04D';
+    }
+
+    .vs .show-file-icons .readme\.md-name-file-icon.md-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E043';
+    }
+
+    .vs .show-file-icons .changelog\.md-name-file-icon.md-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .changelog-name-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .version\.md-name-file-icon.md-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .version-name-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E00F';
+    }
+
+    .vs .show-file-icons .mvnw-name-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E056';
+    }
+
+    .vs .show-file-icons .jenkinsfile-name-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E048';
+    }
+
+    .vs .show-file-icons .docker-healthcheck-name-file-icon.ext-file-icon.file-icon::before {
+      color: #7fae42;
+      content: '\E01F';
+    }
+
+    .vs .show-file-icons .docker-compose\.yml-name-file-icon.yml-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .docker-compose\.yaml-name-file-icon.yaml-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #dd4b78;
+      content: '\E01F';
+    }
+
+    .vs .show-file-icons .geckodriver-name-file-icon.ext-file-icon.file-icon::before {
+      color: #cc6d2e;
+      content: '\E02B';
+    }
+
+    .vs .show-file-icons .gruntfile\.js-name-file-icon.js-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .gruntfile\.babel\.js-name-file-icon.babel\.js-ext-file-icon.js-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .gruntfile\.coffee-name-file-icon.coffee-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #cc6d2e;
+      content: '\E036';
+    }
+
+    .vs .show-file-icons .gulpfile-name-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E037';
+    }
+
+    .vs .show-file-icons .ionic\.config\.json-name-file-icon.config\.json-ext-file-icon.json-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .ionic\.project-name-file-icon.project-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E044';
+    }
+
+    .vs .show-file-icons .rollup\.config\.js-name-file-icon.config\.js-ext-file-icon.js-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E06A';
+    }
+
+    .vs .show-file-icons .yarn\.clean-name-file-icon.clean-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .yarn\.lock-name-file-icon.lock-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E08A';
+    }
+
+    .vs .show-file-icons .webpack\.config\.js-name-file-icon.config\.js-ext-file-icon.js-ext-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .webpack\.config\.build\.js-name-file-icon.config\.build\.js-ext-file-icon.build\.js-ext-file-icon.js-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E084';
+    }
+
+    .vs .show-file-icons .license-name-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .licence-name-file-icon.ext-file-icon.file-icon::before,
+    .vs .show-file-icons .copying-name-file-icon.ext-file-icon.file-icon::before {
+      color: #b7b73b;
+      content: '\E04F';
+    }
+
+    .vs .show-file-icons .compiling-name-file-icon.ext-file-icon.file-icon::before {
+      color: #cc6d2e;
+      content: '\E04F';
+    }
+
+    .vs .show-file-icons .contributing-name-file-icon.ext-file-icon.file-icon::before {
+      color: #b8383d;
+      content: '\E04F';
+    }
+
+    .vs .show-file-icons .qmakefile-name-file-icon.ext-file-icon.file-icon::before {
+      color: #9068b0;
+      content: '\E054';
+    }
+
+    .vs .show-file-icons .omakefile-name-file-icon.ext-file-icon.file-icon::before {
+      color: #627379;
+      content: '\E054';
+    }
+
+    .vs .show-file-icons .cmakelists\.txt-name-file-icon.txt-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #498ba7;
+      content: '\E054';
+    }
+
+    .vs .show-file-icons .procfile-name-file-icon.ext-file-icon.file-icon::before {
+      color: #9068b0;
+      content: '\E03C';
+    }
+
+    .vs .show-file-icons .npm-debug\.log-name-file-icon.log-ext-file-icon.ext-file-icon.file-icon::before {
+      color: #3b4b52;
+      content: '\E05B';
+    }
+  </style>
+  <style type="text/css" media="screen" class="vscode-tokens-styles"></style>
+  <style type="text/css" media="screen"></style>
+  <style type="text/css" media="screen"></style>
+  <title>Welcome - Visual Studio Code - Insiders</title>
+</head>
+
+
+<body class="monaco-shell vs-dark vscode-theme-defaults-themes-dark_plus-json file-icons-enabled" aria-label="">
+
+  <script src="preload.js"></script>
+
+
+  <!-- Startup via index.js -->
+  <script src="index.js"></script>
+  <div class="monaco-shell-content">
+    <div style="width: 951px; height: 817px;">
+      <div class="monaco-workbench-container">
+        <div class="monaco-workbench windows nopanel" id="workbench.main.container" style="top: 0px; right: 0px; bottom: 0px; left: 0px; position: relative; width: 951px; height: 817px;">
+          <div class="part titlebar builder-hidden" id="workbench.parts.titlebar" role="contentinfo" style="color: rgba(204, 204, 204, 0.6); background-color: rgba(60, 60, 60, 0.6); font-size: 12px; width: 951px; height: 0px;" aria-hidden="true">
+            <div class="window-title">Welcome - Visual Studio Code - Insiders</div>
+          </div>
+          <div class="part activitybar left" id="workbench.parts.activitybar" role="navigation" style="background-color: rgb(51, 51, 51); height: 795px; top: 0px; bottom: 0px; left: 0px; position: absolute;" aria-hidden="false">
+            <div class="content" style="width: 50px; height: 795px;">
+              <div class="composite-bar">
+                <div class="monaco-action-bar vertical">
+                  <ul class="actions-container" role="toolbar" aria-label="Active View Switcher">
+                    <li class="action-item checked" role="button" draggable="true" tabindex="0" title="Explorer (Ctrl+Shift+E)" aria-label="Explorer (Ctrl+Shift+E)"><a class="action-label explore" aria-label="Explorer (Ctrl+Shift+E)" title="Explorer (Ctrl+Shift+E)" style="background-color: rgb(255, 255, 255);"></a>
+                      <div class="badge builder-hidden" aria-hidden="true" aria-label="Explorer (Ctrl+Shift+E)"
+                        title="Explorer (Ctrl+Shift+E)">
+                        <div class="badge-content" style="color: rgb(255, 255, 255); background-color: rgb(0, 122, 204);"></div>
+                      </div>
+                    </li>
+                    <li class="action-item" role="button" draggable="true" tabindex="0" title="Search (Ctrl+Shift+F)" aria-label="Search (Ctrl+Shift+F)"><a class="action-label search" aria-label="Search (Ctrl+Shift+F)" title="Search (Ctrl+Shift+F)" style="background-color: rgb(255, 255, 255);"></a>
+                      <div class="badge builder-hidden" aria-hidden="true" aria-label="Search (Ctrl+Shift+F)"
+                        title="Search (Ctrl+Shift+F)">
+                        <div class="badge-content" style="color: rgb(255, 255, 255); background-color: rgb(0, 122, 204);"></div>
+                      </div>
+                    </li>
+                    <li class="action-item" role="button" draggable="true" tabindex="0" title="Source Control (Ctrl+Shift+G)" aria-label="Source Control (Ctrl+Shift+G)"><a class="action-label scm" aria-label="Source Control (Ctrl+Shift+G)" title="Source Control (Ctrl+Shift+G)" style="background-color: rgb(255, 255, 255);"></a>
+                      <div class="badge builder-hidden" aria-hidden="true" aria-label="Source Control (Ctrl+Shift+G)"
+                        title="Source Control (Ctrl+Shift+G)">
+                        <div class="badge-content" style="color: rgb(255, 255, 255); background-color: rgb(0, 122, 204);"></div>
+                      </div>
+                    </li>
+                    <li class="action-item" role="button" draggable="true" tabindex="0" title="Debug (Ctrl+Shift+D)" aria-label="Debug (Ctrl+Shift+D)"><a class="action-label debug" aria-label="Debug (Ctrl+Shift+D)" title="Debug (Ctrl+Shift+D)" style="background-color: rgb(255, 255, 255);"></a>
+                      <div class="badge builder-hidden" aria-hidden="true" aria-label="Debug (Ctrl+Shift+D)" title="Debug (Ctrl+Shift+D)">
+                        <div class="badge-content" style="color: rgb(255, 255, 255); background-color: rgb(0, 122, 204);"></div>
+                      </div>
+                    </li>
+                    <li class="action-item" role="button" draggable="true" tabindex="0" title="Extensions (Ctrl+Shift+X)" aria-label="Extensions (Ctrl+Shift+X)"><a class="action-label extensions" aria-label="Extensions (Ctrl+Shift+X)" title="Extensions (Ctrl+Shift+X)" style="background-color: rgb(255, 255, 255);"></a>
+                      <div class="badge builder-hidden" aria-hidden="true" aria-label="Extensions (Ctrl+Shift+X)"
+                        title="Extensions (Ctrl+Shift+X)">
+                        <div class="badge-content" style="color: rgb(255, 255, 255); background-color: rgb(0, 122, 204);"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="global-activity">
+                <div class="monaco-action-bar vertical">
+                  <ul class="actions-container" role="toolbar" aria-label="Global Actions">
+                    <li class="action-item" role="button" tabindex="0" title=""><a class="action-label update-activity" style="background-color: rgb(255, 255, 255);"></a>
+                      <div class="badge builder-hidden" aria-hidden="true">
+                        <div class="badge-content" style="color: rgb(255, 255, 255); background-color: rgb(0, 122, 204);"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="part sidebar left" id="workbench.parts.sidebar" role="complementary" style="background-color: rgb(37, 37, 38); width: 170px; height: 795px; top: 0px; right: 731px; bottom: 22px; left: 50px; position: absolute;">
+            <div class="composite title">
+              <div class="title-label"><span title="Explorer (Ctrl+Shift+E)" style="color: rgb(187, 187, 187);">Explorer</span></div>
+              <div class="title-actions">
+                <div class="monaco-toolbar">
+                  <div class="monaco-action-bar animated">
+                    <ul class="actions-container" role="toolbar" aria-label="Explorer actions"></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content" style="width: 170px; height: 760px;">
+              <div class="progress-container builder-hidden" aria-hidden="true">
+                <div class="progress-bit" style="background-color: rgb(14, 112, 192);"></div>
+              </div>
+              <div class="composite viewlet explorer-viewlet" id="workbench.view.explorer" aria-hidden="false">
+                <div class="monaco-panel-view">
+                  <div class="monaco-split-view2 vertical">
+                    <div class="split-view-view" style="height: 44px;">
+                      <div class="panel">
+                        <div class="panel-header expanded" tabindex="0" role="toolbar" aria-label="Open Editors Section" aria-expanded="true" draggable="true" style="height: 22px; line-height: 22px; background-color: rgba(128, 128, 128, 0.2);">
+                          <div class="title"><span>Open Editors</span></div>
+                          <div class="count">
+                            <div class="monaco-count-badge hidden" style="background-color: rgb(77, 77, 77); color: rgb(255, 255, 255);"></div>
+                          </div>
+                          <div class="actions">
+                            <div class="monaco-toolbar">
+                              <div class="monaco-action-bar animated">
+                                <ul class="actions-container" role="toolbar" aria-label="Open Editors actions">
+                                  <li class="action-item" role="presentation"><a class="action-label icon toggle-editor-layout" role="button" tabindex="0" title="Horizontal Editor Group Layout (Shift+Alt+0)"></a></li>
+                                  <li class="action-item disabled" role="presentation"><a class="action-label icon explorer-action save-all disabled" role="button" title="Save All (Ctrl+K S)"></a></li>
+                                  <li class="action-item" role="presentation"><a class="action-label icon action-close-all-files" role="button" tabindex="0" title="Close All Editors (Ctrl+K Ctrl+W)"></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="panel-body explorer-open-editors show-file-icons">
+                          <div class="monaco-list list_id_1 element-focused selection-single" role="tree" tabindex="0" data-keybinding-context="4" aria-activedescendant="list_id_1_0">
+                            <div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;">
+                              <div class="monaco-list-rows" style="overflow: hidden; top: 0px; height: 22px;">
+                                <div class="monaco-list-row focused selected" draggable="true" data-index="0" aria-setsize="1" aria-posinset="1" role="treeitem" id="list_id_1_0" style="top: 0px; height: 22px;">
+                                  <div class="monaco-action-bar animated">
+                                    <ul class="actions-container" role="toolbar">
+                                      <li class="action-item" role="presentation"><a class="action-label icon close-editor-action" role="button" tabindex="0" title="Close Editor (Ctrl+F4)"></a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="monaco-icon-label file-icon vs_code_welcome_page-name-file-icon ext-file-icon open-editor" title="/c:/Program Files (x86)/Microsoft VS Code Insiders/resources/app/out/vs/workbench/parts/welcome/page/electron-browser/vs_code_welcome_page">
+                                    <div class="monaco-icon-label-description-container"><a class="label-name">Welcome</a><span class="label-description" style="margin-left: 0px;"></span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute; width: 0px; height: 0px; left: 0px; bottom: 0px;">
+                                <div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; will-change: transform; width: 0px;"></div>
+                              </div>
+                              <div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute; width: 10px; height: 22px; right: 0px; top: 0px;">
+                                <div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; will-change: transform; height: 22px;"></div>
+                              </div>
+                              <div class="shadow"></div>
+                              <div class="shadow"></div>
+                              <div class="shadow top-left-corner"></div>
+                            </div>
+                            <style type="text/css" media="screen">
+                              .monaco-list.list_id_1:focus .monaco-list-row.focused {
+                                background-color: #073655;
+                              }
+
+                              .monaco-list.list_id_1:focus .monaco-list-row.selected {
+                                background-color: #0a4e7c;
+                              }
+
+                              .monaco-list.list_id_1:focus .monaco-list-row.selected:hover {
+                                background-color: #0a4e7c;
+                              }
+
+                              .monaco-list.list_id_1:focus .monaco-list-row.selected {
+                                color: #ffffff;
+                              }
+
+                              .monaco-list.list_id_1:focus .monaco-list-row.selected.focused {
+                                background-color: #094771;
+                              }
+
+                              .monaco-list.list_id_1:focus .monaco-list-row.selected.focused {
+                                color: #ffffff;
+                              }
+
+                              .monaco-list.list_id_1 .monaco-list-row.focused {
+                                background-color: #313135;
+                              }
+
+                              .monaco-list.list_id_1 .monaco-list-row.focused:hover {
+                                background-color: #313135;
+                              }
+
+                              .monaco-list.list_id_1 .monaco-list-row.selected {
+                                background-color: #3f3f46;
+                              }
+
+                              .monaco-list.list_id_1 .monaco-list-row.selected:hover {
+                                background-color: #3f3f46;
+                              }
+
+                              .monaco-list.list_id_1 .monaco-list-row:hover {
+                                background-color: #2a2d2e;
+                              }
+                            </style>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="split-view-view" style="height: 716px;">
+                      <div class="panel">
+                        <div class="panel-header expanded" tabindex="0" role="toolbar" aria-label="Files Explorer Section" aria-expanded="true" draggable="true" style="height: 22px; line-height: 22px; background-color: rgba(128, 128, 128, 0.2);">
+                          <div class="title"><span>No Folder Opened</span></div>
+                        </div>
+                        <div class="panel-body explorer-empty-view">
+                          <div class="section">
+                            <p>You have not yet opened a folder.</p>
+                          </div>
+                          <div class="section"><a class="monaco-button monaco-text-button" tabindex="0" role="button" style="color: rgb(255, 255, 255); background-color: rgb(14, 99, 156);">Open Folder</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="monaco-sash horizontal disabled" style="height: 5px; top: 41.5px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="part editor has-watermark" id="workbench.parts.editor" role="main" style="background-color: rgb(30, 30, 30); width: 731px; height: 795px; top: 0px; right: 0px; bottom: 22px; left: 220px; position: absolute;">
+            <div class="content vertical-layout" style="background-color: rgb(45, 45, 45); width: 731px; height: 795px;">
+              <div class="watermark">
+                <div class="watermark-box">
+                  <dl><dt>Show All Commands</dt>
+                    <dd><span class="shortcuts">Ctrl+Shift+P</span></dd>
+                  </dl>
+                  <dl><dt>Open File</dt>
+                    <dd><span class="shortcuts">Ctrl+O</span></dd>
+                  </dl>
+                  <dl><dt>Open Folder</dt>
+                    <dd><span class="shortcuts">Ctrl+K Ctrl+O</span></dd>
+                  </dl>
+                  <dl><dt>Open Recent</dt>
+                    <dd><span class="shortcuts">Ctrl+R</span></dd>
+                  </dl>
+                  <dl><dt>Toggle Terminal</dt>
+                    <dd><span class="shortcuts">Ctrl+`</span></dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="one-editor-silo editor-one" style="background-color: rgb(30, 30, 30); width: 731px; height: 795px;">
+                <div class="container" data-keybinding-context="1">
+                  <div class="title tabs show-file-icons active" style="background-color: rgb(37, 37, 38);">
+                    <div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;">
+                      <div role="tablist" class="tabs-container" style="overflow: hidden;">
+                        <div draggable="true" tabindex="0" role="presentation" class="tab close-button-right sizing-fit has-icon-theme active" aria-label="Welcome, tab" title="Welcome" aria-selected="true" style="border-right-color: rgb(37, 37, 38); background-color: rgb(30, 30, 30);">
+                          <div class="monaco-icon-label file-icon vs_code_welcome_page-name-file-icon ext-file-icon tab-label" title="/c:/Program Files (x86)/Microsoft VS Code Insiders/resources/app/out/vs/workbench/parts/welcome/page/electron-browser/vs_code_welcome_page"
+                            style="color: rgb(255, 255, 255);">
+                            <div class="monaco-icon-label-description-container"><a class="label-name">Welcome</a><span class="label-description" style="margin-left: 0px;"></span></div>
+                          </div>
+                          <div class="tab-close">
+                            <div class="monaco-action-bar animated">
+                              <ul class="actions-container" role="toolbar" aria-label="Tab actions">
+                                <li class="action-item" role="presentation"><a class="action-label icon close-editor-action" role="button" tabindex="0" title="Close (Ctrl+F4)"></a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute; width: 664px; height: 3px; left: 0px; bottom: 0px;">
+                        <div class="slider" style="position: absolute; top: 0px; left: 0px; height: 3px; will-change: transform; width: 664px;"></div>
+                      </div>
+                      <div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute; width: 0px; height: 0px; right: 0px; top: 0px;">
+                        <div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; will-change: transform; height: 0px;"></div>
+                      </div>
+                    </div>
+                    <div class="editor-actions">
+                      <div class="monaco-toolbar">
+                        <div class="monaco-action-bar animated">
+                          <ul class="actions-container" role="toolbar" aria-label="Editor actions">
+                            <li class="action-item" role="presentation"><a class="action-label icon split-editor-action" role="button" tabindex="0" title="Split Editor (Ctrl+\)"></a></li>
+                            <li class="action-item" role="presentation">
+                              <div class="dropdown">
+                                <div class="dropdown-label"><a class="action-label toolbar-toggle-more" tabindex="0" role="button" aria-haspopup="true" title="More"></a></div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="progress-container builder-hidden done" aria-hidden="true">
+                    <div class="progress-bit" style="background-color: rgb(14, 112, 192); width: inherit; opacity: 1;"></div>
+                  </div>
+                  <div class="editor-container" role="tabpanel" id="workbench.editor.walkThroughPart" aria-hidden="false">
+                    <div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;">
+                      <div tabindex="0" style="outline-style: none; overflow: hidden; height: 760px; width: 731px;">
+                        <div class="welcomePageContainer">
+                          <div class="welcomePage">
+                            <div class="title">
+                              <h1 class="caption">Visual Studio Code</h1>
+                              <p class="subtitle detail">Editing evolved</p>
+                            </div>
+                            <div class="row">
+                              <div class="splash">
+                                <div class="section start">
+                                  <h2 class="caption">Start</h2>
+                                  <ul>
+                                    <li><a href="command:workbench.action.files.newUntitledFile">New file</a></li>
+                                    <li class="mac-only"><a href="command:workbench.action.files.openFileFolder">Open folder...</a></li>
+                                    <li class="windows-only linux-only"><a href="command:workbench.action.files.openFolder">Open folder...</a></li>
+                                    <li><a href="command:workbench.action.addRootFolder">Add workspace folder...</a></li>
+                                  </ul>
+                                </div>
+                                <div class="section recent">
+                                  <h2 class="caption">Recent</h2>
+                                  <ul class="list">
+                                    <!-- Filled programmatically -->
+                                    <li><a title="terminal" aria-label="Open folder terminal with path C:\" href="javascript:void(0)">terminal</a><span class="path detail" title="terminal">C:\</span></li>
+                                    <li class="moreRecent"><a href="command:workbench.action.openRecent">More...</a><span class="path detail if_shortcut" data-command="workbench.action.openRecent">(<span class="shortcut" data-command="workbench.action.openRecent">Ctrl+R</span>)</span>
+                                    </li>
+                                  </ul>
+                                  <p class="none detail">No recent folders</p>
+                                </div>
+                                <div class="section help">
+                                  <h2 class="caption">Help</h2>
+                                  <ul>
+                                    <li class="keybindingsReferenceLink"><a href="command:workbench.action.keybindingsReference">Printable keyboard cheatsheet</a></li>
+                                    <li><a href="command:workbench.action.openIntroductoryVideosUrl">Introductory videos</a></li>
+                                    <li><a href="command:workbench.action.openTipsAndTricksUrl">Tips and Tricks</a></li>
+                                    <li><a href="command:workbench.action.openDocumentationUrl">Product documentation</a></li>
+                                    <li><a href="https://github.com/Microsoft/vscode">GitHub repository</a></li>
+                                    <li><a href="http://stackoverflow.com/questions/tagged/vscode?sort=votes&amp;pageSize=50">Stack Overflow</a></li>
+                                  </ul>
+                                </div>
+                                <p class="showOnStartup"><input type="checkbox" id="showOnStartup" checked="checked"> <label class="caption" for="showOnStartup">Show welcome page on startup</label></p>
+                              </div>
+                              <div class="commands">
+                                <div class="section customize">
+                                  <h2 class="caption">Customize</h2>
+                                  <ul>
+                                    <li class="showLanguageExtensions"><button role="group" data-href="command:workbench.extensions.action.showLanguageExtensions"><h3 class="caption">Tools and languages</h3> <span class="detail">Install support for <span class="extensionPackList"><a title="Install additional support for JavaScript" class="installExtension" data-extension="dbaeumer.vscode-eslint" href="javascript:void(0)">JavaScript</a><span title="JavaScript support is already installed" class="enabledExtension" data-extension="dbaeumer.vscode-eslint">JavaScript</span>, <a title="Install additional support for TypeScript" class="installExtension" data-extension="eg2.tslint" href="javascript:void(0)">TypeScript</a><span title="TypeScript support is already installed" class="enabledExtension" data-extension="eg2.tslint">TypeScript</span>, <a title="Install additional support for Python" class="installExtension" data-extension="ms-python.python" href="javascript:void(0)">Python</a><span title="Python support is already installed" class="enabledExtension" data-extension="ms-python.python">Python</span>, <a title="Install additional support for PHP" class="installExtension" data-extension="felixfbecker.php-pack" href="javascript:void(0)">PHP</a><span title="PHP support is already installed" class="enabledExtension" data-extension="felixfbecker.php-pack">PHP</span>, <a title="Show Azure extensions" href="command:workbench.extensions.action.showAzureExtensions">Azure</a>, <a title="Install additional support for Docker" class="installExtension" data-extension="PeterJausovec.vscode-docker" href="javascript:void(0)">Docker</a><span title="Docker support is already installed" class="enabledExtension" data-extension="PeterJausovec.vscode-docker">Docker</span></span> and <a href="command:workbench.extensions.action.showLanguageExtensions">more</a>
+						</span></button></li>
+                                    <li class="showRecommendedKeymapExtensions"><button role="group" data-href="command:workbench.extensions.action.showRecommendedKeymapExtensions"><h3 class="caption">Install keyboard shortcuts</h3> <span class="detail">Install the keyboard shortcuts of <span class="keymapList"><a title="Install Vim keymap" class="installExtension" data-extension="vscodevim.vim" href="javascript:void(0)">Vim</a><span title="Vim keymap is already installed" class="enabledExtension" data-extension="vscodevim.vim">Vim</span>, <a title="Install Sublime keymap" class="installExtension" data-extension="ms-vscode.sublime-keybindings" href="javascript:void(0)">Sublime</a><span title="Sublime keymap is already installed" class="enabledExtension" data-extension="ms-vscode.sublime-keybindings">Sublime</span>, <a title="Install Atom keymap" class="installExtension" data-extension="ms-vscode.atom-keybindings" href="javascript:void(0)">Atom</a><span title="Atom keymap is already installed" class="enabledExtension" data-extension="ms-vscode.atom-keybindings">Atom</span></span> and <a href="command:workbench.extensions.action.showRecommendedKeymapExtensions">others</a>
+						</span></button></li>
+                                    <li class="selectTheme"><button data-href="command:workbench.action.selectTheme"><h3 class="caption">Color theme</h3> <span class="detail">Make the editor and your code look the way you love</span></button></li>
+                                  </ul>
+                                </div>
+                                <div class="section learn">
+                                  <h2 class="caption">Learn</h2>
+                                  <ul>
+                                    <li class="showCommands"><button data-href="command:workbench.action.showCommands"><h3 class="caption">Find and run all commands</h3> <span class="detail">Rapidly access and search commands from the Command Palette (<span class="shortcut" data-command="workbench.action.showCommands">Ctrl+Shift+P</span>)</span></button></li>
+                                    <li class="showInterfaceOverview"><button data-href="command:workbench.action.showInterfaceOverview"><h3 class="caption">Interface overview</h3> <span class="detail">Get a visual overlay highlighting the major components of the UI</span></button></li>
+                                    <li class="showInteractivePlayground"><button data-href="command:workbench.action.showInteractivePlayground"><h3 class="caption">Interactive playground</h3> <span class="detail">Try essential editor features out in a short walkthrough</span></button></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute; width: 721px; height: 10px; left: 0px; bottom: 0px;">
+                        <div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; will-change: transform; width: 721px;"></div>
+                      </div>
+                      <div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute; width: 10px; height: 760px; right: 0px; top: 0px;">
+                        <div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; will-change: transform; height: 760px;"></div>
+                      </div>
+                      <div class="shadow"></div>
+                      <div class="shadow"></div>
+                      <div class="shadow top-left-corner"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="monaco-sash vertical builder-hidden" aria-hidden="true" style="width: 5px; left: 728.5px; top: 0px; height: 795px;"></div>
+              <div class="one-editor-silo editor-two builder-hidden" aria-hidden="true" style="background-color: rgb(30, 30, 30); border-left-color: rgb(68, 68, 68); border-top-color: rgb(68, 68, 68); height: 795px; top: 0px; left: 731px; position: absolute;">
+                <div class="container" data-keybinding-context="2">
+                  <div class="title tabs show-file-icons empty" style="background-color: rgb(37, 37, 38);">
+                    <div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;">
+                      <div role="tablist" class="tabs-container" style="overflow: hidden;"></div>
+                      <div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute;">
+                        <div class="slider" style="position: absolute; top: 0px; left: 0px; height: 3px; will-change: transform;"></div>
+                      </div>
+                      <div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute;">
+                        <div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; will-change: transform;"></div>
+                      </div>
+                    </div>
+                    <div class="editor-actions">
+                      <div class="monaco-toolbar">
+                        <div class="monaco-action-bar animated">
+                          <ul class="actions-container" role="toolbar" aria-label="Editor actions"></ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="progress-container builder-hidden" aria-hidden="true">
+                    <div class="progress-bit" style="background-color: rgb(14, 112, 192);"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="monaco-sash vertical builder-hidden" aria-hidden="true" style="width: 5px; top: 0px; height: 795px;"></div>
+              <div class="one-editor-silo editor-three builder-hidden" aria-hidden="true" style="background-color: rgb(30, 30, 30); border-left-color: rgb(68, 68, 68); border-top-color: rgb(68, 68, 68); height: 795px;">
+                <div class="container" data-keybinding-context="3">
+                  <div class="title tabs show-file-icons empty" style="background-color: rgb(37, 37, 38);">
+                    <div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;">
+                      <div role="tablist" class="tabs-container" style="overflow: hidden;"></div>
+                      <div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute;">
+                        <div class="slider" style="position: absolute; top: 0px; left: 0px; height: 3px; will-change: transform;"></div>
+                      </div>
+                      <div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute;">
+                        <div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; will-change: transform;"></div>
+                      </div>
+                    </div>
+                    <div class="editor-actions">
+                      <div class="monaco-toolbar">
+                        <div class="monaco-action-bar animated">
+                          <ul class="actions-container" role="toolbar" aria-label="Editor actions"></ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="progress-container builder-hidden" aria-hidden="true">
+                    <div class="progress-bit" style="background-color: rgb(14, 112, 192);"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="part panel bottom" id="workbench.parts.panel" role="complementary" style="background-color: rgb(30, 30, 30); border-left-color: rgba(128, 128, 128, 0.35); width: 0px; height: 0px; top: 795px; right: 0px; bottom: 22px; left: 220px; position: absolute;">
+            <div class="composite title" style="border-top-color: rgba(128, 128, 128, 0.35);">
+              <div class="composite-bar panel-switcher-container">
+                <div class="monaco-action-bar">
+                  <ul class="actions-container" role="toolbar" aria-label="Active View Switcher"></ul>
+                </div>
+              </div>
+              <div class="title-actions">
+                <div class="monaco-toolbar">
+                  <div class="monaco-action-bar animated">
+                    <ul class="actions-container" role="toolbar"></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <div class="progress-container builder-hidden" aria-hidden="true">
+                <div class="progress-bit" style="background-color: rgb(14, 112, 192);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="part statusbar" id="workbench.parts.statusbar" role="contentinfo" style="color: rgb(255, 255, 255); background-color: rgb(104, 33, 122); top: 795px; position: absolute;" aria-hidden="false">
+            <div class="statusbar-item right">
+              <div class="dropdown send-feedback" title="Tweet Feedback">
+                <div class="dropdown-label send-feedback mask-icon" style="background-color: rgb(255, 255, 255);"></div>
+              </div>
+            </div>
+            <div class="statusbar-item right">
+              <div class="profileExtHost-statusbar-item" title="Click to stop profiling." hidden="">
+                <a>
+                  <div class="icon"></div><span class="label">Profiling Extension Host</span></a>
+              </div>
+            </div>
+            <div class="statusbar-item right">
+              <div class="editor-statusbar-item"><a class="editor-status-tabfocusmode status-bar-info" title="Disable Accessibility Mode" style="display: none;">Tab Moves Focus</a><a class="editor-status-screenreadermode status-bar-info" title="If you are not using a Screen Reader, please change the setting `editor.accessibilitySupport` to &quot;off&quot;."
+                  style="display: none;">Screen Reader Optimized</a><a class="editor-status-selection" title="Go to Line" style="display: none;"></a><a class="editor-status-indentation" title="Indentation" style="display: none;"></a><a class="editor-status-encoding"
+                  title="Select Encoding" style="display: none;"></a><a class="editor-status-eol" title="Select End of Line Sequence" style="display: none;"></a><a class="editor-status-mode" title="Select Language Mode" style="display: none;"></a>
+                <span
+                  class="editor-status-metadata" title="File Information" style="display: none;"></span>
+              </div>
+            </div>
+            <div class="statusbar-item left">
+              <div class="task-statusbar-item" title="Problems">
+                <a class="task-statusbar-item-label">
+                  <div class="task-statusbar-item-label-error mask-icon" style="background-color: rgb(255, 255, 255);"></div>
+                  <div class="task-statusbar-item-label-counter">0</div>
+                  <div class="task-statusbar-item-label-warning mask-icon" style="background-color: rgb(255, 255, 255);"></div>
+                  <div class="task-statusbar-item-label-counter">0</div>
+                  <div class="task-statusbar-item-label-info mask-icon builder-hidden" aria-hidden="true" style="background-color: rgb(255, 255, 255);"></div>
+                  <div class="task-statusbar-item-label-counter builder-hidden" aria-hidden="true"></div>
+                </a>
+                <div class="task-statusbar-item-building builder-hidden" aria-hidden="true">Building...</div>
+              </div>
+            </div>
+            <div class="statusbar-item left">
+              <a class="task-statusbar-runningItem builder-hidden" aria-hidden="true">
+                <div class="task-statusbar-runningItem-label" title="Show Running Tasks"></div>
+              </a>
+            </div>
+            <div class="statusbar-item left"></div>
+            <div class="statusbar-item left progress" style="display: none;"></div>
+            <div class="statusbar-item right statusbar-entry"><a title="Toggle Integrated Terminal"> <span class="octicon octicon-terminal "></span> </a></div>
+          </div>
+          <div class="monaco-sash vertical" style="width: 5px; left: 217.5px; top: 0px; height: 795px;"></div>
+          <div class="monaco-sash vertical builder-hidden" style="width: 5px;" aria-hidden="true"></div>
+          <div class="monaco-sash horizontal" style="height: 4px; top: 795px; left: 220px; width: 731px;" aria-hidden="false"></div>
+        </div>
+      </div>
+    </div>
+    <div class="global-message-list" style="top: 0px; background-color: rgb(51, 51, 51); color: rgb(238, 238, 238); box-shadow: rgb(0, 0, 0) 0px 5px 8px;">
+      <ul class="message-list"></ul>
+    </div>
+  </div>
+  <div class="monaco-aria-container">
+    <div class="monaco-alert" role="alert" aria-atomic="true" style="visibility: visible;">Info: Code - Insiders for 64-bit Windows is now available!</div>
+    <div class="monaco-status" role="status" aria-atomic="true"></div>
+  </div>
+  <div class="context-view builder-hidden" aria-hidden="true"></div>
+</body>
+
+</html>
