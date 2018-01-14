@@ -1,0 +1,26 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: LHLiWFjn4fwnkYbqjPU1cXWczZNVo
+ fYl76PkV4Hjhm4=
+SHA-256-Digest-Manifest: 0UCEBmkqcj9+Yr3VKOnFMPPsRjjYTOopsjiQ8VPnPNA=
+Created-By: 1.8.0_131 (Oracle Corporation)
+
+Name: epl-v10.html
+SHA-256-Digest: 8GSw4aNBim+4CHFc1TYSYQy3Ei4T2BVP57HxmJUvTBs=
+
+Name: feature.xml
+SHA-256-Digest: 4zmlA3zKFLbFYHabl50hKWnk+7+T+VvXFrU6skt3TFI=
+
+Name: META-INF/maven/org.eclipse.orion.feature/org.eclipse.orion.serve
+ r.jetty.feature/pom.xml
+SHA-256-Digest: l6nrdY+uL+VM/yFqT9kw5eyn0CVJUkbvQwGu3zVXF/M=
+
+Name: META-INF/maven/org.eclipse.orion.feature/org.eclipse.orion.serve
+ r.jetty.feature/pom.properties
+SHA-256-Digest: lgBNXe1xNLPkVv/S4m3TICAAHQi5UK68B32w+NPxIoM=
+
+Name: feature.properties
+SHA-256-Digest: 3aEWo2cQ2/tEI4i8z1t8Vi7tNfAc00WtND50KvLpx0M=
+
+Name: license.html
+SHA-256-Digest: gb5ZzrbOyFArzDLUIG4huZV/GHHBYb0EtixuMKXnhqs=
+

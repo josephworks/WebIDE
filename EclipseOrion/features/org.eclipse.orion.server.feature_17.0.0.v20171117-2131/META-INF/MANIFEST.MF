@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Built-By: genie.orion
+Created-By: Apache Maven 3.0.5
+Build-Jdk: 1.8.0_131
+
+Name: META-INF/maven/org.eclipse.orion.feature/org.eclipse.orion.serve
+ r.feature/pom.properties
+SHA-256-Digest: sALEINcY8fBYuhh6dDJ63rZZu6lyujEg6i0e7qBCi+g=
+
+Name: META-INF/maven/org.eclipse.orion.feature/org.eclipse.orion.serve
+ r.feature/pom.xml
+SHA-256-Digest: npbEByXmY7jYSgfbNbC/YjyyqRXRtmZ3ITC+1wy9kSQ=
+
+Name: epl-v10.html
+SHA-256-Digest: mpbQ2vmKpvtKpTDTmcdCxmEhsL2uSh9/+iLSE14d9/0=
+
+Name: feature.xml
+SHA-256-Digest: xjVwv7fiCqy3XYG6cOmmzBpJu+1J0IBBibCY8n5lFd4=
+
+Name: feature.properties
+SHA-256-Digest: vdhuIbbtaBaJcYKlFk4QhgCrxlZ9sHDv5t3W9yxKr7w=
+
+Name: license.html
+SHA-256-Digest: X315zLynvdLZ4DaYSopgxruQUUEadA3FOPNviC+YO24=
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.orion.server.authentication.feature"
+      label="%featureName"
+      version="17.0.0.v20171004-1928"
+      provider-name="%providerName"
+      plugin="org.eclipse.orion.server.authentication">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <requires>
+      <import feature="org.eclipse.orion.server.feature" version="13.0.0.qualifier"/>
+   </requires>
+
+   <plugin
+         id="org.cyberneko.html"
+         download-size="131"
+         install-size="268"
+         version="1.9.14.v201105210654"/>
+
+   <plugin
+         id="org.eclipse.orion.server.authentication"
+         download-size="51"
+         install-size="92"
+         version="1.0.0.v20170601-2114"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.oltu.oauth2.client"
+         download-size="34"
+         install-size="61"
+         version="1.0.0.v20150306-0038"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.oltu.oauth2.common"
+         download-size="57"
+         install-size="100"
+         version="1.0.0.v20150306-0038"
+         unpack="false"/>
+
+</feature>
