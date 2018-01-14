@@ -10,6 +10,8 @@ More - Just an addition to the Navigator bar above
 
 Page Navigator done with https://www.tablesgenerator.com/markdown_tables
 
+Blank lines removed with - http://textmechanic.com/text-tools/basic-text-tools/remove-empty-lines/
+
 Directory of C:\Users\smart\Documents\GitHub\WebIDE\docs
 
 204            CODENVY.md
