@@ -5,3 +5,5 @@
 |                   |                   |                     |                     |                       |                 | You are here!     |                 |
 
 ---
+
+WebIDE is a portable IDE written in html.
