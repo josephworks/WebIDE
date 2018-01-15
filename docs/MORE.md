@@ -15,9 +15,15 @@ Blank lines removed with - http://textmechanic.com/text-tools/basic-text-tools/r
 Directory of C:\Users\smart\Documents\GitHub\WebIDE\docs
 
 204            CODENVY.md
+
 225            MORE.md
+
 175            PLAIN.md
+
 168            README.md
+
 192            VSCODE.md
+
 25             _config.yml
+
 6 File(s)      989 bytes
