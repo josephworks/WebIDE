@@ -1,30 +1,78 @@
-<!doctype=html>
+<!DOCTYPE html>
+<html>
+
 <head>
-  <title>WebIDE - Home</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <meta charset="utf-8">
-  <meta name="description" content="WebIDE is a portable IDE written in html.">
-  <meta name="viewport" content="width=device-width">
+  <title="WebIDE - Codenvy">
+    <style>
+      body {
+        margin: 0;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 25%;
+        background-color: #f1f1f1;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+      }
+
+      li a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+
+      li a.active {
+        background-color: lightBlue;
+        color: white;
+      }
+
+      li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+        .slidecontainer {
+          width: 100%;
+        }
+      }
+    </style>
 </head>
 
 <body>
-  <header>
-    <center>
-      <img height="150" src="https://raw.githubusercontent.com/josephworks/WebIDE/master/WebIDElogo.png">
-      <br>
-      <a href="/index.html" title="You are here">Home</a>
-      <a href="/plain.html">| Plain</a>
-      <a href="/vscode.html">| VSCode</a>
-      <a href="/more.html">| More</a>
-      <a href="/about.html">| About</a>
-    </center>
-  </header>
-<hr>
-<center><h1>WebIDE</h1></center>
-<hr />
-<p>&nbsp;</p>
 
-<footer>
-      Created by JosephWorks 2018
-</footer>
+  <ul>
+    <li>
+      <center><img height="100" src="https://raw.githubusercontent.com/josephworks/WebIDE/master/WebIDElogo.png"></center>
+      <li><a class="active" href="/index.html">Home</a></li>
+      <li><a href="/plain.html">Plain</a></li>
+      <li><a href="/vscode.html">VSCode</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/more.html">More</a></li>
+      <li><br>
+      <li><p>Value: <span id="myRange"></span></p>
+  </ul>
+
+  <div style="margin-left:25%;padding:1px 16px;height:660px;">
+    <header>
+      <center>
+        <h1>WebIDE - Codenvy</h1></center>
+    </header>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="4000" value="1120" class="slider" id="myRange">
+    </div>
+    <div style="border:2px solid #666; border-radius:11px; padding:20px;">
+      <iframe height="650" width="id=" demo "" src="http://codenvy.io" frameborder="0" scrolling="no" onload="resizeIframe(this)">
+    </div>
+    <footer>
+      <center>
+        <h3>Created by JosephWorks 2018</h3>
+      </center>
+    </footer>
+  </div>
+
 </body>
+
+</html>
