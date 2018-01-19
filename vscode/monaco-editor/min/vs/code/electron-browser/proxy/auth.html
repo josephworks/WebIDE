@@ -95,22 +95,34 @@
 			const $message = document.getElementById('message');
 
 			function submit() {
-				c({ username: $username.value, password: $password.value });
+				c({
+					username: $username.value,
+					password: $password.value
+				});
 				return false;
 			};
 
 			function cancel() {
-				c({ username: '', password: '' });
+				c({
+					username: '',
+					password: ''
+				});
 				return false;
 			};
 
 			$form.addEventListener('submit', submit);
 			$cancel.addEventListener('click', cancel);
 
-			document.body.addEventListener('keydown', function (e) {
+			document.body.addEventListener('keydown', function(e) {
 				switch (e.keyCode) {
-					case 27: e.preventDefault(); e.stopPropagation(); return cancel();
-					case 13: e.preventDefault(); e.stopPropagation(); return submit();
+					case 27:
+						e.preventDefault();
+						e.stopPropagation();
+						return cancel();
+					case 13:
+						e.preventDefault();
+						e.stopPropagation();
+						return submit();
 				}
 			});
 
@@ -119,7 +131,6 @@
 			$username.focus();
 		});
 	}
-
 </script>
 
 </html>
