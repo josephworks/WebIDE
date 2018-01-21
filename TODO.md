@@ -4,3 +4,4 @@
 2. update more.html
 3. update index.html
 4. update about.html
+5. update head.html
