@@ -8,6 +8,8 @@
 
 More - Just an addition to the Navigator bar above
 
+Plain.html edited from - https://ihs.uk.to/editor/
+
 Page Navigator done with https://www.tablesgenerator.com/markdown_tables
 
 Blank lines removed with - http://textmechanic.com/text-tools/basic-text-tools/remove-empty-lines/
