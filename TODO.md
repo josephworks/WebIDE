@@ -5,3 +5,5 @@
 3. update index.html
 4. update about.html
 5. update head.html
+6. recreate vscode
+7. Work on docs
