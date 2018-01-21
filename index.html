@@ -29,11 +29,13 @@
       li a.active {
         background-color: lightBlue;
         color: white;
+        animation: write-command 5s both;
       }
 
       li a:hover:not(.active) {
         background-color: #555;
         color: white;
+        animation: write-command 5s both;
         .slidecontainer {
           width: 100%;
         }
@@ -46,6 +48,10 @@
       h2 {
         color: Green;
         background: Black;
+      }
+
+      .write {
+        animation: write-command 5s both;
       }
 
       .window {
@@ -76,6 +82,16 @@
           line-height: 0;
           letter-spacing: -12px;
         }
+      }
+
+      .warn {
+        color: Yellow;
+        font-family: monospace;
+        font-size: 16px;
+        width: 0%;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: write-command 5s both;
       }
 
       .terminal {
@@ -190,7 +206,7 @@
       <li><a href="/plain.html">Plain</a></li>
       <li><a href="/vscode.html">VSCode</a></li>
       <li><a href="/codenvy.html">Codenvy</a></li>
-      <li><a href="/dirigible.html">Dirigible</li>
+      <li><a href="/dirigible.html">Dirigible</a></li>
       <li><a href="/about.html">About</a></li>
       <li><a href="/more.html">More</a></li>
   </ul>
@@ -205,18 +221,13 @@
       <div class="terminal">
         <p class="command">Terminal> git clone https://github.com/josephworks/WebIDE.git</p>
         <p class="log">
-        Cloning into 'WebIDE'...
-        <br />
-        remote: Counting objects: 2764, done.
-        <br />
-        remote: Compressing objects: 100% (403/403), done.
-        <br />
-        remote: Total 2764 (delta 316), reused 484 (delta 211), pack-reused 2100
-        <br />
-        Receiving objects: 100% (2764/2764), 132.34 MiB | 4.57 MiB/s, done.
-        <br />
-        Resolving deltas: 100% (967/967), done.
-        </span>
+          Cloning into 'WebIDE'...
+          <br /> remote: Counting objects: 2764, done.
+          <br /> remote: Compressing objects: 100% (403/403), done.
+          <br /> remote: Total 2764 (delta 316), reused 484 (delta 211), pack-reused 2100
+          <br /> Receiving objects: 100% (2764/2764), 132.34 MiB | 4.57 MiB/s, done.
+          <br /> Resolving deltas: 100% (967/967), done.
+          </span>
         </p>
         <p class="command">Terminal> cp -r WebIDE /var/www</p>
         <p class="log">Done!</p>
@@ -225,15 +236,20 @@
         <p class="command">Terminal> mv /var/www/html /var/www/oldhtml</p>
         <p class="log">Done!</p>
         <p class="command">Terminal> mv /var/www/WebIDE /var/www/html</p>
-        <p class="log">Done!</p>
-        <p class="log">Now go to %your ip%</p>
+        <p class="log">
+          Done!
+          <br /> Now go to localhost or 127.0.0.1 in your browser!
+          <br /> Warn: If you had old files in /var/www/html they would be in /var/www/oldhtml
+        </p>
+        <p class="warn">To undo these changes run this command:</p>
+        <p class="warn">Terminal> rm -rf /var/www/html && mv mv /var/www/oldhtml /var/www/html</p>
       </div>
     </div>
 
     <h3>WebIDE is an IDE written HTML that contains multiple other IDE's.</h3>
     <footer>
       <center>
-        <h3>Created by JosephWorks 2018</h3>
+        <h3 class="write">Created by JosephWorks 2018</h3>
       </center>
     </footer>
   </div>
