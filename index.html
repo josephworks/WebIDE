@@ -47,6 +47,138 @@
         color: Green;
         background: Black;
       }
+
+      .window {
+        border-radius: 3px;
+        background: #222;
+        color: #fff;
+        overflow: hidden;
+        position: relative;
+        margin: 0 auto;
+        width: 70%;
+
+        &:before {
+          content: ' ';
+          display: block;
+          height: 48px;
+          background: #C6C6C6;
+        }
+
+        &:after {
+          content: '. . .';
+          position: absolute;
+          left: 12px;
+          right: 0;
+          top: -3px;
+          font-family: "Times New Roman", Times, serif;
+          font-size: 96px;
+          color: #fff;
+          line-height: 0;
+          letter-spacing: -12px;
+        }
+      }
+
+      .terminal {
+        margin: 20px;
+        font-family: monospace;
+        font-size: 16px;
+        color: #22da26;
+
+        .command {
+          width: 0%;
+          white-space: nowrap;
+          overflow: hidden;
+          animation: write-command 5s both;
+
+          &:before {
+            content: '$ ';
+            color: #22da26;
+          }
+        }
+
+        .log {
+          white-space: nowrap;
+          overflow: hidden;
+          animation: write-log 5s both;
+        }
+
+        p:nth-child(2) {
+          animation-delay: 2s;
+        }
+
+        p:nth-child(3) {
+          animation-delay: 8s;
+        }
+      }
+
+      @keyframes write-command {
+        0% {
+          width: 0%;
+        }
+
+
+        100% {
+          width: 100%;
+        }
+      }
+
+      @keyframes write-log {
+        0% {
+          height: 0;
+        }
+
+        16% {
+          height: 0;
+        }
+
+        17% {
+          height: 18px;
+        }
+
+        33% {
+          height: 18px;
+        }
+
+        34% {
+          height: 37px;
+        }
+
+        51% {
+          height: 37px;
+        }
+
+        52% {
+          height: 55px;
+        }
+
+        69% {
+          height: 55px;
+        }
+
+        70% {
+          height: 74px;
+        }
+
+        87% {
+          height: 74px;
+        }
+
+        88% {
+          height: 92px;
+        }
+
+        88% {
+          height: 92px;
+        }
+
+        99% {
+          height: 92px;
+        }
+
+        100% {
+          height: 110px;
+        }
+      }
     </style>
 </head>
 
@@ -68,9 +200,35 @@
         <h1>WebIDE</h1>
       </center>
     </header>
-    <div style="border:2px solid #100; border-radius:5px; padding:0.1px; background-color:Black;">
-      <h2><strong>Terminal> Welcome to WebIDE!</strong></h2>
+    <br />
+    <div class="window">
+      <div class="terminal">
+        <p class="command">Terminal> git clone https://github.com/josephworks/WebIDE.git</p>
+        <p class="log">
+        Cloning into 'WebIDE'...
+        <br />
+        remote: Counting objects: 2764, done.
+        <br />
+        remote: Compressing objects: 100% (403/403), done.
+        <br />
+        remote: Total 2764 (delta 316), reused 484 (delta 211), pack-reused 2100
+        <br />
+        Receiving objects: 100% (2764/2764), 132.34 MiB | 4.57 MiB/s, done.
+        <br />
+        Resolving deltas: 100% (967/967), done.
+        </span>
+        </p>
+        <p class="command">Terminal> cp -r WebIDE /var/www</p>
+        <p class="log">Done!</p>
+        <p class="command">Terminal> cd /var/www</p>
+        <p class="log">Done!</p>
+        <p class="command">Terminal> mv /var/www/html /var/www/oldhtml</p>
+        <p class="log">Done!</p>
+        <p class="command">Terminal> mv /var/www/WebIDE /var/www/html</p>
+        <p class="log">Now go to %your ip%</p>
+      </div>
     </div>
+
     <h3>WebIDE is an IDE written HTML that contains multiple other IDE's.</h3>
     <footer>
       <center>
