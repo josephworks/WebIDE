@@ -7,3 +7,4 @@
 5. update head.html
 6. recreate vscode
 7. Work on docs
+8. Work on getwebide.sh
