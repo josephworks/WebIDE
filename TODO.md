@@ -8,3 +8,4 @@
 6. recreate vscode
 7. Work on docs
 8. Work on getwebide.sh
+9. Add depends to head.html
