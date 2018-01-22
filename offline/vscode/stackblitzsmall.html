@@ -1,0 +1,1175 @@
+<html>
+
+<head>
+
+  <head>
+    <script type="text/javascript" src="https://bam.nr-data.net/1/6292180984?a=57763841&amp;v=1071.385e752&amp;to=cw5XTUYJVV5WRhsSQlINUFobDlZfVg%3D%3D&amp;rst=3180&amp;ref=https://stackblitz.com/&amp;ap=22&amp;be=857&amp;fe=3048&amp;dc=1225&amp;perf=%7B%22timing%22:%7B%22of%22:1515886819796,%22n%22:0,%22u%22:515,%22ue%22:515,%22f%22:3,%22dn%22:5,%22dne%22:108,%22c%22:108,%22s%22:139,%22ce%22:332,%22rq%22:334,%22rp%22:504,%22rpe%22:514,%22dl%22:574,%22di%22:1164,%22ds%22:1164,%22de%22:1287,%22dc%22:3048,%22l%22:3048,%22le%22:3070%7D,%22navigation%22:%7B%7D%7D&amp;jsonp=NREUM.setToken"></script>
+    <script src="https://js-agent.newrelic.com/nr-1071.min.js"></script>
+    <script type="text/javascript" async="" src="https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script>
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async="" src="https://cdn.segment.com/analytics.js/v1/ta1kDK49qdEDEfd8KYxI37mW0GPkLKn1/analytics.min.js"></script>
+    <script type="text/javascript">
+      window.NREUM || (NREUM = {});
+      NREUM.info = {
+        "beacon": "bam.nr-data.net",
+        "errorBeacon": "bam.nr-data.net",
+        "licenseKey": "6292180984",
+        "applicationID": "57763841",
+        "transactionName": "cw5XTUYJVV5WRhsSQlINUFobDlZfVg==",
+        "queueTime": 0,
+        "applicationTime": 22,
+        "agent": ""
+      }
+    </script>
+    <script type="text/javascript">
+      window.NREUM || (NREUM = {}), __nr_require = function(e, t, n) {
+        function r(n) {
+          if (!t[n]) {
+            var o = t[n] = {
+              exports: {}
+            };
+            e[n][0].call(o.exports, function(t) {
+              var o = e[n][1][t];
+              return r(o || t)
+            }, o, o.exports)
+          }
+          return t[n].exports
+        }
+        if ("function" == typeof __nr_require) return __nr_require;
+        for (var o = 0; o < n.length; o++) r(n[o]);
+        return r
+      }({
+        1: [function(e, t, n) {
+          function r() {}
+
+          function o(e, t, n) {
+            return function() {
+              return i(e, [f.now()].concat(u(arguments)), t ? null : this, n), t ? void 0 : this
+            }
+          }
+          var i = e("handle"),
+            a = e(2),
+            u = e(3),
+            c = e("ee").get("tracer"),
+            f = e("loader"),
+            s = NREUM;
+          "undefined" == typeof window.newrelic && (newrelic = s);
+          var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+            d = "api-",
+            l = d + "ixn-";
+          a(p, function(e, t) {
+            s[t] = o(d + t, !0, "api")
+          }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), t.exports = newrelic, s.interaction = function() {
+            return (new r).get()
+          };
+          var m = r.prototype = {
+            createTracer: function(e, t) {
+              var n = {},
+                r = this,
+                o = "function" == typeof t;
+              return i(l + "tracer", [f.now(), e, n], r),
+                function() {
+                  if (c.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], n), o) try {
+                    return t.apply(this, arguments)
+                  } catch (e) {
+                    throw c.emit("fn-err", [arguments, this, e], n), e
+                  } finally {
+                    c.emit("fn-end", [f.now()], n)
+                  }
+                }
+            }
+          };
+          a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(e, t) {
+            m[t] = o(l + t)
+          }), newrelic.noticeError = function(e) {
+            "string" == typeof e && (e = new Error(e)), i("err", [e, f.now()])
+          }
+        }, {}],
+        2: [function(e, t, n) {
+          function r(e, t) {
+            var n = [],
+              r = "",
+              i = 0;
+            for (r in e) o.call(e, r) && (n[i] = t(r, e[r]), i += 1);
+            return n
+          }
+          var o = Object.prototype.hasOwnProperty;
+          t.exports = r
+        }, {}],
+        3: [function(e, t, n) {
+          function r(e, t, n) {
+            t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0);
+            for (var r = -1, o = n - t || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = e[t + r];
+            return i
+          }
+          t.exports = r
+        }, {}],
+        4: [function(e, t, n) {
+          t.exports = {
+            exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart
+          }
+        }, {}],
+        ee: [function(e, t, n) {
+          function r() {}
+
+          function o(e) {
+            function t(e) {
+              return e && e instanceof r ? e : e ? c(e, u, i) : i()
+            }
+
+            function n(n, r, o, i) {
+              if (!d.aborted || i) {
+                e && e(n, r, o);
+                for (var a = t(o), u = m(n), c = u.length, f = 0; f < c; f++) u[f].apply(a, r);
+                var p = s[y[n]];
+                return p && p.push([b, n, r, a]), a
+              }
+            }
+
+            function l(e, t) {
+              v[e] = m(e).concat(t)
+            }
+
+            function m(e) {
+              return v[e] || []
+            }
+
+            function w(e) {
+              return p[e] = p[e] || o(n)
+            }
+
+            function g(e, t) {
+              f(e, function(e, n) {
+                t = t || "feature", y[n] = t, t in s || (s[t] = [])
+              })
+            }
+            var v = {},
+              y = {},
+              b = {
+                on: l,
+                emit: n,
+                get: w,
+                listeners: m,
+                context: t,
+                buffer: g,
+                abort: a,
+                aborted: !1
+              };
+            return b
+          }
+
+          function i() {
+            return new r
+          }
+
+          function a() {
+            (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
+          }
+          var u = "nr@context",
+            c = e("gos"),
+            f = e(2),
+            s = {},
+            p = {},
+            d = t.exports = o();
+          d.backlog = s
+        }, {}],
+        gos: [function(e, t, n) {
+          function r(e, t, n) {
+            if (o.call(e, t)) return e[t];
+            var r = n();
+            if (Object.defineProperty && Object.keys) try {
+              return Object.defineProperty(e, t, {
+                value: r,
+                writable: !0,
+                enumerable: !1
+              }), r
+            } catch (i) {}
+            return e[t] = r, r
+          }
+          var o = Object.prototype.hasOwnProperty;
+          t.exports = r
+        }, {}],
+        handle: [function(e, t, n) {
+          function r(e, t, n, r) {
+            o.buffer([e], r), o.emit(e, t, n)
+          }
+          var o = e("ee").get("handle");
+          t.exports = r, r.ee = o
+        }, {}],
+        id: [function(e, t, n) {
+          function r(e) {
+            var t = typeof e;
+            return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function() {
+              return o++
+            })
+          }
+          var o = 1,
+            i = "nr@id",
+            a = e("gos");
+          t.exports = r
+        }, {}],
+        loader: [function(e, t, n) {
+          function r() {
+            if (!x++) {
+              var e = h.info = NREUM.info,
+                t = d.getElementsByTagName("script")[0];
+              if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && t)) return s.abort();
+              f(y, function(t, n) {
+                e[t] || (e[t] = n)
+              }), c("mark", ["onload", a() + h.offset], null, "api");
+              var n = d.createElement("script");
+              n.src = "https://" + e.agent, t.parentNode.insertBefore(n, t)
+            }
+          }
+
+          function o() {
+            "complete" === d.readyState && i()
+          }
+
+          function i() {
+            c("mark", ["domContent", a() + h.offset], null, "api")
+          }
+
+          function a() {
+            return E.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - h.offset
+          }
+          var u = (new Date).getTime(),
+            c = e("handle"),
+            f = e(2),
+            s = e("ee"),
+            p = window,
+            d = p.document,
+            l = "addEventListener",
+            m = "attachEvent",
+            w = p.XMLHttpRequest,
+            g = w && w.prototype;
+          NREUM.o = {
+            ST: setTimeout,
+            SI: p.setImmediate,
+            CT: clearTimeout,
+            XHR: w,
+            REQ: p.Request,
+            EV: p.Event,
+            PR: p.Promise,
+            MO: p.MutationObserver
+          };
+          var v = "" + location,
+            y = {
+              beacon: "bam.nr-data.net",
+              errorBeacon: "bam.nr-data.net",
+              agent: "js-agent.newrelic.com/nr-1071.min.js"
+            },
+            b = w && g && g[l] && !/CriOS/.test(navigator.userAgent),
+            h = t.exports = {
+              offset: u,
+              now: a,
+              origin: v,
+              features: {},
+              xhrWrappable: b
+            };
+          e(1), d[l] ? (d[l]("DOMContentLoaded", i, !1), p[l]("load", r, !1)) : (d[m]("onreadystatechange", o), p[m]("onload", r)), c("mark", ["firstbyte", u], null, "api");
+          var x = 0,
+            E = e(4)
+        }, {}]
+      }, {}, ["loader"]);
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/introjs.min.css" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="https://c.staticblitz.com/assets/application-c15eaba9cc599561e6a7ab9fd8c1279abb3625b004a26a12acc8feb90037d1b7.css" data-turbolinks-track="reload">
+    <link rel="stylesheet" type="text/css" data-name="vs/editor/editor.main" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.10.0/min/vs/editor/editor.main.css">
+    <link rel="stylesheet" media="all" href="https://c.staticblitz.com/assets/packs/client-7b4ed548733c76af73844fde2e75fb8b.css" data-turbolinks-track="reload">
+    <script src="https://c.staticblitz.com/assets/application-fcc93c2ba85e60c4ddeb2ce13c2b81c6a5266991f94ea70e5fcdba78bd774121.js" data-turbolinks-track="reload"></script>
+    <script src="https://c.staticblitz.com/assets/packs/common-f516a2ebb1fb645eb26a.js" data-turbolinks-track="reload"></script>
+    <script src="https://c.staticblitz.com/assets/packs/client-7ab704a15f79579c22c4.js" data-turbolinks-track="reload"></script>
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.10.0/min/vs/loader.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.10.0/min/vs/editor/editor.main.js"></script>
+    <style type="text/css" media="screen"></style>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.10.0/min/vs/editor/editor.main.nls.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.10.0/min/vs/language/typescript/src/mode.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.10.0/min/vs/language/css/cssMode.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.10.0/min/vs/basic-languages/src/css.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.10.0/min/vs/language/html/htmlMode.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.10.0/min/vs/basic-languages/src/html.js"></script>
+    <style type="text/css" media="screen" class="monaco-colors">
+      .monaco-editor,
+      .monaco-editor-background,
+      .monaco-editor .inputarea.ime-input {
+        background-color: #1e1e1e;
+      }
+
+      .monaco-editor,
+      .monaco-editor .inputarea.ime-input {
+        color: #d4d4d4;
+      }
+
+      .monaco-editor .margin {
+        background-color: #1e1e1e;
+      }
+
+      .monaco-editor .rangeHighlight {
+        background-color: rgba(255, 255, 255, 0.04);
+      }
+
+      .vs-whitespace {
+        color: rgba(227, 228, 226, 0.16) !important;
+      }
+
+      .monaco-editor .bracket-match {
+        background-color: rgba(0, 100, 0, 0.1);
+      }
+
+      .monaco-editor .bracket-match {
+        border: 1px solid #888888;
+      }
+
+      .monaco-editor.vs .valueSetReplacement {
+        outline: solid 2px #888888;
+      }
+
+      .monaco-editor .colorpicker-widget {
+        background-color: #2d2d30;
+      }
+
+      .monaco-editor .colorpicker-widget {
+        border: 1px solid #454545;
+      }
+
+      .monaco-editor .colorpicker-header {
+        border-bottom: 1px solid #454545;
+      }
+
+      .monaco-editor .focused .selectionHighlight {
+        background-color: rgba(173, 214, 255, 0.15);
+      }
+
+      .monaco-editor .selectionHighlight {
+        background-color: rgba(173, 214, 255, 0.07);
+      }
+
+      .monaco-editor .wordHighlight {
+        background-color: rgba(87, 87, 87, 0.72);
+      }
+
+      .monaco-editor .wordHighlightStrong {
+        background-color: rgba(0, 73, 114, 0.72);
+      }
+
+      .monaco-editor .findOptionsWidget {
+        background-color: #2d2d30;
+      }
+
+      .monaco-editor .findOptionsWidget {
+        box-shadow: 0 2px 8px #000000;
+      }
+
+      .monaco-editor .view-overlays .current-line {
+        border: 2px solid #282828;
+      }
+
+      .monaco-editor .margin-view-overlays .current-line-margin {
+        border: 2px solid #282828;
+      }
+
+      .monaco-editor .lines-content .cigr {
+        background-color: #404040;
+      }
+
+      .monaco-editor .line-numbers {
+        color: #5a5a5a;
+      }
+
+      .monaco-editor .minimap-slider,
+      .monaco-editor .minimap-slider .minimap-slider-horizontal {
+        background: rgba(121, 121, 121, 0.2);
+      }
+
+      .monaco-editor .minimap-slider:hover,
+      .monaco-editor .minimap-slider:hover .minimap-slider-horizontal {
+        background: rgba(100, 100, 100, 0.35);
+      }
+
+      .monaco-editor .minimap-slider.active,
+      .monaco-editor .minimap-slider.active .minimap-slider-horizontal {
+        background: rgba(191, 191, 191, 0.2);
+      }
+
+      .monaco-editor .minimap-shadow-visible {
+        box-shadow: #000000 -6px 0 6px -6px inset;
+      }
+
+      .monaco-editor .view-ruler {
+        background-color: #5a5a5a;
+      }
+
+      .monaco-editor .scroll-decoration {
+        box-shadow: #000000 0 6px 6px -6px inset;
+      }
+
+      .monaco-editor .focused .selected-text {
+        background-color: #264f78;
+      }
+
+      .monaco-editor .selected-text {
+        background-color: #3a3d41;
+      }
+
+      .monaco-editor .cursor {
+        background-color: #aeafad;
+        border-color: #aeafad;
+        color: #515052;
+      }
+
+      .monaco-diff-editor .diff-review-line-number {
+        color: #5a5a5a;
+      }
+
+      .monaco-diff-editor .diff-review-shadow {
+        box-shadow: #000000 0 -6px 6px -6px inset;
+      }
+
+      .monaco-editor .redsquiggly {
+        background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23ff0000'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left;
+      }
+
+      .monaco-editor .greensquiggly {
+        background: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23008000'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left;
+      }
+
+      .monaco-editor .line-insert,
+      .monaco-editor .char-insert {
+        background-color: rgba(155, 185, 85, 0.2);
+      }
+
+      .monaco-diff-editor .line-insert,
+      .monaco-diff-editor .char-insert {
+        background-color: rgba(155, 185, 85, 0.2);
+      }
+
+      .monaco-editor .inline-added-margin-view-zone {
+        background-color: rgba(155, 185, 85, 0.2);
+      }
+
+      .monaco-editor .line-delete,
+      .monaco-editor .char-delete {
+        background-color: rgba(255, 0, 0, 0.2);
+      }
+
+      .monaco-diff-editor .line-delete,
+      .monaco-diff-editor .char-delete {
+        background-color: rgba(255, 0, 0, 0.2);
+      }
+
+      .monaco-editor .inline-deleted-margin-view-zone {
+        background-color: rgba(255, 0, 0, 0.2);
+      }
+
+      .monaco-diff-editor.side-by-side .editor.modified {
+        box-shadow: -6px 0 5px -5px #000000;
+      }
+
+      .monaco-editor .codelens-decoration {
+        color: #999999;
+      }
+
+      .monaco-editor .codelens-decoration>a:hover {
+        color: #4e94ce !important;
+      }
+
+      .monaco-editor .findMatch {
+        background-color: rgba(234, 92, 0, 0.33);
+      }
+
+      .monaco-editor .currentFindMatch {
+        background-color: #515c6a;
+      }
+
+      .monaco-editor .findScope {
+        background-color: rgba(58, 61, 65, 0.4);
+      }
+
+      .monaco-editor .find-widget {
+        background-color: #2d2d30;
+      }
+
+      .monaco-editor .find-widget {
+        box-shadow: 0 2px 8px #000000;
+      }
+
+      .monaco-editor .find-widget.no-results .matchesCount {
+        color: #f48771;
+      }
+
+      .monaco-editor .monaco-editor-overlaymessage .anchor {
+        border-top-color: #007acc;
+      }
+
+      .monaco-editor .monaco-editor-overlaymessage .message {
+        border: 1px solid #007acc;
+      }
+
+      .monaco-editor .monaco-editor-overlaymessage .message {
+        background-color: #063b49;
+      }
+
+      .monaco-editor .hoverHighlight {
+        background-color: rgba(38, 79, 120, 0.25);
+      }
+
+      .monaco-editor .monaco-editor-hover {
+        background-color: #2d2d30;
+      }
+
+      .monaco-editor .monaco-editor-hover {
+        border: 1px solid #454545;
+      }
+
+      .monaco-editor .monaco-editor-hover .hover-row:not(:first-child):not(:empty) {
+        border-top: 1px solid rgba(69, 69, 69, 0.5);
+      }
+
+      .monaco-editor .monaco-editor-hover a {
+        color: #4080d0;
+      }
+
+      .monaco-editor .monaco-editor-hover code {
+        background-color: rgba(10, 10, 10, 0.4);
+      }
+
+      .monaco-editor .detected-link-active {
+        color: #4e94ce !important;
+      }
+
+      .monaco-editor .parameter-hints-widget {
+        border: 1px solid #454545;
+      }
+
+      .monaco-editor .parameter-hints-widget.multiple .body {
+        border-left: 1px solid rgba(69, 69, 69, 0.5);
+      }
+
+      .monaco-editor .parameter-hints-widget .signature.has-docs {
+        border-bottom: 1px solid rgba(69, 69, 69, 0.5);
+      }
+
+      .monaco-editor .parameter-hints-widget {
+        background-color: #2d2d30;
+      }
+
+      .monaco-editor .suggest-widget:not(.frozen) .monaco-highlighted-label .highlight {
+        color: #0097fb;
+      }
+
+      .monaco-editor .suggest-widget {
+        color: #d4d4d4;
+      }
+
+      .monaco-editor .reference-zone-widget .ref-tree .referenceMatch {
+        background-color: rgba(234, 92, 0, 0.3);
+      }
+
+      .monaco-editor .reference-zone-widget .preview .reference-decoration {
+        background-color: rgba(255, 143, 0, 0.6);
+      }
+
+      .monaco-editor .reference-zone-widget .ref-tree {
+        background-color: #252526;
+      }
+
+      .monaco-editor .reference-zone-widget .ref-tree {
+        color: #bbbbbb;
+      }
+
+      .monaco-editor .reference-zone-widget .ref-tree .reference-file {
+        color: #ffffff;
+      }
+
+      .monaco-editor .reference-zone-widget .ref-tree .monaco-tree.focused .monaco-tree-rows>.monaco-tree-row.selected:not(.highlighted) {
+        background-color: rgba(51, 153, 255, 0.2);
+      }
+
+      .monaco-editor .reference-zone-widget .ref-tree .monaco-tree.focused .monaco-tree-rows>.monaco-tree-row.selected:not(.highlighted) {
+        color: #ffffff !important;
+      }
+
+      .monaco-editor .reference-zone-widget .preview .monaco-editor .monaco-editor-background,
+      .monaco-editor .reference-zone-widget .preview .monaco-editor .inputarea.ime-input {
+        background-color: #001f33;
+      }
+
+      .monaco-editor .reference-zone-widget .preview .monaco-editor .margin {
+        background-color: #001f33;
+      }
+
+      .monaco-editor .goto-definition-link {
+        color: #4e94ce !important;
+      }
+
+      .monaco-editor .accessibilityHelpWidget {
+        background-color: #2d2d30;
+      }
+
+      .monaco-editor .accessibilityHelpWidget {
+        box-shadow: 0 2px 8px #000000;
+      }
+
+      .monaco-editor .tokens-inspect-widget {
+        border: 1px solid #454545;
+      }
+
+      .monaco-editor .tokens-inspect-widget .tokens-inspect-separator {
+        background-color: #454545;
+      }
+
+      .monaco-editor .tokens-inspect-widget {
+        background-color: #2d2d30;
+      }
+
+      .mtk1 {
+        color: #d4d4d4;
+      }
+
+      .mtk2 {
+        color: #1e1e1e;
+      }
+
+      .mtk3 {
+        color: #cc6666;
+      }
+
+      .mtk4 {
+        color: #9cdcfe;
+      }
+
+      .mtk5 {
+        color: #ce9178;
+      }
+
+      .mtk6 {
+        color: #b5cea8;
+      }
+
+      .mtk7 {
+        color: #608b4e;
+      }
+
+      .mtk8 {
+        color: #569cd6;
+      }
+
+      .mtk9 {
+        color: #dcdcdc;
+      }
+
+      .mtk10 {
+        color: #808080;
+      }
+
+      .mtk11 {
+        color: #f44747;
+      }
+
+      .mtk12 {
+        color: #c586c0;
+      }
+
+      .mtk13 {
+        color: #a79873;
+      }
+
+      .mtk14 {
+        color: #dd6a6f;
+      }
+
+      .mtk15 {
+        color: #5bb498;
+      }
+
+      .mtk16 {
+        color: #909090;
+      }
+
+      .mtk17 {
+        color: #778899;
+      }
+
+      .mtk18 {
+        color: #ff00ff;
+      }
+
+      .mtk19 {
+        color: #b46695;
+      }
+
+      .mtk20 {
+        color: #ff0000;
+      }
+
+      .mtk21 {
+        color: #4f76ac;
+      }
+
+      .mtk22 {
+        color: #3dc9b0;
+      }
+
+      .mtk23 {
+        color: #74b0df;
+      }
+
+      .mtk24 {
+        color: #4864aa;
+      }
+
+      .mtki {
+        font-style: italic;
+      }
+
+      .mtkb {
+        font-weight: bold;
+      }
+
+      .mtku {
+        text-decoration: underline;
+      }
+    </style>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/npm/monaco-editor@0.10.0/min/vs/language/typescript/lib/typescriptServices.js"></script>
+    <script type="text/javascript">
+      window.NREUM || (NREUM = {});
+      NREUM.info = {
+        "beacon": "bam.nr-data.net",
+        "errorBeacon": "bam.nr-data.net",
+        "licenseKey": "6292180984",
+        "applicationID": "57763841",
+        "transactionName": "cw5XTUYJVV5WRhsSQlINUFobDlZfVg==",
+        "queueTime": 0,
+        "applicationTime": 20,
+        "agent": ""
+      }
+    </script>
+    <title>Online VS Code IDE for Modern Web Applications - StackBlitz</title>
+    <meta charset="utf-8">
+    <meta name="turbolinks-cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="action-cable-url" content="https://wss.stackblitz.com/cable">
+    <meta name="og:image" content="https://c.staticblitz.com/assets/icon-664493542621427cc8adae5e8f50d632f87aaa6ea1ce5b01e9a3d05b57940a9f.png">
+    <meta name="twitter:image" content="https://c.staticblitz.com/assets/icon-664493542621427cc8adae5e8f50d632f87aaa6ea1ce5b01e9a3d05b57940a9f.png">
+    <meta name="twitter:site" content="@StackBlitz">
+    <link rel="icon" type="image/png" href="https://c.staticblitz.com/assets/favicon-6a6da88dda7db08ce15df2be392e715b941d78d1487ce9b05f31e2f8e40d9443.png">
+    <link rel="apple-touch-icon" href="https://c.staticblitz.com/assets/icon-664493542621427cc8adae5e8f50d632f87aaa6ea1ce5b01e9a3d05b57940a9f.png">
+    <style id="pane-sizes" type="text/css">
+      .ChromeError {
+        top: 0px;
+      }
+
+      .Editor {
+        margin-top: 38px;
+        height: 342px;
+      }
+
+      .PreviewFrame {
+        margin-top: 38px;
+        height: 342px;
+      }
+
+      .PreviewFrame-iFrame {
+        height: 342px;
+      }
+
+      .EmbedSideMenu {
+        margin-top: 38px;
+        height: 380px;
+      }
+
+      .VSBottomBar {
+        height: 20px;
+      }
+    </style>
+  </head>
+</head>
+
+<body>
+  <div class="embed-wrapper">
+    <script type="application/json" class="js-react-on-rails-component" data-component-name="App" data-dom-id="App-react-component-3d07d06a-91a6-42e5-8cfd-d93a0d9e121b">
+      {}
+    </script>
+    <div id="App-react-component-3d07d06a-91a6-42e5-8cfd-d93a0d9e121b">
+      <div data-reactroot="" class="Stackblitz isEmbed embedView--default Chrome">
+        <div class="Editor-navBar">
+          <div class="HeaderBar-project">
+            <div class="SideMenu-project">
+              <div class="projectInfo">
+                <div class="logo-wrap"><a href="/" target="_blank" class="stackblitz-logo false"><img src="https://c.staticblitz.com/assets/packs/blitz_logo-11cebad97cad4b50bc955cf72f532d1b.png" style="height: 26px; width: 36px; margin-left: -3px; margin-top: 2px;"><span class="logo-bg"></span></a>
+                  <div class="embeddedFilepath">
+                    <div class="FilePath"><span class="fragment"><span><span class="seperator">/</span><span class="active">index.ts</span></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Editor-actionContainer"><button class="embedToggleBtn false" style="width: 85px;"><i class="ion-code"></i><span>editor</span></button><button class="embedToggleBtn false" style="width: 93px;"><i class="ion-ios-browsers"></i><span>preview</span></button></div>
+        </div>
+        <div class="SplitPane  vertical disabled" style="display: flex; flex: 1 1 0%; height: initial; position: absolute; outline: none; overflow: hidden; user-select: text; bottom: 0px; top: 0px; flex-direction: row; left: 0px; right: 0px;">
+          <div class="Pane vertical Pane1" style="flex: 0 0 auto; position: relative; outline: none; width: 0%;"></div><span class="Resizer vertical disabled"></span>
+          <div class="Pane vertical Pane2" style="flex: 1 1 0%; position: relative; outline: none;">
+            <div id="editor-wrapper-cmp" class="Editor-wrapper">
+              <div class="SplitPane Splitpane-editorPreview embed-view-default  vertical " style="display: flex; flex: 1 1 0%; height: 100%; position: absolute; outline: none; overflow: hidden; user-select: text; flex-direction: row; left: 0px; right: 0px;">
+                <div class="Pane vertical Pane1" style="flex: 0 0 auto; position: relative; outline: none; width: 55%;">
+                  <div class="Editor-wrapper">
+                    <div class="EmbedSideMenu">
+                      <div class="EmbedSideMenu-leftCol">
+                        <div class="EmbedSideMenu-btnContainer"><img src="https://c.staticblitz.com/assets/packs/files-dark-a3e8ceae3b13084cb394c053b8dc8250.svg" class=""><i class="ion-cube"></i></div>
+                      </div>
+                    </div>
+                    <!-- react-empty: 172 -->
+                    <div class="Editor" data-keybinding-context="1" data-mode-id="typescript">
+                      <div></div>
+                      <!-- react-empty: 184 -->
+                      <div class="monaco-editor vs-dark" style="width: 332px; height: 342px;">
+                        <div data-mprt="3" class="overflow-guard" style="width: 332px; height: 342px;">
+                          <div class="margin" role="presentation" aria-hidden="true" style="position: absolute; will-change: transform; top: 0px; height: 703px; width: 48px;">
+                            <div class="glyph-margin" style="left: 0px; width: 0px; height: 703px;"></div>
+                            <div class="margin-view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div>
+                            <div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; width: 48px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; line-height: 19px; letter-spacing: 0px; height: 703px;">
+                              <div style="position:absolute;top:247px;width:100%;height:19px;">
+                                <div class="line-numbers" style="left:0px;width:38px;">10</div>
+                              </div>
+                              <div style="position:absolute;top:266px;width:100%;height:19px;">
+                                <div class="line-numbers" style="left:0px;width:38px;">11</div>
+                              </div>
+                              <div style="position:absolute;top:285px;width:100%;height:19px;">
+                                <div class="line-numbers" style="left:0px;width:38px;">12</div>
+                              </div>
+                              <div style="position:absolute;top:304px;width:100%;height:19px;">
+                                <div class="line-numbers" style="left:0px;width:38px;">13</div>
+                              </div>
+                              <div style="position:absolute;top:323px;width:100%;height:19px;">
+                                <div class="line-numbers" style="left:0px;width:38px;">14</div>
+                              </div>
+                              <div style="position:absolute;top:190px;width:100%;height:19px;">
+                                <div class="line-numbers" style="left:0px;width:38px;">7</div>
+                              </div>
+                              <div style="position:absolute;top:209px;width:100%;height:19px;">
+                                <div class="line-numbers" style="left:0px;width:38px;">8</div>
+                              </div>
+                              <div style="position:absolute;top:228px;width:100%;height:19px;">
+                                <div class="line-numbers" style="left:0px;width:38px;">9</div>
+                              </div>
+                              <div style="position:absolute;top:133px;width:100%;height:19px;">
+                                <div class="line-numbers" style="left:0px;width:38px;">5</div>
+                              </div>
+                              <div style="position:absolute;top:152px;width:100%;height:19px;">
+                                <div class="line-numbers" style="left:0px;width:38px;">6</div>
+                              </div>
+                              <div style="position:absolute;top:171px;width:100%;height:19px;"></div>
+                              <div style="position:absolute;top:95px;width:100%;height:19px;"></div>
+                              <div style="position:absolute;top:114px;width:100%;height:19px;">
+                                <div class="line-numbers" style="left:0px;width:38px;">4</div>
+                              </div>
+                              <div style="position:absolute;top:38px;width:100%;height:19px;">
+                                <div class="line-numbers" style="left:0px;width:38px;">2</div>
+                              </div>
+                              <div style="position:absolute;top:57px;width:100%;height:19px;"></div>
+                              <div style="position:absolute;top:76px;width:100%;height:19px;">
+                                <div class="line-numbers" style="left:0px;width:38px;">3</div>
+                              </div>
+                              <div style="position:absolute;top:0px;width:100%;height:19px;">
+                                <div class="line-numbers" style="left:0px;width:38px;">1</div>
+                              </div>
+                              <div style="position:absolute;top:19px;width:100%;height:19px;"></div>
+                            </div>
+                          </div>
+                          <div class="monaco-scrollable-element editor-scrollable vs-dark" role="presentation" data-mprt="5" style="position: absolute; overflow: hidden; left: 48px; width: 284px; height: 342px;">
+                            <div class="lines-content monaco-editor-background" style="position: absolute; overflow: hidden; width: 1e+06px; height: 1e+06px; will-change: transform; top: 0px; left: 0px;">
+                              <div class="view-overlays" role="presentation" aria-hidden="true" style="position: absolute; height: 0px; width: 284px;">
+                                <div style="position:absolute;top:247px;width:100%;height:19px;"></div>
+                                <div style="position:absolute;top:266px;width:100%;height:19px;"></div>
+                                <div style="position:absolute;top:285px;width:100%;height:19px;"></div>
+                                <div style="position:absolute;top:304px;width:100%;height:19px;"></div>
+                                <div style="position:absolute;top:323px;width:100%;height:19px;">
+                                  <div class="cigr" style="left:0px;height:19px;width:1px"></div>
+                                </div>
+                                <div style="position:absolute;top:190px;width:100%;height:19px;"></div>
+                                <div style="position:absolute;top:209px;width:100%;height:19px;"></div>
+                                <div style="position:absolute;top:228px;width:100%;height:19px;"></div>
+                                <div style="position:absolute;top:133px;width:100%;height:19px;"></div>
+                                <div style="position:absolute;top:152px;width:100%;height:19px;"></div>
+                                <div style="position:absolute;top:171px;width:100%;height:19px;"></div>
+                                <div style="position:absolute;top:95px;width:100%;height:19px;"></div>
+                                <div style="position:absolute;top:114px;width:100%;height:19px;"></div>
+                                <div style="position:absolute;top:38px;width:100%;height:19px;"></div>
+                                <div style="position:absolute;top:57px;width:100%;height:19px;"></div>
+                                <div style="position:absolute;top:76px;width:100%;height:19px;"></div>
+                                <div style="position:absolute;top:0px;width:100%;height:19px;"></div>
+                                <div style="position:absolute;top:19px;width:100%;height:19px;"></div>
+                              </div>
+                              <div role="presentation" aria-hidden="true" class="view-rulers"></div>
+                              <div class="view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div>
+                              <div class="view-lines" role="presentation" aria-hidden="true" data-mprt="7" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; line-height: 19px; letter-spacing: 0px; width: 284px; height: 703px;">
+                                <div style="top:247px;height:19px;" class="view-line"><span><span class="mtk8 ConstKeyword VariableDeclarationList VariableStatement">const</span><span class="mtk1 VariableDeclarationList VariableStatement">&nbsp;</span><span class="mtk1 Identifier VariableDeclaration SyntaxList VariableDeclarationList VariableStatement">COLOR</span>
+                                  <span class="mtk1 VariableDeclaration SyntaxList VariableDeclarationList VariableStatement">&nbsp;</span><span class="mtk9 FirstAssignment VariableDeclaration SyntaxList VariableDeclarationList VariableStatement">=</span>
+                                  <span
+                                    class="mtk1 VariableDeclaration SyntaxList VariableDeclarationList VariableStatement">&nbsp;</span>
+                                    <span class="mtk5 StringLiteral VariableDeclaration SyntaxList VariableDeclarationList VariableStatement">'deepskyblue'</span><span class="mtk9 VariableStatement SemicolonToken">;</span></span>
+                                </div>
+                                <div style="top:266px;height:19px;" class="view-line"><span><span>&nbsp;</span></span>
+                                </div>
+                                <div style="top:285px;height:19px;" class="view-line"><span><span class="mtk7">//&nbsp;Bounce&nbsp;the&nbsp;ball!</span></span>
+                                </div>
+                                <div style="top:304px;height:19px;" class="view-line"><span><span class="mtk1 Identifier CallExpression ExpressionStatement">BounceBall</span><span class="mtk9 OpenParenToken CallExpression ExpressionStatement">(</span><span class="mtk9 CallExpression ExpressionStatement FirstPunctuation ObjectLiteralExpression SyntaxList">{</span></span>
+                                </div>
+                                <div style="top:323px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;</span><span class="mtk1 Identifier PropertyAssignment SyntaxList">color</span><span class="mtk9 ColonToken PropertyAssignment SyntaxList">:</span><span class="mtk1 PropertyAssignment SyntaxList">&nbsp;</span>
+                                  <span class="mtk1 Identifier PropertyAssignment SyntaxList">COLOR</span><span class="mtk9 SyntaxList CommaToken">,</span></span>
+                                </div>
+                                <div style="top:190px;height:19px;" class="view-line"><span><span class="mtk8 ConstKeyword VariableDeclarationList VariableStatement">const</span><span class="mtk1 VariableDeclarationList VariableStatement">&nbsp;</span><span class="mtk1 Identifier VariableDeclaration SyntaxList VariableDeclarationList VariableStatement">GRAVITY</span>
+                                  <span class="mtk1 VariableDeclaration SyntaxList VariableDeclarationList VariableStatement">&nbsp;</span><span class="mtk9 FirstAssignment VariableDeclaration SyntaxList VariableDeclarationList VariableStatement">=</span>
+                                  <span
+                                    class="mtk1 VariableDeclaration SyntaxList VariableDeclarationList VariableStatement">&nbsp;</span>
+                                    <span class="mtk6 FirstLiteralToken VariableDeclaration SyntaxList VariableDeclarationList VariableStatement">1</span><span class="mtk9 VariableStatement SemicolonToken">;</span></span>
+                                </div>
+                                <div style="top:209px;height:19px;" class="view-line"><span><span>&nbsp;</span></span>
+                                </div>
+                                <div style="top:228px;height:19px;" class="view-line"><span><span class="mtk7">//&nbsp;Color&nbsp;of&nbsp;the&nbsp;ball.</span></span>
+                                </div>
+                                <div style="top:133px;height:19px;" class="view-line"><span><span class="mtk7">//&nbsp;Set&nbsp;gravity&nbsp;effect&nbsp;on&nbsp;the&nbsp;ball.</span></span>
+                                </div>
+                                <div style="top:152px;height:19px;" class="view-line"><span><span class="mtk7">//&nbsp;1&nbsp;=&nbsp;Earth,&nbsp;.16&nbsp;=&nbsp;Moon,&nbsp;2&nbsp;=&nbsp;</span></span>
+                                </div>
+                                <div style="top:171px;height:19px;" class="view-line"><span><span class="mtk7">Jupiter.</span></span>
+                                </div>
+                                <div style="top:95px;height:19px;" class="view-line"><span><span class="mtk7">alert(pad);</span></span>
+                                </div>
+                                <div style="top:114px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;</span></span>
+                                </div>
+                                <div style="top:38px;height:19px;" class="view-line"><span><span class="mtk7">//&nbsp;Try&nbsp;uncommenting&nbsp;the&nbsp;line&nbsp;below&nbsp;</span></span>
+                                </div>
+                                <div style="top:57px;height:19px;" class="view-line"><span><span class="mtk7">:)</span></span>
+                                </div>
+                                <div style="top:76px;height:19px;" class="view-line"><span><span class="mtk7">//&nbsp;import&nbsp;pad&nbsp;from&nbsp;'left-pad';&nbsp;</span></span>
+                                </div>
+                                <div style="top:0px;height:19px;" class="view-line"><span><span class="mtk8 ImportKeyword ImportDeclaration SourceFile SyntaxList">import</span><span class="mtk1 ImportDeclaration SourceFile SyntaxList">&nbsp;</span><span class="mtk9 FirstPunctuation NamedImports ImportClause ImportDeclaration SourceFile SyntaxList">{</span>
+                                  <span class="mtk1 NamedImports ImportClause ImportDeclaration SourceFile SyntaxList">&nbsp;</span><span class="mtk1 SyntaxList ImportSpecifier Identifier NamedImports ImportClause ImportDeclaration SourceFile SyntaxList">BounceBall</span>
+                                  <span
+                                    class="mtk1 NamedImports ImportClause ImportDeclaration SourceFile SyntaxList">&nbsp;</span>
+                                    <span class="mtk9 CloseBraceToken NamedImports ImportClause ImportDeclaration SourceFile SyntaxList">}</span><span class="mtk1 ImportDeclaration SourceFile SyntaxList">&nbsp;</span><span class="mtk8 FromKeyword ImportDeclaration SourceFile SyntaxList">from</span>
+                                    <span
+                                      class="mtk1 ImportDeclaration SourceFile SyntaxList">&nbsp;</span>
+                                      </span>
+                                </div>
+                                <div style="top:19px;height:19px;" class="view-line"><span><span class="mtk5 StringLiteral ImportDeclaration SourceFile SyntaxList">'./Ball'</span><span class="mtk9 ImportDeclaration SourceFile SyntaxList SemicolonToken">;</span></span>
+                                </div>
+                              </div>
+                              <div data-mprt="1" class="contentWidgets" style="position: absolute; top: 0px;"></div>
+                              <div role="presentation" aria-hidden="true" class="cursors-layer cursor-line-style cursor-solid">
+                                <div class="cursor" style="height: 19px; top: 361px; left: 23px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; line-height: 19px; letter-spacing: 0px; display: none; visibility: hidden; width: 2px;"></div>
+                              </div>
+                            </div>
+                            <div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute; width: 270px; height: 10px; left: 0px; bottom: 0px;">
+                              <div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; will-change: transform; width: 270px;"></div>
+                            </div><canvas class="decorationsOverviewRuler" width="14" height="342" style="position: absolute; will-change: transform; top: 0px; right: 0px; width: 14px; height: 342px;"></canvas>
+                            <div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 342px; right: 0px; top: 0px;">
+                              <div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; will-change: transform; height: 166px;"></div>
+                            </div>
+                          </div>
+                          <div role="presentation" aria-hidden="true" style="width: 332px;" class=""></div><textarea data-mprt="6" class="inputarea" wrap="off" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" aria-label="Editor content;Press Alt+F1 for Accessibility Options." role="textbox" aria-multiline="true"
+                            aria-haspopup="false" aria-autocomplete="both" style="font-size: 14px; line-height: 19px; top: 0px; left: 0px; width: 1px; height: 1px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; letter-spacing: 0px;"></textarea>
+                          <div style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px;" class="monaco-editor-background textAreaCover line-numbers"></div>
+                          <div data-mprt="4" class="overlayWidgets" style="width: 332px;">
+                            <div class="editor-widget find-widget narrow-find-widget reduced-find-widget" aria-hidden="true" widgetid="editor.contrib.findWidget" style="width: 411px; position: absolute;">
+                              <div title="Toggle Replace mode" tabindex="-1" class="button toggle left collapse disabled" role="button" aria-label="Toggle Replace mode" aria-expanded="false" aria-disabled="true"></div>
+                              <div class="find-part">
+                                <div class="monaco-findInput disabled" style="width: 221px;">
+                                  <div class="monaco-inputbox idle" style="background-color: rgb(60, 60, 60); color: rgb(204, 204, 204);">
+                                    <div class="wrapper"><input class="input" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" wrap="off" aria-label="Find" placeholder="Find" title="Find" disabled="" style="width: 155px; background-color: rgb(60, 60, 60); color: rgb(204, 204, 204);"></div>
+                                  </div>
+                                  <div class="controls">
+                                    <div title="Match Case (Alt+C)" class="custom-checkbox monaco-case-sensitive unchecked" role="checkbox" aria-checked="false" aria-label="Match Case (Alt+C)" aria-disabled="true" style="border-color: transparent;"></div>
+                                    <div title="Match Whole Word (Alt+W)" class="custom-checkbox monaco-whole-word unchecked" role="checkbox" aria-checked="false" aria-label="Match Whole Word (Alt+W)" aria-disabled="true" style="border-color: transparent;"></div>
+                                    <div title="Use Regular Expression (Alt+R)" class="custom-checkbox monaco-regex unchecked" role="checkbox" aria-checked="false" aria-label="Use Regular Expression (Alt+R)" aria-disabled="true" style="border-color: transparent;"></div>
+                                  </div>
+                                </div>
+                                <div class="matchesCount" title="" style="min-width: 69px;">No Results</div>
+                                <div title="Previous match (Shift+F3)" tabindex="-1" class="button previous disabled" role="button" aria-label="Previous match (Shift+F3)" aria-disabled="true"></div>
+                                <div title="Next match (F3)" tabindex="-1" class="button next disabled" role="button" aria-label="Next match (F3)" aria-disabled="true"></div>
+                                <div class="monaco-checkbox" title="Find in selection (Alt+L)" tabindex="-1"><input type="checkbox" class="checkbox" id="checkbox-1" tabindex="-1" disabled=""><label class="label" for="checkbox-1" tabindex="-1"></label></div>
+                                <div title="Close (Escape)" tabindex="-1" class="button close-fw disabled" role="button" aria-label="Close (Escape)" aria-disabled="true"></div>
+                              </div>
+                              <div class="replace-part">
+                                <div class="replace-input" style="width: 221px;">
+                                  <div class="monaco-inputbox idle" style="background-color: rgb(60, 60, 60); color: rgb(204, 204, 204);">
+                                    <div class="wrapper"><input class="input" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" wrap="off" aria-label="Replace" placeholder="Replace" title="Replace" disabled="" style="background-color: rgb(60, 60, 60); color: rgb(204, 204, 204); width: 161px;"></div>
+                                  </div>
+                                </div>
+                                <div title="Replace (Ctrl+Shift+1)" tabindex="-1" class="button replace disabled" role="button" aria-label="Replace (Ctrl+Shift+1)" aria-disabled="true"></div>
+                                <div title="Replace All (Ctrl+Alt+Enter)" tabindex="-1" class="button replace-all disabled" role="button" aria-label="Replace All (Ctrl+Alt+Enter)" aria-disabled="true"></div>
+                              </div>
+                              <div class="monaco-sash vertical" style="width: 5px;"></div>
+                            </div>
+                            <div class="findOptionsWidget" role="presentation" aria-hidden="true" widgetid="editor.contrib.findOptionsWidget" style="display: none; top: 0px; position: absolute; right: 28px;">
+                              <div title="Match Case (Alt+C)" class="custom-checkbox monaco-case-sensitive unchecked" tabindex="0" role="checkbox" aria-checked="false" aria-label="Match Case (Alt+C)" style="border-color: transparent;"></div>
+                              <div title="Match Whole Word (Alt+W)" class="custom-checkbox monaco-whole-word unchecked" tabindex="0" role="checkbox" aria-checked="false" aria-label="Match Whole Word (Alt+W)" style="border-color: transparent;"></div>
+                              <div title="Use Regular Expression (Alt+R)" class="custom-checkbox monaco-regex unchecked" tabindex="0" role="checkbox" aria-checked="false" aria-label="Use Regular Expression (Alt+R)" style="border-color: transparent;"></div>
+                            </div>
+                            <div class="monaco-editor-hover hidden" aria-hidden="true" role="presentation" widgetid="editor.contrib.modesGlyphHoverWidget" style="position: absolute;"></div>
+                            <div class="accessibilityHelpWidget" role="dialog" aria-hidden="true" widgetid="editor.contrib.accessibilityHelpWidget" style="display: none; position: absolute;">
+                              <div role="document"></div>
+                            </div>
+                          </div>
+                          <div data-mprt="8" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; right: 14px; width: 0px; height: 342px;">
+                            <div class="minimap-shadow-hidden" style="height: 342px;"></div><canvas width="1" height="342" style="position: absolute; left: 0px; width: 1px; height: 342px;"></canvas>
+                            <div class="minimap-slider" style="position: absolute; will-change: transform; width: 0px;">
+                              <div class="minimap-slider-horizontal" style="position: absolute;"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div data-mprt="2" class="overflowingContentWidgets">
+                          <div class="monaco-editor-hover hidden" tabindex="0" widgetid="editor.contrib.modesContentHoverWidget" style="position: absolute; max-width: 1045px; visibility: hidden;">
+                            <div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;">
+                              <div class="monaco-editor-hover-content" style="overflow: hidden; font-size: 14px; line-height: 19px; max-height: 250px;"></div>
+                              <div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute;">
+                                <div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; will-change: transform;"></div>
+                              </div>
+                              <div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute;">
+                                <div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; will-change: transform;"></div>
+                              </div>
+                              <div class="shadow"></div>
+                              <div class="shadow"></div>
+                              <div class="shadow top-left-corner"></div>
+                            </div>
+                          </div>
+                          <div class="editor-widget parameter-hints-widget" widgetid="editor.widget.parameterHintsWidget" style="font-size: 14px; max-height: 250px; position: absolute; max-width: 1045px; visibility: hidden;">
+                            <div class="wrapper">
+                              <div class="buttons">
+                                <div class="button previous"></div>
+                                <div class="button next"></div>
+                              </div>
+                              <div class="overloads"></div>
+                              <div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;">
+                                <div class="body" style="overflow: hidden;">
+                                  <div class="signature"></div>
+                                  <div class="docs"></div>
+                                </div>
+                                <div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute;">
+                                  <div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; will-change: transform;"></div>
+                                </div>
+                                <div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute;">
+                                  <div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; will-change: transform;"></div>
+                                </div>
+                                <div class="shadow"></div>
+                                <div class="shadow"></div>
+                                <div class="shadow top-left-corner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="monaco-editor rename-box" widgetid="__renameInputWidget" style="height: 19px; box-shadow: rgb(0, 0, 0) 0px 2px 8px; position: absolute; max-width: 1045px; visibility: hidden;"><input class="rename-input" type="text" aria-label="Rename input. Type new name and press Enter to commit." style="font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; background-color: rgb(60, 60, 60); color: rgb(204, 204, 204); border-width: 0px; border-style: none;"></div>
+                          <div class="editor-widget suggest-widget" widgetid="editor.widget.suggestWidget" style="position: absolute; max-width: 1045px; visibility: hidden;">
+                            <div class="message" style="display: none; background-color: rgb(45, 45, 48); border-color: rgb(69, 69, 69);"></div>
+                            <div class="tree" style="background-color: rgb(45, 45, 48); border-color: rgb(69, 69, 69);">
+                              <div class="monaco-list list_id_2 selection-none" role="tree" tabindex="0">
+                                <div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;">
+                                  <div class="monaco-list-rows" style="overflow: hidden; height: 0px;"></div>
+                                  <div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute;">
+                                    <div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; will-change: transform;"></div>
+                                  </div>
+                                  <div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute;">
+                                    <div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; will-change: transform;"></div>
+                                  </div>
+                                </div>
+                                <style type="text/css" media="screen">
+                                  .monaco-list.list_id_2:focus .monaco-list-row.focused {
+                                    background-color: #073655;
+                                  }
+
+                                  .monaco-list.list_id_2:focus .monaco-list-row.selected {
+                                    background-color: #0a4e7c;
+                                  }
+
+                                  .monaco-list.list_id_2:focus .monaco-list-row.selected:hover {
+                                    background-color: #0a4e7c;
+                                  }
+
+                                  .monaco-list.list_id_2:focus .monaco-list-row.selected {
+                                    color: #ffffff;
+                                  }
+
+                                  .monaco-list.list_id_2:focus .monaco-list-row.selected.focused {
+                                    background-color: #094771;
+                                  }
+
+                                  .monaco-list.list_id_2:focus .monaco-list-row.selected.focused {
+                                    color: #ffffff;
+                                  }
+
+                                  .monaco-list.list_id_2 .monaco-list-row.focused {
+                                    background-color: #073655;
+                                  }
+
+                                  .monaco-list.list_id_2 .monaco-list-row.focused:hover {
+                                    background-color: #073655;
+                                  }
+
+                                  .monaco-list.list_id_2 .monaco-list-row.selected {
+                                    background-color: #3f3f46;
+                                  }
+
+                                  .monaco-list.list_id_2 .monaco-list-row.selected:hover {
+                                    background-color: #3f3f46;
+                                  }
+
+                                  .monaco-list.list_id_2 .monaco-list-row:hover {
+                                    background-color: #2a2d2e;
+                                  }
+                                </style>
+                              </div>
+                            </div>
+                            <div class="details" style="font-size: 14px; display: none; background-color: rgb(45, 45, 48); border-color: rgb(69, 69, 69);">
+                              <div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;">
+                                <div class="body" style="overflow: hidden;">
+                                  <div class="header"><span class="close" title="Read less... (Ctrl+Space)" style="height: 19px; width: 19px;"></span>
+                                    <p class="type" style="font-family: Consolas, &quot;Courier New&quot;, monospace;"></p>
+                                  </div>
+                                  <p class="docs"></p>
+                                </div>
+                                <div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute;">
+                                  <div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; will-change: transform;"></div>
+                                </div>
+                                <div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute;">
+                                  <div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; will-change: transform;"></div>
+                                </div>
+                                <div class="shadow"></div>
+                                <div class="shadow"></div>
+                                <div class="shadow top-left-corner"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="context-view builder-hidden" aria-hidden="true"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div><span class="Resizer vertical "></span>
+                <div class="Pane vertical Pane2" style="flex: 1 1 0%; position: relative; outline: none;">
+                  <div class="PreviewFrame">
+                    <div class="PreviewFrame-iframeWrapper"><iframe name="previewFrame" class="PreviewFrame-iFrame" src="https://ball-demo.stackblitz.io" style="background: rgb(255, 255, 255);"></iframe></div>
+                  </div>
+                </div>
+              </div>
+              <div style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; z-index: 9999; cursor: col-resize; background: none; display: none;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="VSBottomBar">
+          <a href="https://stackblitz.com/edit/ball-demo" class="VSBottomBar-embedEdit" target="_blank">
+            <div class="VSBottomBar-embedEditText">EDIT ON</div><img src="https://c.staticblitz.com/assets/packs/blitz_logo-11cebad97cad4b50bc955cf72f532d1b.png" alt="Stackblitz">
+            <div class="VSBottomBar-embedEditText">STACKBLITZ</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
