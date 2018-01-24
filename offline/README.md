@@ -2,9 +2,7 @@
 
 This repo folder contains the full(complete) version of WebIDE.
 
-This comes with some of the files and works completely offline.
-
-These files also are the recommended files to be hosted on a webserver if you would like to do a On-Premise server.
+This comes with some of the files and works completely offline
 
 Feel free to edit these files when you wish to.
 
