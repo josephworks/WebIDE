@@ -13,6 +13,6 @@
 11. Work on ./Offline
 12. Use / Integrate micron.js with all html pages
 13. Work on OnPremise
-14. Add ace
+14. Integrate ace ace
 
 ***15. Stabilize WebIDE and create v1 stable***
