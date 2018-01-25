@@ -14,3 +14,4 @@
 12. Add micron.js
 13. Work on OnPremise
 14. Add ace
+* 15. Stabilize WebIDE and create v1 stable
