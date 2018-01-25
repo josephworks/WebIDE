@@ -1,5 +1,5 @@
 # ToDo
->yellow Note: Bolded text (***Text***) means the item is Important / Critical
+>Note: Bolded text (***Text***) means the item is Important / Critical
 
 1. remove Monaco editor and embed it to the html files
 2. update more.html
