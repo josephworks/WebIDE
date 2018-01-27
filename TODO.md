@@ -16,3 +16,5 @@
 14. Integrate ace ace
 
 ***15. Stabilize WebIDE and create v1 stable***
+
+16. Combine micron and mini.css
