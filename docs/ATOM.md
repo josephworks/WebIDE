@@ -8,4 +8,4 @@
 
 Atom WebIDE was created with Codiad since we were not able to get the HTML files to work like VSCode.
 
-VSCode's and Atom's UI were both written in HTML and CSS.
+VSCode's and Atom's UI were both written in HTML, CSS, JS, and NodeJS and are coded into electron.
