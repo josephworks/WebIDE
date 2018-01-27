@@ -18,3 +18,4 @@
 ***15. Stabilize WebIDE and create v1 stable***
 
 16. Combine micron and mini.css
+17. add mini.css into style in html
