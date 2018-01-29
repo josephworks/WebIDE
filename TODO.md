@@ -30,3 +30,4 @@
 > Note: When WebIDE is stable, create Online, Offline and OnPremise Stable
 
 22. Work on wikis
+23. Attempt to create html configs
