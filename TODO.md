@@ -25,3 +25,6 @@
 
 19. Work on css for ***Everything***
 20. Create WebIDE-src repository for assets and micron and mini.css and mint-css and pure-css
+21. Create seperate repositories for Online, Offline and OnPremise in WebIDE orginization
+
+> Note: When WebIDE is stable, create
