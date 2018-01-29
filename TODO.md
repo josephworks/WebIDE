@@ -20,3 +20,7 @@
 
 16. Combine micron and mini.css and mint-css and pure-css into assets
 17. add css assets into style in html
+
+***18. After WebIDE V1 is stable, fork into a new orginavation called WebIDE
+
+19. Work on css for ***Everything***
