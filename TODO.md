@@ -31,3 +31,4 @@
 
 22. Work on wikis
 23. Attempt to create html configs
+24. Remove useless JavaScript
