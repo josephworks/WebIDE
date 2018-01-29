@@ -32,3 +32,6 @@
 22. Work on wikis
 23. Attempt to create html configs
 24. Remove useless JavaScript
+25. recreate sadaca.zip into ./portal/
+
+***26. Create WebIDE-Reactjs repo for WebIDE Orginization***
