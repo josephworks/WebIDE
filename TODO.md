@@ -34,5 +34,5 @@
 24. Remove useless JavaScript
 25. recreate sadaca.zip into ./portal/
 
-***26. Remove Ace repostiory and get ace depends only (Just editor)
+***26. Remove Ace repostiory and get ace depends only (Just editor)***
 
