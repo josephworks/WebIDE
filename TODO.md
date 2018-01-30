@@ -33,3 +33,6 @@
 23. Attempt to create html configs
 24. Remove useless JavaScript
 25. recreate sadaca.zip into ./portal/
+
+***26. Remove Ace repostiory and get ace depends only (Just editor)
+
