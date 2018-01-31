@@ -27,12 +27,9 @@
 <div class="scrollmargin"></div>
 <pre id="editor"></pre>
 
-<script src="kitchen-sink/require.js"></script>
+<!-- load ace -->
+<script src="../src/ace.js"></script>
 <script>
-// setup paths
-require.config({paths: { "ace" : "../lib/ace"}});
-// load ace and extensions
-require(["ace/ace"], function(ace) {
 
     var editor1 = ace.edit("editor1");
     editor1.setTheme("ace/theme/tomorrow_night_eighties");
@@ -59,7 +56,6 @@ require(["ace/ace"], function(ace) {
     editor.session.setMode("ace/mode/html");
     editor.setAutoScrollEditorIntoView(true);
     editor.setOption("maxLines", 100);
-});
 </script>
 
 <script src="./show_own_source.js"></script>

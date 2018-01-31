@@ -23,12 +23,11 @@
 
 <pre id="editor"></pre>
     
-<script src="kitchen-sink/require.js"></script>
+<!-- load ace -->
+<script src="../src/ace.js"></script>
+<!-- load ace modelist extension -->
+<script src="../src/ext-modelist.js"></script>
 <script>
-// setup paths
-require.config({paths: { "ace" : "../lib/ace"}});
-// load ace and extensions
-require(["ace/ace", "ace/ext/modelist"], function(ace) {
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/twilight");
     (function () {
@@ -43,7 +42,6 @@ require(["ace/ace", "ace/ext/modelist"], function(ace) {
         console.log(mode);
         editor.session.setMode(mode);
     }());
-})
 </script>
 
 <script src="./show_own_source.js"></script>

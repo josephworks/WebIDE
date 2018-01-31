@@ -22,11 +22,9 @@
 
 <pre id="editor"></pre>
     
-<script src="kitchen-sink/require.js"></script>
+<!-- load ace -->
+<script src="../src/ace.js"></script>
 <script>
-// setup paths
-require.config({paths: { "ace" : "../lib/ace"}});
-require(["ace/ace"], function(ace) {
     var editor = ace.edit("editor")
     editor.setTheme("ace/theme/twilight")
     editor.session.setMode("ace/mode/html")
@@ -43,7 +41,6 @@ require(["ace/ace"], function(ace) {
         }
     })
     editor.execCommand("showKeyboardShortcuts")
-})
 </script>
 
 <script src="./show_own_source.js"></script>

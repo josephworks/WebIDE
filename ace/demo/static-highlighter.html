@@ -54,11 +54,11 @@ end
 </div>
 
 
-<script src="kitchen-sink/require.js"></script>
+<!-- load ace -->
+<script src="../src/ace.js"></script>
+<!-- load ace static_highlight extension -->
+<script src="../src/ext-static_highlight.js"></script>
 <script>
-require.config({paths: { "ace" : "../lib/ace"}});
-
-require(["ace/ace", "ace/ext/static_highlight"], function(ace) {
     var highlight = ace.require("ace/ext/static_highlight")
     var dom = ace.require("ace/lib/dom")
     function qsa(sel) {
@@ -76,7 +76,6 @@ require(["ace/ace", "ace/ext/static_highlight"], function(ace) {
             
         });
     });
-})
 </script>
 
 </body>

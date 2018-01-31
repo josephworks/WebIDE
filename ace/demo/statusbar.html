@@ -41,19 +41,17 @@
 <pre id="editor"></pre>
 <div id="statusBar">ace rocks!</div>
     
-<script src="kitchen-sink/require.js"></script>
+<!-- load ace -->
+<script src="../src/ace.js"></script>
+<!-- load ace statusbar extension -->
+<script src="../src/ext-statusbar.js"></script>
 <script>
-// setup paths
-require.config({paths: { "ace" : "../lib/ace"}});
-// load ace and extensions
-require(["ace/ace", "ace/ext/statusbar"], function(ace) {
     var editor = ace.edit("editor");
     var StatusBar = ace.require("ace/ext/statusbar").StatusBar;
     // create a simple selection status indicator
     var statusBar = new StatusBar(editor, document.getElementById("statusBar"));
     editor.setTheme("ace/theme/dawn");
     editor.session.setMode("ace/mode/html");
-});
 </script>
 
 <script src="./show_own_source.js"></script>

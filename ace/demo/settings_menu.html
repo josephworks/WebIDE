@@ -23,12 +23,11 @@
 
 <pre id="editor"></pre>
     
-<script src="kitchen-sink/require.js"></script>
+<!-- load ace -->
+<script src="../src/ace.js"></script>
+<!-- load ace settings_menu extension -->
+<script src="../src/ext-settings_menu.js"></script>
 <script>
-// setup paths
-require.config({paths: { "ace" : "../lib/ace"}});
-// load ace and extensions
-require(["ace/ace", "ace/ext/settings_menu"], function(ace) {
     var editor = ace.edit("editor");
     ace.require('ace/ext/settings_menu').init(editor);
     editor.setTheme("ace/theme/twilight");
@@ -41,7 +40,6 @@ require(["ace/ace", "ace/ext/settings_menu"], function(ace) {
 		},
 		readOnly: true
 	}]);
-})
 </script>
 
 <script src="./show_own_source.js"></script>
