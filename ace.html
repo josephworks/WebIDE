@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title="WebIDE - Ace">
+        <script src="/ace/src/ace.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+            var editor = ace.edit("editor");
+            editor.setTheme("ace/theme/monokai");
+            editor.session.setMode("ace/mode/javascript");
+        </script>
+        <style type="text/css" media="screen">
+            body {
+                margin: 0;
+            }
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                width: 25%;
+                background-color: #f1f1f1;
+                position: fixed;
+                height: 100%;
+                overflow: auto;
+            }
+
+            li a {
+                display: block;
+                color: #000;
+                padding: 8px 16px;
+                text-decoration: none;
+            }
+
+            li a.active {
+                background-color: lightBlue;
+                color: white;
+            }
+
+            li a:hover:not(.active) {
+                background-color: #555;
+                color: white;
+                .slidecontainer {
+                    width: 100%;
+                }
+            }
+
+            h1 {
+                color: lightBlue;
+            }
+
+            h2 {
+                color: Green;
+                background: Black;
+            }
+        </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <center>
+                <img height="100" src="https://raw.githubusercontent.com/josephworks/WebIDE/master/WebIDElogo.png">
+            </center>
+            <li>
+                <a href="/index.html">Home</a>
+            </li>
+            <li>
+                <a href="/plain.html">Plain</a>
+            </li>
+            <li>
+                <a href="/vscode.html">VSCode</a>
+            </li>
+            <li>
+                <a href="/codenvy.html">Codenvy</a>
+            </li>
+            <li>
+                <a class="active" href="/dirigible.html">Dirigible</a>
+            </li>
+            <li>
+                <a href="/about.html">About</a>
+            </li>
+            <li>
+                <a href="/more.html">More</a>
+            </li>
+    </ul>
+    <div style="margin-left:25%;padding:1px 16px;height:660px;">
+        <header>
+            <center>
+                <h1>WebIDE - Dirigible</h1>
+            </center>
+        </header>
+        <div style="border:2px solid #666; border-radius:11px; padding:20px;" id="editor">function foo(items) { var x = "All this is syntax highlighted"; return x; }
+        </div>
+        <footer>
+            <center>
+                <h3>Created by JosephWorks 2018</h3>
+            </center>
+        </footer>
+    </div>
+</body>
+
+</html>
