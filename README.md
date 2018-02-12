@@ -1,6 +1,6 @@
 # WebIDE
 
-A portable IDE written in html!
+A portable IDE written in HTML!
 
 # Contribute
 
