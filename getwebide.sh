@@ -4,7 +4,7 @@ apt install git toilet
 echo "Cloning Repository"
 git clone https://github.com/josephworks/WebIDE.git
 
-echo "Starting!"
+echo "Starting WebServer!"
 toilet WebIDE
 
 java -version
