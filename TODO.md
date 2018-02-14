@@ -7,7 +7,6 @@
 ***7. Work on docs / Wikis***
 
 19. Work on css for ***Everything***
-21. Create seperate repositories for Online, Offline and OnPremise in WebIDE orginization
 23. Attempt to create html configs
 26. When WebIDE is stable, create Online, Offline and OnPremise Stable
 28. Integrate JsTree to WebIDE and Add src to WebIDE-src - https://www.jstree.com/
@@ -29,6 +28,7 @@
 ***18. After WebIDE V1 is stable, fork into a new organization called WebIDE***
 
 20. Create WebIDE-src repository for assets
+21. Create seperate repositories for Online, Offline and OnPremise in WebIDE orginization
 
 ***24. Remove useless JavaScript***
 
