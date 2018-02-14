@@ -12,9 +12,7 @@ A portable IDE written in html!!!
 
 # Contribute
 
-If you would like to contribute you can do pull requests and fix issues.
-
-If you want to be a contributor, we usually use HTML, CSS, JS, and Markdown
+If you would like to contribute you can create pull requests and create patches and updates, we usually use HTML, CSS, JS, and Markdown.
 
 If you want to be added to the development team then send me a discord message at 
 emerald tnt #7908
@@ -29,6 +27,8 @@ https://github.com/josephworks/WebIDE/releases
 
 https://webide-wpfeqmprrx.now.sh/
 
+> Warning: ***This page IS outdated!!!***
+
 Styles:
 ---
 
@@ -36,7 +36,7 @@ Styles:
 
 > Visual Studio Code
 
-> Visual Studio Code remade
+> WebIDE Editor
 
 > Dirigible
 
@@ -45,5 +45,7 @@ Styles:
 > Orion
 
 > Codechef
+
+> Ace
 
 ---
