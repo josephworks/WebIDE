@@ -1,4 +1,4 @@
-# Plain IDE
+# Plain IDE - Monaco Editor
 
 | [Home](README.md) | Plain | [VSCode](VSCODE.md) | [Monaco](MONACO.md) | [Codenvy](CODENVY.md) | [Atom](ATOM.md) | [About](ABOUT.md) | [More](MORE.md) |
 |-------------------|-------------------|---------------------|---------------------|-----------------------|-----------------|-------------------|-----------------|
@@ -20,26 +20,8 @@ Learn how to extend the editor and try out your own customizations in the [playg
 
 Browse the latest editor API at [`monaco.d.ts`](https://github.com/Microsoft/monaco-editor/blob/master/website/playground/monaco.d.ts.txt).
 
-## Issues
-
-Please mention the version of the editor when creating issues and the browser you're having trouble in. Create issues in this repository.
-
 ## Known issues
 In IE, the editor must be completely surrounded in the body element, otherwise the hit testing we do for mouse operations does not work. You can inspect this using F12 and clicking on the body element and confirm that visually it surrounds the editor.
-
-## Installing
-
-```
-npm install monaco-editor
-```
-
-You will get:
-* inside `dev`: bundled, not minified
-* inside `min`: bundled, and minified
-* inside `min-maps`: source maps for `min`
-* `monaco.d.ts`: this specifies the API of the editor (this is what is actually versioned, everything else is considered private and might break with any release).
-
-It is recommended to develop against the `dev` version, and in production to use the `min` version.
 
 ## Integrate
 
@@ -72,43 +54,6 @@ Here is the most basic HTML page that embeds the editor. More samples are availa
 </script>
 </body>
 </html>
-```
-
-## Integrate cross domain
-
-If you are hosting your `.js` on a different domain (e.g. on a CDN) than the HTML, you should know that the Monaco Editor creates web workers for smart language features. Cross-domain web workers are not allowed, but here is how you can proxy their loading and get them to work:
-
-```html
-<!--
-	Assuming the HTML lives on www.mydomain.com and that the editor is hosted on www.mycdn.com
--->
-<script type="text/javascript" src="http://www.mycdn.com/monaco-editor/min/vs/loader.js"></script>
-<script>
-	require.config({ paths: { 'vs': 'http://www.mycdn.com/monaco-editor/min/vs' }});
-
-	// Before loading vs/editor/editor.main, define a global MonacoEnvironment that overwrites
-	// the default worker url location (used when creating WebWorkers). The problem here is that
-	// HTML5 does not allow cross-domain web workers, so we need to proxy the instantiation of
-	// a web worker through a same-domain script
-	window.MonacoEnvironment = {
-		getWorkerUrl: function(workerId, label) {
-			return 'monaco-editor-worker-loader-proxy.js';
-		}
-	};
-
-	require(["vs/editor/editor.main"], function () {
-		// ...
-	});
-</script>
-
-<!--
-	Create http://www.mydomain.com/monaco-editor-worker-loader-proxy.js with the following content:
-		self.MonacoEnvironment = {
-			baseUrl: 'http://www.mycdn.com/monaco-editor/min/'
-		};
-		importScripts('www.mycdn.com/monaco-editor/min/vs/base/worker/workerMain.js');
-	That's it. You're good to go! :)
--->
 ```
 
 # More documentation
