@@ -4,12 +4,13 @@
 
 ***7. Work on docs / Wikis***
 
-14. Integrate ace
-17. add css assets into style in html
+
+
 19. Work on css for ***Everything***
 21. Create seperate repositories for Online, Offline and OnPremise in WebIDE orginization
 23. Attempt to create html configs
 26. When WebIDE is stable, create Online, Offline and OnPremise Stable
+28. Integrate Jstree to WebIDE and Add src to WebIDE-src
 
 # Completed
 
@@ -19,6 +20,7 @@
 8. Work on getwebide.sh
 9. Add depends and CSS to head.html
 12. Use / Integrate micron.js with all html pages
+14. Integrate ace
 
 ***15. Stabilize WebIDE and create v1 stable***
 
@@ -37,4 +39,5 @@
 10. work on ./Online
 11. Work on ./Offline
 13. Work on OnPremise
+17. add css assets into style in html
 27. Make getwebide.sh work for windows and linux
