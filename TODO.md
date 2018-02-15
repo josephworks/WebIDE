@@ -4,9 +4,15 @@
 
 ---
 
-***7. Work on docs / Wikis***
+***1. Work on docs / Wikis***
 
-19. Work on css for ***Everything***
-23. Attempt to create html configs
-26. When WebIDE is stable, create Online, Offline and OnPremise Stable
-28. Integrate JsTree to WebIDE and Add src to WebIDE-src - https://www.jstree.com/
+2. Work on css for ***Everything***
+3. Attempt to create html configs
+4. When WebIDE is stable, create Online, Offline and OnPremise Stable
+5. Integrate JsTree to WebIDE and Add src to WebIDE-src - https://www.jstree.com/
+6. Work on WebIDE-FileExplorer
+7. Create stable release for WebIDE-Embeddable
+8. Try and add modules to webide
+9. Work on adding features (About 5)
+10. Work on WebIDE css
+11. Fix navbars with http://cssmenumaker.com/
