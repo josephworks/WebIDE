@@ -18,3 +18,4 @@
 11. Fix navbars with http://cssmenumaker.com/
 12. Add loaders from https://1stwebdesigner.com/10-free-css-javascript-snippets-for-creating-animated-loaders/
 13. Add some things from https://1stwebdesigner.com/
+14. Add https://dhtmlx.com/docs/products/demoApps/dhtmlxFileExplorerDemo/index.html to File Explorer
