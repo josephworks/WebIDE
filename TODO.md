@@ -10,6 +10,7 @@
 23. Attempt to create html configs
 26. When WebIDE is stable, create Online, Offline and OnPremise Stable
 28. Integrate JsTree to WebIDE custom edtior and Add src to WebIDE-src - https://www.jstree.com/
+29. Add http://nicedit.com/
 
 # Completed
 
