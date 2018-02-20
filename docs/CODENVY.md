@@ -8,7 +8,9 @@ Also known as Eclipse Che IDE
 
 ---
 
-Our codenvy page contains an Iframe of codenvy.io
+Codenvy allows you to use linux containers online.
+
+Our Codenvy page contains an Iframe of codenvy.io.
 
 In order to recreate codenvy you need docker and a hypervisor.
 
