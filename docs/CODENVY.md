@@ -8,8 +8,10 @@ Also known as Eclipse Che IDE
 
 ---
 
-Our codenvy page contains of an Iframe to codenvy.io
+Our codenvy page contains an Iframe of codenvy.io
 
-In order to recreate codenvy you need docker which is not portable.
+In order to recreate codenvy you need docker and a hypervisor.
+
+Due to the need of Docker, Codenvy has to be used online!
 
 This is why we Iframed codenvy.io
