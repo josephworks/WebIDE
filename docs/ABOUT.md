@@ -7,3 +7,5 @@
 ---
 
 WebIDE is a portable IDE written in html.
+
+Languages: HTML, CSS, JavaScript, Markdown
