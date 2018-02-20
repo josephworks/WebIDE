@@ -1,6 +1,6 @@
 # More
 
-| [Home](README.md) | [Plain](PLAIN.md) | [VSCode](VSCODE.md) | [Codenvy](CODENVY.md) | [Atom](ATOM.md) | [About](ABOUT.md) | More |
+| [Home](README.md) | [Plain](PLAIN.md) | [VSCode](VSCODE.md) | [Codenvy](CODENVY.md) | [About](ABOUT.md) | More |
 |-------------------|-------------------|---------------------|---------------------|-----------------------|-----------------|-------------------|-----------------|
 |                   |                   |                     |                     |                       |                 |                   | You are here!   |
 
