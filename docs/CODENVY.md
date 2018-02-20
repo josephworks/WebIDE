@@ -13,5 +13,3 @@ Our codenvy page contains an Iframe of codenvy.io
 In order to recreate codenvy you need docker and a hypervisor.
 
 Due to the need of Docker, Codenvy has to be used online!
-
-This is why we Iframed codenvy.io
