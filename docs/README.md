@@ -25,7 +25,7 @@ https://github.com/josephworks/WebIDE/releases
 
 # Online Website
 
-https://webide-wpfeqmprrx.now.sh/
+https://josephworks-webide-nuyvqdtvvc.now.sh/
 
 > Warning: ***This page IS outdated!!!***
 
