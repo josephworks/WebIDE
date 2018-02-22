@@ -1,6 +1,6 @@
 # WebIDE
 
-| Home | [Plain](PLAIN.md) | [VSCode](VSCODE.md) | [Codenvy](CODENVY.md) | [Try](../../index.html) | [About](ABOUT.md) | [More](MORE.md) |
+| Home | [Plain](PLAIN.md) | [VSCode](VSCODE.md) | [Codenvy](CODENVY.md) | [Try](../../index.html) | [About](ABOUT.md) | [More](MORE.md)
 |-------------------|-------------------|---------------------|---------------------|-----------------------|-----------------|-------------------|----------------|
 | You are here!     |                   |                     |                     |                       |                 |                   |                |
 
