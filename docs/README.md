@@ -19,7 +19,7 @@ emerald tnt #7908
 
 # Download
 
-You can get WebIDE Releases at 
+You can get WebIDE Releases at:
 
 https://github.com/josephworks/WebIDE/releases
 
@@ -28,6 +28,7 @@ https://github.com/josephworks/WebIDE/releases
 https://josephworks-webide-nuyvqdtvvc.now.sh/
 
 Styles:
+
 ---
 
 > Plain (Monaco Editor)
