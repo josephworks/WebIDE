@@ -27,8 +27,6 @@ https://github.com/josephworks/WebIDE/releases
 
 https://josephworks-webide-nuyvqdtvvc.now.sh/
 
-> Warning: ***This page IS outdated!!!***
-
 Styles:
 ---
 
