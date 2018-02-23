@@ -14,6 +14,6 @@ Linter - A linter or lint refers to tools that analyze source code to flag progr
 
 Since I Did most of my coding using git on github, I can see data in the repository pulse!
 
-<iframe src="https://github.com/josephworks/WebIDE/pulse"></iframe>
+<iframe src="https://github.com/josephworks/WebIDE/pulse" />
 
 > [Click to go to Diagram](https://josephworks.github.io/WebIDE/stem/DIAGRAM/)

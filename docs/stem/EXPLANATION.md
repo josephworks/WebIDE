@@ -4,7 +4,7 @@ Most Websites you go to are written in html or Hypertext Markup Language. Hypert
 
 I used HTML For the main code, CSS for the style and animations, and JS for the Editors like Plain (Monaco).
 
-I also used other Open Sourced code and made WebIDE and File Explorer!
+I also used other Open Source code and made WebIDE and File Explorer!
 
 After you download WebIDE and open index.html, you will be able to use an IDE from your web browser!
 
@@ -20,11 +20,15 @@ HTML:
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Title</title>
+      <title>WebIDE</title>
       <meta charset="utf-8">
+      <link href="https://unpkg.com/webkul-micron@1.0.4/dist/css/micron.min.css" type="text/css" rel="stylesheet">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <script src="https://unpkg.com/webkul-micron@1.0.4/dist/script/micron.min.js" type="text/javascript"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
    </head>
    <body>
-      <h1>Header</h1>
+      <h1>WebIDE</h1>
    </body>
 <html>
 ```
