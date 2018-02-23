@@ -3,17 +3,17 @@
 
 <head>
     <title="WebIDE - Ace">
-        <script src="/ace/src/ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="https://raw.githubusercontent.com/ajaxorg/ace-builds/3459f57252c79bad99246012f9c703f728eb0b7a/src/ace.js" type="text/javascript" charset="utf-8"></script>
         <script>
             var editor = ace.edit("editor");
-            editor.setTheme("ace/theme/monokai");
-            editor.session.setMode("ace/mode/javascript");
+            editor.setTheme("https://raw.githubusercontent.com/ajaxorg/ace-builds/3459f57252c79bad99246012f9c703f728eb0b7a/src/theme-vibrant_ink");
+            editor.session.setMode("https://raw.githubusercontent.com/ajaxorg/ace-builds/3459f57252c79bad99246012f9c703f728eb0b7a/src/mode-abc");
         </script>
         <style type="text/css" media="screen">
             body {
                 margin: 0;
             }
-
+            
             ul {
                 list-style-type: none;
                 margin: 0;
@@ -24,19 +24,19 @@
                 height: 100%;
                 overflow: auto;
             }
-
+            
             li a {
                 display: block;
                 color: #000;
                 padding: 8px 16px;
                 text-decoration: none;
             }
-
+            
             li a.active {
                 background-color: lightBlue;
                 color: white;
             }
-
+            
             li a:hover:not(.active) {
                 background-color: #555;
                 color: white;
@@ -44,11 +44,11 @@
                     width: 100%;
                 }
             }
-
+            
             h1 {
                 color: lightBlue;
             }
-
+            
             h2 {
                 color: Green;
                 background: Black;
