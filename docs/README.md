@@ -1,8 +1,8 @@
 # WebIDE
 
-| Home | [Plain](PLAIN.md) | [VSCode](VSCODE.md) | [Codenvy](CODENVY.md) | [Try](../../index.html) | [About](ABOUT.md) | [More](MORE.md)
-|-------------------|-------------------|---------------------|---------------------|-----------------------|-----------------|-------------------|----------------|
-| You are here!     |                   |                     |                     |                       |                 |                   |                |
+| [Home](README.md) | [Plain](PLAIN.md) | [VSCode](VSCODE.md) | [Codenvy](CODENVY.md) | [Try](https://josephworks-webide-nuyvqdtvvc.now.sh/) | [About](ABOUT.md) | [STEM Presentation](stem/PROBLEM.md) |
+|-------------------|-------------------|---------------------|-----------------------|------------------------------------------------------|-------------------|--------------------------------------|
+|                   |                   |                     |                       |                                                      |                   |                                      |
 
 # WebIDE
 
@@ -26,6 +26,10 @@ https://github.com/josephworks/WebIDE/releases
 # Online Website
 
 https://josephworks-webide-nuyvqdtvvc.now.sh/
+
+You can view the code at:
+
+https://josephworks-webide-nuyvqdtvvc.now.sh/_src
 
 Styles:
 
