@@ -22,8 +22,13 @@
 
 ***15. Update markdown tables***
 
-***16. Fix Ace***
+16. Fix Ace
 
 ***17. Fix all cards in index.html***
 
 18. Try and create php version of WebIDE for OnPremise
+19. Integrate jekyll with webide
+20. add ftp access
+21. fix VNC viewer (NoVNC)
+22. Make more themes
+23. Embed FileExplorer to webide
