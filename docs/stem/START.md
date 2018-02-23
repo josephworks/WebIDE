@@ -4,6 +4,8 @@ By Joseph Robinson
 
 Copyright 2018
 
+# [Click me to Try WebIDE](https://josephworks-webide-nuyvqdtvvc.now.sh/)
+
 > [Click to go to Problem](https://josephworks.github.io/WebIDE/stem/PROBLEM/)
 
 ---
