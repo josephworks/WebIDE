@@ -19,3 +19,11 @@
 12. Add loaders from https://1stwebdesigner.com/10-free-css-javascript-snippets-for-creating-animated-loaders/
 13. Add some things from https://1stwebdesigner.com/
 14. Add https://dhtmlx.com/docs/products/demoApps/dhtmlxFileExplorerDemo/index.html to File Explorer
+
+***15. Update markdown tables***
+
+***16. Fix Ace***
+
+***17. Fix all cards in index.html***
+
+18. Try and create php version of WebIDE for OnPremise
