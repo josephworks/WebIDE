@@ -8,6 +8,8 @@ I also used other Open Sourced code and made WebIDE and File Explorer!
 
 After you download WebIDE and open index.html, you will be able to use an IDE from your web browser!
 
+> [Click to go to Conclusion](https://josephworks.github.io/WebIDE/stem/CONCLUSION/)
+
 # Example of WebIDE's Code
 
 > Note: Provided by josephworks' gists
