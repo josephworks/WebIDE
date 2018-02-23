@@ -12,6 +12,8 @@ Parser - In the case of programming languages, a parser is a component of a comp
 Linter - A linter or lint refers to tools that analyze source code to flag programming errors, bugs, stylistic errors, and suspicious constructs. The term is originated from a Unix utility that examined C language source code.
 ```
 
-Since I Did most of my coding using git on github, I can see data in the repository page!
+Since I Did most of my coding using git on github, I can see data in the repository pulse!
 
 <iframe src="https://github.com/josephworks/WebIDE/pulse"></iframe>
+
+> [Click to go to Diagram](https://josephworks.github.io/WebIDE/stem/DIAGRAM/)
