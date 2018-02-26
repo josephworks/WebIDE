@@ -10,7 +10,7 @@ Copyright 2018
 
 ---
 
-# Licence
+# License
 
 MIT Licence:
 
