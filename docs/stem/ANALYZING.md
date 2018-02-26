@@ -1,6 +1,6 @@
 # Data
 
-> Note: also known as Analysing data
+> Note: also known as Analyzing data
 
 At first my project had some bugs and it looked incorrect, then I linted my html code with a parser and it fixed most of my errors!
 
