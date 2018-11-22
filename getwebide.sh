@@ -8,4 +8,4 @@ echo "Starting WebServer!"
 toilet WebIDE
 
 java -version
-java -jar SimpleWebServer.jar
+java -jar WebServerLite.jar
