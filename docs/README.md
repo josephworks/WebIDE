@@ -41,8 +41,6 @@ Styles:
 
 > WebIDE Editor
 
-> Dirigible
-
 > Codenvy
 
 > Orion

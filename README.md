@@ -38,7 +38,6 @@ Styles:
 > Plain (Monaco Editor)
 > Visual Studio Code
 > WebIDE Editor
-> Dirigible
 > Codenvy
 > Orion
 > Codechef
